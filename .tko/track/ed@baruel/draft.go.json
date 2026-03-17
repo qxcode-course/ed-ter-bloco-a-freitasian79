@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_22-27-24",
+            "content": "@@ -424,24 +424,62 @@\n urinhas%5Bi%5D)%0A\n+            fmt.Println(repetidas%5Bi%5D)%0A\n         %7D%0A  \n@@ -531,19 +531,17 @@\n m := 1; \n-num\n+i\n  %3C= tota\n@@ -548,19 +548,17 @@\n lAlbum; \n-num\n+i\n ++ %7B%0A   \n@@ -1263,14 +1263,13 @@\n s%5Bi%5D\n-)\n  - 1\n- \n+)\n %7B%0A  \n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-03-16_22-30-58",
+            "content": "@@ -1222,16 +1222,19 @@\n altantes\n+%5Bi%5D\n ) - 1 %7B%0A\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-03-16_22-32-08",
+            "content": "@@ -1046,13 +1046,8 @@\n  %7D%0A%0A\n-    %0A\n     \n@@ -1288,19 +1288,16 @@\n    %7D%0A   \n- %7D%0A\n      fmt\n@@ -1307,10 +1307,16 @@\n intln()%0A\n+    %7D%0A\n %7D%0A\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-03-16_22-32-50",
+            "content": "@@ -1300,20 +1300,16 @@\n   %7D%0A    \n-%0A   \n  fmt.Pri\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-03-16_22-32-59",
+            "content": "@@ -1290,24 +1290,31 @@\n       %7D%0A    \n+%7D%0A    %0A\n     fmt.Prin\n@@ -1323,22 +1323,6 @@\n n()%0A\n-    %7D%0A    %0A    %0A\n %7D%0A\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-03-16_22-33-34",
+            "content": "@@ -1035,38 +1035,16 @@\n       %7D%0A\n-        fmt.Println()%0A\n     %7D%0A%0A \n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-03-16_22-34-44",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar totalAlbum int\n\tvar figsBaruel int\n\tfmt.Scan(&totalAlbum)\n\tfmt.Scan(&figsBaruel)\n\n\tfigurinhas := make([]int, figsBaruel)\n\n\tfor i := 0; i < figsBaruel; i++ {\n\t\tfmt.Scan(&figurinhas[i])\n\t}\n\n\trepetidas := []int{}\n    faltantes := []int{}\n\n    for i := 0; i < figsBaruel; i++ {\n        if i > 0 && figurinhas[i] == figurinhas[i - 1] {\n            repetidas = append(repetidas, figurinhas[i])\n        }\n    }\n\n    // procurar as faltantes\n\n    for num := 1; num <= totalAlbum; num++ {\n        temNaMao := false\n\n        for j := 0; j < figsBaruel; j++ {\n            if figurinhas[j] == num {\n                temNaMao = true\n                break\n            }\n        }\n\n        if !temNaMao {\n            faltantes = append(faltantes, num)\n        }\n    }\n\n    if len(repetidas) == 0 {\n        fmt.Println(\"N\")\n    } else {\n        for i := 0; i < len(repetidas); i++ {\n            fmt.Print(repetidas[i])\n            if i < len(repetidas)-1 {\n                fmt.Print(\" \")\n            }\n        }\n        fmt.Println()\n    }\n\n    \n    if len(faltantes) == 0{\n        fmt.Println(\"N\")\n    } else {\n        for i := 0; i < len(faltantes); i++ {\n            fmt.Print(faltantes[i])\n            if i < len(faltantes) - 1 {\n                fmt.Print(\" \")\n            }\n        }\n        fmt.Println()\n    }\n    \n    \n}\n",
+            "lines": "69"
+        }
+    ]
+}

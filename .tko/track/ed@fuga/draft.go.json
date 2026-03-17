@@ -1,0 +1,84 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-15_21-00-07",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,443 +37,32 @@\n ) %7B%0A\n-%09var (%0A%09%09h int%0A%09%09p int%0A%09%09f int%0A%09%09d int%0A%09)%0A%0A%09fmt.Println(%22Em qual sentido vc deseja ir%22)%0A%09fmt.Scan(&h, &p, &f, &d)%0A%0A%09var aux string%0A%0A%09//sentido anti-hor%C3%A1rio (esquerda)%0A%09if d == 1 %7B%0A%09%09for i := f; i %3C= 15; i++ %7B%0A%09%09%09if i == p %7B%0A%09%09%09%09aux = %22N%22%0A%09%09%09%09break%0A%09%09%09%7D else %7B%0A%09%09%09%09aux = %22S%22%0A%09%09%09%09break%0A%09%09%09%7D%0A%0A%09%09%7D%0A%09%7D else %7B%0A%09%09for e := f; e %3E= 0; e-- %7B%0A%09%09%09if e == p %7B%0A%09%09%09%09aux = %22N%22%0A%09%09%09%09break%0A%09%09%09%7D else %7B%0A%09%09%09%09aux = %22S%22%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Print(aux)%0A\n+    fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-16_14-33-04",
+            "content": "@@ -78,16 +78,61 @@\n int%0A%09)%0A%0A\n+%09fmt.Println(%22Em qual sentido vc deseja ir%22)%0A\n %09fmt.Sca\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-16_14-33-22",
+            "content": "@@ -424,10 +424,8 @@\n rint\n-ln\n (aux\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-16_14-33-36",
+            "content": "@@ -291,28 +291,12 @@\n %0A%09%7D \n-%0A    %0A    if d == -1\n+else\n  %7B%0A%09\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-16_14-35-20",
+            "content": "@@ -82,53 +82,8 @@\n %09)%0A%0A\n-%09fmt.Println(%22Em qual sentido vc deseja ir%22)%0A\n %09fmt\n@@ -104,16 +104,16 @@\n &f, &d)%0A\n+\n %0A%09var au\n@@ -246,22 +246,13 @@\n %09%09%09%7D\n-%0A%0A%09%09%09if i == h\n+ else\n  %7B%0A%09\n@@ -287,20 +287,36 @@\n %0A%09%09%7D%0A%09%7D \n-else\n+%0A    %0A    if d == -1\n  %7B%0A%09%09for\n@@ -385,22 +385,13 @@\n %09%09%09%7D\n-%0A%0A%09%09%09if e == h\n+ else\n  %7B%0A%09\n@@ -426,16 +426,16 @@\n %09%09%7D%0A%09%7D%0A%0A\n-\n %09fmt.Pri\n@@ -436,16 +436,18 @@\n mt.Print\n+ln\n (aux)%0A%0A%7D\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-16_14-38-56",
+            "content": "@@ -78,16 +78,61 @@\n int%0A%09)%0A%0A\n+%09fmt.Println(%22Em qual sentido vc deseja ir%22)%0A\n %09fmt.Sca\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-16_14-39-05",
+            "content": "@@ -442,10 +442,8 @@\n rint\n-ln\n (aux\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-16_14-39-16",
+            "content": "@@ -438,16 +438,18 @@\n mt.Print\n+ln\n (aux)%0A%0A%7D\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-16_14-39-30",
+            "content": "@@ -446,15 +446,8 @@\n (aux\n- + %22%5Cn%22\n )%0A%0A%7D\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-16_14-39-51",
+            "content": "@@ -442,14 +442,19 @@\n rint\n-ln\n (aux\n+ + %22%5Cn%22\n )%0A%0A%7D\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-16_14-40-04",
+            "content": "@@ -438,17 +438,18 @@\n mt.Print\n-f\n+ln\n (aux)%0A%0A%7D\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-16_14-40-22",
+            "content": "@@ -444,16 +444,8 @@\n ntf(\n-%22%25s%5Cn%22, \n aux)\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-16_14-42-43",
+            "content": "@@ -170,51 +170,56 @@\n  == \n--\n 1 %7B%0A\n-        for %7B%0A            if f\n+%09%09for i := f; i %3C= 15; i++ %7B%0A%09%09%09if i\n  == p %7B%0A\n     \n@@ -218,95 +218,53 @@\n p %7B%0A\n-                \n+%09%09%09%09\n aux = %22\n-S%22%0A                break%0A            %7D%0A%0A            if f\n+N%22%0A%09%09%09%09break%0A%09%09%09%7D%0A%0A%09%09%09if i\n  == h %7B%0A\n     \n@@ -263,221 +263,95 @@\n h %7B%0A\n-                \n+%09%09%09%09\n aux = %22\n-N%22%0A                break%0A            %7D%0A            %0A            f++%0A            if f %3E 15 %7B%0A                f = 0%0A            %7D%0A         %7D%0A    %7D else %7B%0A        for %7B%0A            if f\n+S%22%0A%09%09%09%09break%0A%09%09%09%7D%0A%0A%09%09%7D%0A%09%7D else %7B%0A%09%09for e := f; e %3E= 0; e-- %7B%0A%09%09%09if e\n  == p %7B%0A\n     \n@@ -350,95 +350,53 @@\n p %7B%0A\n-                aux = %22N%22%0A                break%0A            %7D%0A%0A            if f\n+%09%09%09%09aux = %22N%22%0A%09%09%09%09break%0A%09%09%09%7D%0A%0A%09%09%09if e\n  == h %7B%0A\n     \n@@ -395,180 +395,65 @@\n h %7B%0A\n-                aux = %22S%22%0A                break%0A            %7D%0A            f--%0A%0A            if f %3C 0 %7B%0A                f = 15%0A            %7D%0A        %7D%0A    %7D%0A%0A    fmt.Println(\n+%09%09%09%09aux = %22S%22%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Printf(%22%25s%5Cn%22, \n aux)\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-16_15-01-21",
+            "content": "@@ -133,16 +133,21 @@\n sentido \n+anti-\n hor%C3%A1rio \n@@ -157,16 +157,16 @@\n querda)%0A\n-\n %09if d ==\n@@ -224,33 +224,33 @@\n          aux = %22\n-N\n+S\n %22%0A              \n@@ -311,33 +311,33 @@\n          aux = %22\n-S\n+N\n %22%0A              \n@@ -384,18 +384,18 @@\n        f\n---\n+++\n %0A       \n@@ -408,11 +408,12 @@\n f f \n-%3C 0\n+%3E 15\n  %7B%0A \n@@ -431,18 +431,17 @@\n     f = \n-15\n+0\n %0A       \n@@ -650,33 +650,32 @@\n k%0A            %7D%0A\n-%0A\n             f--%0A\n@@ -684,36 +684,35 @@\n            if f \n-%3E 15\n+%3C 0\n  %7B%0A             \n@@ -710,33 +710,34 @@\n             f = \n-0\n+15\n %0A            %7D%0A \n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-03-16_15-32-40",
+            "content": "@@ -671,10 +671,10 @@\n    f\n-++\n+--\n %0A%0A  \n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-03-16_15-33-59",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar (\n\t\th int\n\t\tp int\n\t\tf int\n\t\td int\n\t)\n\n\tfmt.Scan(&h, &p, &f, &d)\n\n\tvar aux string\n\n\t//sentido hor\u00e1rio (esquerda)\n\tif d == -1 {\n        for {\n            if f == p {\n                aux = \"N\"\n                break\n            }\n\n            if f == h {\n                aux = \"S\"\n                break\n            }\n            \n            f--\n            if f < 0 {\n                f = 15\n            }\n         }\n    } else {\n        for {\n            if f == p {\n                aux = \"N\"\n                break\n            }\n\n            if f == h {\n                aux = \"S\"\n                break\n            }\n\n            f++\n\n            if f > 15 {\n                f = 0\n            }\n        }\n    }\n\n    fmt.Println(aux)\n\n}\n",
+            "lines": "57"
+        }
+    ]
+}

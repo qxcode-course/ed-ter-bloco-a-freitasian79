@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_19-42-42",
+            "content": "@@ -10,36 +10,21 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-%09%22math%22%0A)%0A%0A\n func\n@@ -37,685 +37,32 @@\n ) %7B%0A\n-%09var (%0A%09%09numeroCompetidores int%0A%09%09a                  int%0A%09%09b                  int%0A%09)%0A%0A%09fmt.Scan(&numeroCompetidores)%0A%0A%09listaCompetidores := make(%5B%5Dint, numeroCompetidores)%0A%0A%09for i := 0; i %3C numeroCompetidores; i++ %7B%0A%09%09fmt.Scan(&a, &b)%0A%09%09if a %3C 10 %7C%7C b %3C 10 %7B%0A%09%09%09listaCompetidores%5Bi%5D = -1 //valor que ser%C3%A1 atribuido para os jogadores desclassificados%0A%09%09%7D else %7B%0A%09%09%09listaCompetidores%5Bi%5D = int(math.Abs(float64(a - b)))%0A%09%09%7D%0A%0A%09%7D%0A%09var menor int = 999%0A%09var indiceVencedor int = 0%0A%09for e := 0; e %3C len(listaCompetidores); e++ %7B%0A%09%09if listaCompetidores%5Be%5D != -1 && listaCompetidores%5Be%5D %3C menor %7B%0A%09%09%09menor = listaCompetidores%5Be%5D%0A%09%09%09indiceVencedor = e%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Println(indiceVencedor)%0A\n+    fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-16_19-42-57",
+            "content": "@@ -573,17 +573,8 @@\n + %7B%0A\n-        %0A\n %09%09if\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-16_20-06-27",
+            "content": "@@ -569,16 +569,25 @@\n ; e++ %7B%0A\n+        %0A\n %09%09if lis\n@@ -710,68 +710,8 @@\n %09%7D%0A%0A\n-%09if menor == 999 %7B%0A%09%09fmt.Println(%22sem ganhador%22)%0A%09%7D else %7B%0A%09\n %09fmt\n@@ -734,15 +734,12 @@\n encedor)\n-%0A%09%7D\n %0A%0A%7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-16_20-07-02",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc main() {\n\tvar (\n\t\tnumeroCompetidores int\n\t\ta                  int\n\t\tb                  int\n\t)\n\n\tfmt.Scan(&numeroCompetidores)\n\n\tlistaCompetidores := make([]int, numeroCompetidores)\n\n\tfor i := 0; i < numeroCompetidores; i++ {\n\t\tfmt.Scan(&a, &b)\n\t\tif a < 10 || b < 10 {\n\t\t\tlistaCompetidores[i] = -1 //valor que ser\u00e1 atribuido para os jogadores desclassificados\n\t\t} else {\n\t\t\tlistaCompetidores[i] = int(math.Abs(float64(a - b)))\n\t\t}\n\n\t}\n\tvar menor int = 999\n\tvar indiceVencedor int = 0\n\tfor e := 0; e < len(listaCompetidores); e++ {\n\t\tif listaCompetidores[e] != -1 && listaCompetidores[e] < menor {\n\t\t\tmenor = listaCompetidores[e]\n\t\t\tindiceVencedor = e\n\t\t}\n\t}\n\n\tif menor == 999 {\n\t\tfmt.Println(\"sem ganhador\")\n\t} else {\n\t\tfmt.Println(indiceVencedor)\n\t}\n\n}\n",
+            "lines": "43"
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+2026-03-15 16:20:58, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-15 16:21:17, EXEC, v:1, k:ed@pintando, mode:FULL, fail:COMP
+2026-03-15 16:21:19, EXEC, v:1, k:ed@pintando, mode:FULL, fail:COMP
+2026-03-15 16:21:21, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-15 16:21:27, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-15 16:21:45, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-15 16:21:50, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-15 16:33:12, EXEC, v:1, k:ed@pintando, mode:FULL, fail:COMP
+2026-03-15 16:33:20, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:19
+2026-03-15 16:33:32, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0
+2026-03-15 16:33:34, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0
+2026-03-15 16:34:44, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0
+2026-03-15 16:34:48, EXEC, v:1, k:ed@pintando, mode:FULL, size:19, fail:COMP
+2026-03-15 16:36:03, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:19
+2026-03-15 16:36:18, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0
+2026-03-15 16:36:20, EXEC, v:1, k:ed@pintando, mode:FREE
+2026-03-15 16:36:54, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0
+2026-03-15 16:37:02, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-15 16:41:56, MOVE, v:1, k:ed@mumia, mode:DOWN
+2026-03-15 16:41:58, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-03-15 16:52:24, EXEC, v:1, k:ed@mumia, mode:FULL, rate:0, size:22
+2026-03-15 16:52:38, EXEC, v:1, k:ed@mumia, mode:FULL, rate:0, size:22
+2026-03-15 16:53:46, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-03-15 18:18:38, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-15 18:18:40, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0
+2026-03-15 18:18:54, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-15 18:18:56, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-15 18:19:18, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0
+2026-03-15 18:19:24, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:19
+2026-03-15 18:19:33, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100, size:19
+2026-03-15 18:19:40, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-15 18:32:50, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-03-15 18:33:34, EXEC, v:1, k:ed@mumia, mode:FULL, rate:0, size:22
+2026-03-15 18:35:18, EXEC, v:1, k:ed@mumia, mode:FULL, rate:0, size:25
+2026-03-15 18:35:37, EXEC, v:1, k:ed@mumia, mode:FULL, rate:0, size:25
+2026-03-15 18:36:07, EXEC, v:1, k:ed@mumia, mode:FULL, rate:100, size:25
+2026-03-15 18:36:25, EXEC, v:1, k:ed@mumia, mode:FULL, rate:100
+2026-03-15 18:36:26, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-03-15 20:24:47, MOVE, v:1, k:ed@fuga, mode:DOWN
+2026-03-15 20:24:48, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-15 21:00:07, EXEC, v:1, k:ed@fuga, mode:FULL, rate:0, size:5
+2026-03-15 21:16:36, MOVE, v:1, k:ed@fuga, mode:BACK

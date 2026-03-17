@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-15_16-52-24",
+            "content": "@@ -160,17 +160,16 @@\n (%22%25s eh \n-c\n rianca%22,\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-15_16-52-38",
+            "content": "@@ -167,17 +167,16 @@\n  crianca\n- \n %22, nome)\n@@ -234,17 +234,16 @@\n eh jovem\n- \n %22, nome)\n@@ -302,17 +302,16 @@\n h adulto\n- \n %22, nome)\n@@ -372,17 +372,16 @@\n h idoso%22\n- \n , nome)%0A\n@@ -425,17 +425,16 @@\n h mumia%22\n- \n , nome)%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-15_18-33-34",
+            "content": "@@ -74,37 +74,8 @@\n  int\n-%0A    var classificacao string\n %0A%0A  \n@@ -146,33 +146,42 @@\n     \n-classificacao = %22crianca%22\n+fmt.Printf(%22%25s eh crianca %22, nome)\n %0A   \n@@ -216,31 +216,40 @@\n     \n-classificacao = %22jovem%22\n+fmt.Printf(%22%25s eh jovem %22, nome)\n %0A   \n@@ -284,32 +284,41 @@\n     \n-classificacao = %22adulto%22\n+fmt.Printf(%22%25s eh adulto %22, nome)\n %0A   \n@@ -355,129 +355,100 @@\n     \n-classificacao = %22idoso%22%0A    %7D else %7B%0A        classificacao = %22mumia%22%0A    %7D%0A%0A    fmt.Printf(nome + %22 eh %22 + classificacao)\n+fmt.Printf(%22%25s eh idoso%22 , nome)%0A    %7D else %7B%0A        fmt.Printf(%22%25s eh mumia%22 , nome)%0A    %7D\n %0A%0A%7D%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-15_18-35-18",
+            "content": "@@ -473,14 +473,13 @@\n ificacao\n- \n )%0A%0A%7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-15_18-35-37",
+            "content": "@@ -446,10 +446,9 @@\n rint\n-ln\n+f\n (nom\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-15_18-36-07",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var nome string\n    var idade int\n    var classificacao string\n\n    fmt.Scan(&nome)\n    fmt.Scan(&idade)\n\n    if idade < 12 {\n        classificacao = \"crianca\"\n    } else if idade < 18 {\n        classificacao = \"jovem\"\n    } else if idade < 65 {\n        classificacao = \"adulto\"\n    } else if idade < 1000 {\n        classificacao = \"idoso\"\n    } else {\n        classificacao = \"mumia\"\n    }\n\n    fmt.Println(nome + \" eh \" + classificacao )\n\n}\n",
+            "lines": "25"
+        }
+    ]
+}
