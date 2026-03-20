@@ -1,0 +1,18 @@
+2026-03-20 15:03:53, SELF, v:1, k:ed@fuga, self:1, rate:100, study:113, friend:nao, concept:1
+2026-03-20 15:04:32, SELF, v:1, k:ed@pedra, self:1, rate:100, study:24, friend:nao, code:1, debug:1
+2026-03-20 15:05:29, SELF, v:1, k:ed@casais, self:1, rate:100, study:61, friend:nao, concept:1, code:1, refactor:1
+2026-03-20 15:06:25, SELF, v:1, k:ed@baruel, self:1, rate:100, study:120, friend:nao, concept:1
+2026-03-20 15:06:34, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-20 15:06:35, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-20 15:07:12, SELF, v:1, k:ed@gomos, self:1, rate:100, study:120, friend:nao, code:1
+2026-03-20 15:07:20, SELF, v:1, k:ed@gomos, self:1, rate:100, study:120, friend:nao
+2026-03-20 15:08:09, SELF, v:1, k:ed@gomos, self:1, rate:100, study:120, friend:nao, code:1
+2026-03-20 15:08:20, SELF, v:1, k:ed@gomos, self:1, rate:100, study:120, friend:nao, refactor:1
+2026-03-20 15:08:36, SELF, v:1, k:ed@gomos, self:1, rate:100, study:120, friend:nao, code:1, refactor:1
+2026-03-20 15:08:37, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-20 15:08:38, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-20 15:08:41, SELF, v:1, k:ed@gomos, self:1, rate:100, study:120, friend:nao, code:1
+2026-03-20 15:08:43, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-20 15:08:44, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-20 15:08:52, SELF, v:1, k:ed@gomos, self:1, rate:100, study:120, friend:nao, code:1
+2026-03-20 15:09:10, SELF, v:1, k:ed@pedra, self:1, rate:100, study:24, friend:nao, code:1, debug:1
