@@ -9,8 +9,10 @@ import (
 )
 
 func processa(vet []int) {
-	lista = vet;
-	/
+	// 1. defina o ponto de parada
+	if len(vet) <= 1 {
+		return
+	}
 	// 2. monte o vetor auxiliar com os resultados das somas
 	// 3. chame recursivamente a função processa para o vetor auxiliar
 	// 4. imprima o vetor original
