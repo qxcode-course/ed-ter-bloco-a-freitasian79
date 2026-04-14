@@ -17,8 +17,38 @@
         },
         {
             "label": "2026-03-16_20-07-02",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc main() {\n\tvar (\n\t\tnumeroCompetidores int\n\t\ta                  int\n\t\tb                  int\n\t)\n\n\tfmt.Scan(&numeroCompetidores)\n\n\tlistaCompetidores := make([]int, numeroCompetidores)\n\n\tfor i := 0; i < numeroCompetidores; i++ {\n\t\tfmt.Scan(&a, &b)\n\t\tif a < 10 || b < 10 {\n\t\t\tlistaCompetidores[i] = -1 //valor que ser\u00e1 atribuido para os jogadores desclassificados\n\t\t} else {\n\t\t\tlistaCompetidores[i] = int(math.Abs(float64(a - b)))\n\t\t}\n\n\t}\n\tvar menor int = 999\n\tvar indiceVencedor int = 0\n\tfor e := 0; e < len(listaCompetidores); e++ {\n\t\tif listaCompetidores[e] != -1 && listaCompetidores[e] < menor {\n\t\t\tmenor = listaCompetidores[e]\n\t\t\tindiceVencedor = e\n\t\t}\n\t}\n\n\tif menor == 999 {\n\t\tfmt.Println(\"sem ganhador\")\n\t} else {\n\t\tfmt.Println(indiceVencedor)\n\t}\n\n}\n",
+            "content": "@@ -10,21 +10,36 @@\n ain%0A\n+%0A\n import \n+(%0A%09\n %22fmt%22%0A\n+%09%22math%22%0A)%0A%0A\n func\n@@ -52,39 +52,748 @@\n ) %7B%0A\n-    fmt.Println(%22Hello, World!%22)\n+%09var (%0A%09%09numeroCompetidores int%0A%09%09a                  int%0A%09%09b                  int%0A%09)%0A%0A%09fmt.Scan(&numeroCompetidores)%0A%0A%09listaCompetidores := make(%5B%5Dint, numeroCompetidores)%0A%0A%09for i := 0; i %3C numeroCompetidores; i++ %7B%0A%09%09fmt.Scan(&a, &b)%0A%09%09if a %3C 10 %7C%7C b %3C 10 %7B%0A%09%09%09listaCompetidores%5Bi%5D = -1 //valor que ser%C3%A1 atribuido para os jogadores desclassificados%0A%09%09%7D else %7B%0A%09%09%09listaCompetidores%5Bi%5D = int(math.Abs(float64(a - b)))%0A%09%09%7D%0A%0A%09%7D%0A%09var menor int = 999%0A%09var indiceVencedor int = 0%0A%09for e := 0; e %3C len(listaCompetidores); e++ %7B%0A%09%09if listaCompetidores%5Be%5D != -1 && listaCompetidores%5Be%5D %3C menor %7B%0A%09%09%09menor = listaCompetidores%5Be%5D%0A%09%09%09indiceVencedor = e%0A%09%09%7D%0A%09%7D%0A%0A%09if menor == 999 %7B%0A%09%09fmt.Println(%22sem ganhador%22)%0A%09%7D else %7B%0A%09%09fmt.Println(indiceVencedor)%0A%09%7D%0A\n %0A%7D%0A\n",
             "lines": "43"
+        },
+        {
+            "label": "2026-04-14_01-04-29",
+            "content": "@@ -28,305 +28,48 @@\n unc \n-absoluto(n int) int%7B%0A    if n %3C 0 %7B%0A        return -n%0A    %7D%0A%0A    return n%0A%7D%0Afunc main() %7B%0A    var num_competidores, a, b int%0A%0A    competidores := make(%5B%5Dint, num_competidores)%0A%0A    for i := 0; i %3C num_competidores; i++ %7B%0A        fmt.Scan(&a, &b)%0A        competidores%5Bi%5D = absoluto(a - b)%0A    %7D%0A    \n+main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-14_01-11-09",
+            "content": "@@ -321,39 +321,8 @@\n    %7D\n-%0A%0A    fmt.Println(competidores)\n %0A   \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-14_01-12-45",
+            "content": "@@ -154,40 +154,8 @@\n nt%0A%0A\n-    fmt.Scan(&num_competidores)%0A\n     \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-14_01-14-28",
+            "content": "@@ -314,186 +314,41 @@\n     \n-if a %3C 10 %7C%7C b %3C 10 %7B%0A            competidores%5Bi%5D = -1%0A        %7D else %7B%0A            competidores%5Bi%5D = absoluto(a - b)%0A        %7D%0A    %7D%0A%0A    for i := 0; i %3C num_competidores; i++ %7B\n+competidores%5Bi%5D = absoluto(a - b)\n %0A   \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-14_01-16-33",
+            "content": "@@ -449,51 +449,8 @@\n  %7D%0A%0A\n-    menor := 999%0A    indice_vencedor := -1%0A\n     \n@@ -497,309 +497,40 @@\n     \n-    if competidores%5Bi%5D != -1 %7B%0A            if competidores%5Bi%5D %3C menor %7B%0A                menor = competidores%5Bi%5D%0A                indice_vencedor = i%0A            %7D%0A        %7D%0A    %7D%0A%0A    if indice_vencedor == -1 %7B%0A        fmt.Println(%22sem ganhador%22)%0A    %7D else %7B%0A        fmt.Println(indice_vencedor)%0A    %7D\n+%7D%0A%0A    fmt.Println(competidores)\n %0A   \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-14_01-23-01",
+            "content": "package main\nimport \"fmt\"\nfunc absoluto(n int) int{\n    if n < 0 {\n        return -n\n    }\n\n    return n\n}\nfunc main() {\n    var num_competidores, a, b int\n\n    fmt.Scan(&num_competidores)\n    competidores := make([]int, num_competidores)\n\n    for i := 0; i < num_competidores; i++ {\n        fmt.Scan(&a, &b)\n        if a < 10 || b < 10 {\n            competidores[i] = -1\n        } else {\n            competidores[i] = absoluto(a - b)\n        }\n    }\n\n    menor := 999\n    indice_vencedor := -1\n    for i := 0; i < num_competidores; i++ {\n        if competidores[i] != -1 {\n            if competidores[i] < menor {\n                menor = competidores[i]\n                indice_vencedor = i\n            }\n        }\n    }\n\n    if indice_vencedor == -1 {\n        fmt.Println(\"sem ganhador\")\n    } else {\n        fmt.Println(indice_vencedor)\n    }\n    \n}\n",
+            "lines": "42"
         }
     ]
 }

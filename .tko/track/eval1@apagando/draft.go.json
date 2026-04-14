@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_10-43-25",
+            "content": "@@ -33,10 +33,342 @@\n ain() %7B%0A\n+%09var n int%0A%0A%09fmt.Scan(&n)%0A%09na_fila := make(%5B%5Dint, n)%0A%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09fmt.Scan(&na_fila%5Bi%5D)%0A%09%7D%0A%0A%09var m int%0A%09fmt.Scan(&m)%0A%09vai_sair := make(map%5Bint%5Dbool)%0A%0A%09for i := 0; i %3C m; i++ %7B%0A%09%09var x int %0A%09%09fmt.Scan(&x)%0A%09%09vai_sair%5Bx%5D = true%0A%09%7D%0A%0A%09for _, pessoa := range na_fila %7B%0A%09%09if !vai_sair%5Bpessoa%5D %7B%0A%09%09%09fmt.Printf(%22%25d %22)%0A%09%09%7D%0A%09%7D%0A\n %7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-14_10-47-02",
+            "content": "@@ -37,392 +37,6 @@\n ) %7B%0A\n-%09var n int%0A%0A%09fmt.Scan(&n)%0A%09na_fila = make(%5B%5Dint, n)%0A%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09fmt.Scan(&na_fila%5Bi%5D)%0A%09%7D%0A%0A%09var m int%0A%09fmt.Scan(&m)%0A%09vai_sair = make(map%5Bint%5Dbool)%0A%0A%09for i := 0; i %3C m; i++ %7B%0A%09%09var sai int %0A%09%09fmt.Scan(&sai)%0A%09%09vai_sair%5Bsai%5D = true%0A%09%7D%0A%0A%09fila_final := %5B%5Dint%7B%7D%0A%0A%09for _, pessoa := range na_fila %7B%0A%09%09if !vai_sair%5Bpessoa%5D %7B%0A%09%09%09fmt.Printf(%22%25d %22, pessoa)%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Println()%0A%0A%0A\n %7D%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-04-14_10-53-35",
+            "content": "@@ -68,17 +68,16 @@\n na_fila \n-:\n = make(%5B\n@@ -175,17 +175,16 @@\n ai_sair \n-:\n = make(m\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-14_10-53-48",
+            "content": "@@ -284,16 +284,39 @@\n rue%0A%09%7D%0A%0A\n+%09fila_final := %5B%5Dint%7B%7D%0A\n %0A%09for _,\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-14_10-53-59",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\tvar n int\n\n\tfmt.Scan(&n)\n\tna_fila := make([]int, n)\n\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&na_fila[i])\n\t}\n\n\tvar m int\n\tfmt.Scan(&m)\n\tvai_sair := make(map[int]bool)\n\n\tfor i := 0; i < m; i++ {\n\t\tvar sai int \n\t\tfmt.Scan(&sai)\n\t\tvai_sair[sai] = true\n\t}\n\n\n\tfor _, pessoa := range na_fila {\n\t\tif !vai_sair[pessoa] {\n\t\t\tfmt.Printf(\"%d \", pessoa)\n\t\t}\n\t}\n\n\tfmt.Println()\n\n\n}\n",
+            "lines": "33"
+        }
+    ]
+}

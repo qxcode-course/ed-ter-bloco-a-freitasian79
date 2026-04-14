@@ -1,0 +1,239 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-20_15-39-01",
+            "content": "@@ -41,271 +41,28 @@\n     \n-var (%0A        n int%0A        m int%0A    )%0A%0A    // quantas pessoas tem na fila%0A    fmt.Scan(&n)%0A%0A    //vetor que armazena os identificadores de cada pessoa na fila%0A    fila := make(%5B%5Dint, n)%0A%0A    for i := range n %7B%0A        fmt.Scan(fila%5Bi%5D)%0A    %7D%0A%0A    fmt.Print(fila\n+fmt.Println(%22qxcode%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-29_16-32-14",
+            "content": "@@ -57,16 +57,30 @@\n   n int%0A\n+        m int%0A\n     )%0A%0A \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-29_16-32-23",
+            "content": "@@ -229,29 +229,15 @@\n  := \n-0; i %3C len(fila); i++\n+range n\n  %7B%0A \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-29_16-35-04",
+            "content": "@@ -266,17 +266,16 @@\n mt.Scan(\n-&\n fila%5Bi%5D)\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-29_16-35-35",
+            "content": "@@ -1,12 +1,8 @@\n-    \n package \n@@ -6,20 +6,16 @@\n ge main%0A\n-    \n import %22\n@@ -19,20 +19,16 @@\n t %22fmt%22%0A\n-    \n func mai\n@@ -33,20 +33,16 @@\n ain() %7B%0A\n-    \n     var \n@@ -55,40 +55,14 @@\n     \n- \n-   \n n int%0A\n-            m int%0A    \n     \n@@ -72,42 +72,18 @@\n     \n-  \n-  \n // \n-1a ENTRADA - quantidades de\n+quantas\n  pes\n@@ -87,24 +87,28 @@\n pessoas \n+tem \n na fila%0A\n         \n@@ -95,28 +95,24 @@\n tem na fila%0A\n-    \n     fmt.Scan\n@@ -113,28 +113,24 @@\n t.Scan(&n)%0A%0A\n-    \n     //vetor \n@@ -184,20 +184,16 @@\n na fila%0A\n-    \n     fila\n@@ -216,99 +216,8 @@\n n)%0A%0A\n-        // 2a ENTRADA - DETERMINA%C3%87%C3%83O DO IDENTIFICADOR %C3%9ANICO DE CADA INTEGRANTE DA FILA%0A    \n     \n@@ -249,36 +249,32 @@\n ; i++ %7B%0A        \n- \n-   \n fmt.Scan(&fila%5Bi\n@@ -280,530 +280,15 @@\n i%5D)%0A\n-    \n     %7D%0A%0A\n-        // 3a QUANTAS PESSOAS SAIRAM DA FILA%0A        fmt.Scan(&m)%0A%0A        // 4a - IDENTIFICADORES DAS PESSOAS QUE SA%C3%8DRAM DA FILA%0A        desistentes := make(%5B%5Dint, m)%0A%0A        for i := 0; i %3C m; i++ %7B%0A            fmt.Scan(&desistentes%5Bi%5D)%0A        %7D%0A%0A        novaFila := make(%5B%5Dint, n-m)%0A%0A        for i := range fila %7B%0A            for j := range desistentes %7B%0A                if fila%5Bi%5D == desistentes%5Bj%5D%7B%0A                    novaFila = append(novaFila, fila%5Bi%5D)%0A                %7D%0A            %7D%0A        %7D%0A%0A%0A    \n     \n@@ -303,14 +303,10 @@\n t(fila)%0A\n-    \n %7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-29_16-45-39",
+            "content": "@@ -739,17 +739,19 @@\n (%5B%5Dint, \n-0\n+n-m\n )%0A%0A     \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-29_16-49-46",
+            "content": "@@ -979,21 +979,17 @@\n t.Print(\n-novaF\n+f\n ila)%0A   \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-29_16-50-02",
+            "content": "@@ -913,17 +913,17 @@\n a, fila%5B\n-j\n+i\n %5D)%0A     \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-29_16-53-43",
+            "content": "@@ -908,27 +908,20 @@\n vaFila, \n-desistentes\n+fila\n %5Bj%5D)%0A   \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-29_16-53-58",
+            "content": "@@ -744,13 +744,8 @@\n t, 0\n-, n-m\n )%0A%0A \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-29_16-54-27",
+            "content": "@@ -889,18 +889,36 @@\n     \n-fmt.Print(\n+novaFila = append(novaFila, \n desi\n@@ -981,9 +981,34 @@\n     \n-%7D\n+    fmt.Print(novaFila)%0A\n    \n+ %7D\n %0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-29_17-05-16",
+            "content": "@@ -715,18 +715,16 @@\n         \n-//\n novaFila\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-29_17-05-28",
+            "content": "@@ -896,17 +896,16 @@\n mt.Print\n-f\n (desiste\n@@ -915,14 +915,8 @@\n s%5Bj%5D\n- + %22 %22\n )%0A  \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-29_17-05-59",
+            "content": "@@ -902,15 +902,8 @@\n ntf(\n-%22%25d %22, \n desi\n@@ -912,16 +912,22 @@\n entes%5Bj%5D\n+ + %22 %22\n )%0A      \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-29_17-06-18",
+            "content": "@@ -871,62 +871,8 @@\n j%5D%7B%0A\n-                    continue%0A                %7D else %7B%0A\n     \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-29_17-06-46",
+            "content": "@@ -852,9 +852,9 @@\n %5Bi%5D \n-!\n+=\n = de\n@@ -865,16 +865,69 @@\n entes%5Bj%5D\n+%7B%0A                    continue%0A                %7D else\n  %7B%0A     \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-29_17-07-12",
+            "content": "@@ -707,32 +707,34 @@\n      %7D%0A%0A        \n+//\n novaFila := make\n@@ -749,16 +749,16 @@\n 0, n-m)%0A\n-\n %0A       \n@@ -848,17 +848,17 @@\n fila%5Bi%5D \n-=\n+!\n = desist\n@@ -865,16 +865,17 @@\n entes%5Bj%5D\n+ \n %7B%0A      \n@@ -892,34 +892,24 @@\n     \n-novaFila = append(novaFila\n+fmt.Printf(%22%25d %22\n , de\n@@ -970,36 +970,8 @@\n %7D%0A%0A%0A\n-        fmt.Print(novaFila)%0A\n     \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-29_17-08-19",
+            "content": "@@ -913,20 +913,27 @@\n vaFila, \n-fila\n+desistentes\n %5Bj%5D)%0A   \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-29_17-11-02",
+            "content": "@@ -850,9 +850,9 @@\n %5Bi%5D \n-!\n+=\n = de\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-29_17-12-41",
+            "content": "@@ -781,26 +781,8 @@\n la %7B\n-%0A%0A            esta\n %0A   \n@@ -914,25 +914,25 @@\n aFila, fila%5B\n-i\n+j\n %5D)%0A         \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-29_17-19-42",
+            "content": "@@ -779,16 +779,33 @@\n fila %7B%0A%0A\n+            esta%0A\n         \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-29_17-19-45",
+            "content": "@@ -979,116 +979,27 @@\n     \n-// sa%C3%ADda do problema%0A%0A        for n := range novaFila %7B%0A            fmt.Printf(%22%25d %22, novaFila%5Bn%5D)%0A        %7D\n+fmt.Print(novaFila)\n %0A   \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-29_17-20-30",
+            "content": "@@ -781,48 +781,8 @@\n la %7B\n-%0A            estaNosDesistentes := false\n %0A%0A  \n@@ -890,34 +890,44 @@\n     \n-estaNosDesi stentes = true\n+novaFila = append(novaFila, fila%5Bi%5D)\n %0A   \n@@ -943,26 +943,22 @@\n     \n+%7D%0A\n     \n-break%0A\n         \n     \n@@ -945,32 +945,34 @@\n   %7D%0A            \n+%7D%0A\n         %7D%0A%0A     \n@@ -966,27 +966,25 @@\n      %7D%0A%0A\n-   \n+%0A\n         \n      if \n@@ -979,138 +979,68 @@\n     \n-     if !estaNosDesistentes %7B%0A                    novaFila = append(novaFila, fila%5Bi%5D)%0A                %7D%0A            %7D\n+// sa%C3%ADda do problema%0A%0A        for n := range novaFila %7B\n %0A    \n-    %7D%0A%0A\n     \n@@ -1056,18 +1056,39 @@\n rint\n-(novaFila)\n+f(%22%25d %22, novaFila%5Bn%5D)%0A        %7D\n %0A   \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-29_17-26-14",
+            "content": "@@ -887,17 +887,17 @@\n fila%5Bi%5D \n-=\n+!\n = desist\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-29_17-27-54",
+            "content": "@@ -1006,36 +1006,8 @@\n     \n-            %0A            %7D%0A%0A\n     \n@@ -1114,16 +1114,30 @@\n       %7D%0A\n+            %7D%0A\n         \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-29_17-27-57",
+            "content": "@@ -929,32 +929,33 @@\n      estaNosDesi\n+ \n stentes = true%0A \n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-29_17-28-14",
+            "content": "@@ -1165,85 +1165,26 @@\n    f\n-or n := range novaFila %7B%0A            fmt.Printf(%22%25d %22, novaFila%5Bn%5D)%0A        %7D\n+mt.Print(novaFila)\n %0A   \n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-29_17-28-50",
+            "content": "@@ -1214,11 +1214,11 @@\n tf(%22\n- \n %25d\n+ \n %22, n\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-29_17-30-00",
+            "content": "@@ -1214,11 +1214,11 @@\n tf(%22\n+ \n %25d\n- \n %22, n\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-29_17-30-05",
+            "content": "@@ -1217,10 +1217,8 @@\n %22%25d \n-%5Cn\n %22, n\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-29_17-30-22",
+            "content": "@@ -1213,16 +1213,18 @@\n ntf(%22%25d \n+%5Cn\n %22, novaF\n@@ -1244,31 +1244,8 @@\n    %7D\n-%0A%0A        fmt.Println()\n %0A   \n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-29_17-30-41",
+            "content": "@@ -1,8 +1,12 @@\n+    \n package \n@@ -10,17 +10,20 @@\n ge main%0A\n-%0A\n+    \n import %22\n@@ -27,17 +27,20 @@\n t %22fmt%22%0A\n-%0A\n+    \n func mai\n@@ -49,36 +49,77 @@\n ) %7B%0A\n-%09var (%0A%09%09n int%0A%09%09m int%0A%09)%0A%0A%09\n+        var (%0A            n int%0A            m int%0A        )%0A%0A        \n // 1\n@@ -161,17 +161,24 @@\n na fila%0A\n-%09\n+        \n fmt.Scan\n@@ -183,17 +183,24 @@\n an(&n)%0A%0A\n-%09\n+        \n //vetor \n@@ -254,17 +254,24 @@\n na fila%0A\n-%09\n+        \n fila := \n@@ -286,17 +286,24 @@\n nt, n)%0A%0A\n-%09\n+        \n // 2a EN\n@@ -373,17 +373,24 @@\n DA FILA%0A\n-%09\n+        \n for i :=\n@@ -406,34 +406,44 @@\n en(fila); i++ %7B%0A\n-%09%09\n+            \n fmt.Scan(&fila%5Bi\n@@ -445,21 +445,35 @@\n ila%5Bi%5D)%0A\n-%09%7D%0A%0A%09\n+        %7D%0A%0A        \n // 3a QU\n@@ -501,17 +501,24 @@\n DA FILA%0A\n-%09\n+        \n fmt.Scan\n@@ -523,17 +523,24 @@\n an(&m)%0A%0A\n-%09\n+        \n // 4a - \n@@ -586,17 +586,24 @@\n DA FILA%0A\n-%09\n+        \n desisten\n@@ -621,25 +621,32 @@\n (%5B%5Dint, m)%0A%0A\n-%09\n+        \n for i := 0; \n@@ -658,18 +658,28 @@\n ; i++ %7B%0A\n-%09%09\n+            \n fmt.Scan\n@@ -696,21 +696,35 @@\n tes%5Bi%5D)%0A\n-%09%7D%0A%0A%09\n+        %7D%0A%0A        \n novaFila\n@@ -748,17 +748,24 @@\n , n-m)%0A%0A\n-%09\n+        \n for i :=\n@@ -778,18 +778,28 @@\n  fila %7B%0A\n-%09%09\n+            \n estaNosD\n@@ -819,18 +819,28 @@\n  false%0A%0A\n-%09%09\n+            \n for j :=\n@@ -860,19 +860,32 @@\n entes %7B%0A\n-%09%09%09\n+                \n if fila%5B\n@@ -908,15 +908,30 @@\n s%5Bj%5D\n- \n %7B%0A\n-%09%09%09%09\n+                    \n esta\n@@ -956,31 +956,97 @@\n rue%0A\n-%09%09%09%09break%0A%09%09%09%7D%0A%0A%09%09%7D%0A%0A%09%09\n+                    break%0A                %7D%0A%0A                %0A            %7D%0A%0A            \n if !\n@@ -1070,11 +1070,28 @@\n s %7B%0A\n-%09%09%09\n+                    \n nova\n@@ -1127,17 +1127,45 @@\n i%5D)%0A\n-%09%09%7D%0A%09%7D%0A%0A%09\n+                %7D%0A        %7D%0A%0A        \n for \n@@ -1190,10 +1190,20 @@\n a %7B%0A\n-%09%09\n+            \n fmt.\n@@ -1233,13 +1233,27 @@\n n%5D)%0A\n-%09%7D%0A%0A%09\n+        %7D%0A%0A        \n fmt.\n@@ -1262,10 +1262,17 @@\n intln()%0A\n-%7D\n+    %7D   \n %0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-13_20-08-03",
+            "content": "@@ -6,16 +6,17 @@\n ge main%0A\n+%0A\n import %22\n@@ -20,16 +20,17 @@\n t %22fmt%22%0A\n+%0A\n func mai\n@@ -35,10 +35,885 @@\n ain() %7B%0A\n+%09var (%0A%09%09n int%0A%09%09m int%0A%09)%0A%0A%09// 1a ENTRADA - quantidades de pessoas na fila%0A%09fmt.Scan(&n)%0A%0A%09//vetor que armazena os identificadores de cada pessoa na fila%0A%09fila := make(%5B%5Dint, n)%0A%0A%09// 2a ENTRADA - DETERMINA%C3%87%C3%83O DO IDENTIFICADOR %C3%9ANICO DE CADA INTEGRANTE DA FILA%0A%09for i := 0; i %3C len(fila); i++ %7B%0A%09%09fmt.Scan(&fila%5Bi%5D)%0A%09%7D%0A%0A%09// 3a QUANTAS PESSOAS SAIRAM DA FILA%0A%09fmt.Scan(&m)%0A%0A%09// 4a - IDENTIFICADORES DAS PESSOAS QUE SA%C3%8DRAM DA FILA%0A%09desistentes := make(%5B%5Dint, m)%0A%0A%09for i := 0; i %3C m; i++ %7B%0A%09%09fmt.Scan(&desistentes%5Bi%5D)%0A%09%7D%0A%0A%09novaFila := make(%5B%5Dint, 0, n-m)%0A%0A%09for i := range fila %7B%0A%09%09estaNosDesistentes := false%0A%0A%09%09for j := range desistentes %7B%0A%09%09%09if fila%5Bi%5D == desistentes%5Bj%5D %7B%0A%09%09%09%09estaNosDesistentes = true%0A%09%09%09%09break%0A%09%09%09%7D%0A%0A%09%09%7D%0A%0A%09%09if !estaNosDesistentes %7B%0A%09%09%09novaFila = append(novaFila, fila%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%0A%09for n := range novaFila %7B%0A%09%09fmt.Printf(%22%25d %22, novaFila%5Bn%5D)%0A%09%7D%0A%0A%09fmt.Println()%0A\n %7D%0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-13_20-08-03",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,881 +37,6 @@\n ) %7B%0A\n-%09var (%0A%09%09n int%0A%09%09m int%0A%09)%0A%0A%09// 1a ENTRADA - quantidades de pessoas na fila%0A%09fmt.Scan(&n)%0A%0A%09//vetor que armazena os identificadores de cada pessoa na fila%0A%09fila := make(%5B%5Dint, n)%0A%0A%09// 2a ENTRADA - DETERMINA%C3%87%C3%83O DO IDENTIFICADOR %C3%9ANICO DE CADA INTEGRANTE DA FILA%0A%09for i := 0; i %3C len(fila); i++ %7B%0A%09%09fmt.Scan(&fila%5Bi%5D)%0A%09%7D%0A%0A%09// 3a QUANTAS PESSOAS SAIRAM DA FILA%0A%09fmt.Scan(&m)%0A%0A%09// 4a - IDENTIFICADORES DAS PESSOAS QUE SA%C3%8DRAM DA FILA%0A%09desistentes := make(%5B%5Dint, m)%0A%0A%09for i := 0; i %3C m; i++ %7B%0A%09%09fmt.Scan(&desistentes%5Bi%5D)%0A%09%7D%0A%0A%09novaFila := make(%5B%5Dint, 0, n-m)%0A%0A%09for i := range fila %7B%0A%09%09estaNosDesistentes := false%0A%0A%09%09for j := range desistentes %7B%0A%09%09%09if fila%5Bi%5D == desistentes%5Bj%5D %7B%0A%09%09%09%09estaNosDesistentes = true%0A%09%09%09%09break%0A%09%09%09%7D%0A%0A%09%09%7D%0A%0A%09%09if !estaNosDesistentes %7B%0A%09%09%09novaFila = append(novaFila, fila%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%0A%09for n := range novaFila %7B%0A%09%09fmt.Printf(%22%25d %22, novaFila%5Bn%5D)%0A%09%7D%0A%0A%09fmt.Println()%0A\n %7D%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-04-13_20-08-04",
+            "content": "@@ -6,16 +6,17 @@\n ge main%0A\n+%0A\n import %22\n@@ -20,16 +20,17 @@\n t %22fmt%22%0A\n+%0A\n func mai\n@@ -35,10 +35,885 @@\n ain() %7B%0A\n+%09var (%0A%09%09n int%0A%09%09m int%0A%09)%0A%0A%09// 1a ENTRADA - quantidades de pessoas na fila%0A%09fmt.Scan(&n)%0A%0A%09//vetor que armazena os identificadores de cada pessoa na fila%0A%09fila := make(%5B%5Dint, n)%0A%0A%09// 2a ENTRADA - DETERMINA%C3%87%C3%83O DO IDENTIFICADOR %C3%9ANICO DE CADA INTEGRANTE DA FILA%0A%09for i := 0; i %3C len(fila); i++ %7B%0A%09%09fmt.Scan(&fila%5Bi%5D)%0A%09%7D%0A%0A%09// 3a QUANTAS PESSOAS SAIRAM DA FILA%0A%09fmt.Scan(&m)%0A%0A%09// 4a - IDENTIFICADORES DAS PESSOAS QUE SA%C3%8DRAM DA FILA%0A%09desistentes := make(%5B%5Dint, m)%0A%0A%09for i := 0; i %3C m; i++ %7B%0A%09%09fmt.Scan(&desistentes%5Bi%5D)%0A%09%7D%0A%0A%09novaFila := make(%5B%5Dint, 0, n-m)%0A%0A%09for i := range fila %7B%0A%09%09estaNosDesistentes := false%0A%0A%09%09for j := range desistentes %7B%0A%09%09%09if fila%5Bi%5D == desistentes%5Bj%5D %7B%0A%09%09%09%09estaNosDesistentes = true%0A%09%09%09%09break%0A%09%09%09%7D%0A%0A%09%09%7D%0A%0A%09%09if !estaNosDesistentes %7B%0A%09%09%09novaFila = append(novaFila, fila%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%0A%09for n := range novaFila %7B%0A%09%09fmt.Printf(%22%25d %22, novaFila%5Bn%5D)%0A%09%7D%0A%0A%09fmt.Println()%0A\n %7D%0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-13_20-08-04",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,881 +37,6 @@\n ) %7B%0A\n-%09var (%0A%09%09n int%0A%09%09m int%0A%09)%0A%0A%09// 1a ENTRADA - quantidades de pessoas na fila%0A%09fmt.Scan(&n)%0A%0A%09//vetor que armazena os identificadores de cada pessoa na fila%0A%09fila := make(%5B%5Dint, n)%0A%0A%09// 2a ENTRADA - DETERMINA%C3%87%C3%83O DO IDENTIFICADOR %C3%9ANICO DE CADA INTEGRANTE DA FILA%0A%09for i := 0; i %3C len(fila); i++ %7B%0A%09%09fmt.Scan(&fila%5Bi%5D)%0A%09%7D%0A%0A%09// 3a QUANTAS PESSOAS SAIRAM DA FILA%0A%09fmt.Scan(&m)%0A%0A%09// 4a - IDENTIFICADORES DAS PESSOAS QUE SA%C3%8DRAM DA FILA%0A%09desistentes := make(%5B%5Dint, m)%0A%0A%09for i := 0; i %3C m; i++ %7B%0A%09%09fmt.Scan(&desistentes%5Bi%5D)%0A%09%7D%0A%0A%09novaFila := make(%5B%5Dint, 0, n-m)%0A%0A%09for i := range fila %7B%0A%09%09estaNosDesistentes := false%0A%0A%09%09for j := range desistentes %7B%0A%09%09%09if fila%5Bi%5D == desistentes%5Bj%5D %7B%0A%09%09%09%09estaNosDesistentes = true%0A%09%09%09%09break%0A%09%09%09%7D%0A%0A%09%09%7D%0A%0A%09%09if !estaNosDesistentes %7B%0A%09%09%09novaFila = append(novaFila, fila%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%0A%09for n := range novaFila %7B%0A%09%09fmt.Printf(%22%25d %22, novaFila%5Bn%5D)%0A%09%7D%0A%0A%09fmt.Println()%0A\n %7D%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-04-13_20-08-05",
+            "content": "@@ -6,16 +6,17 @@\n ge main%0A\n+%0A\n import %22\n@@ -20,16 +20,17 @@\n t %22fmt%22%0A\n+%0A\n func mai\n@@ -35,10 +35,885 @@\n ain() %7B%0A\n+%09var (%0A%09%09n int%0A%09%09m int%0A%09)%0A%0A%09// 1a ENTRADA - quantidades de pessoas na fila%0A%09fmt.Scan(&n)%0A%0A%09//vetor que armazena os identificadores de cada pessoa na fila%0A%09fila := make(%5B%5Dint, n)%0A%0A%09// 2a ENTRADA - DETERMINA%C3%87%C3%83O DO IDENTIFICADOR %C3%9ANICO DE CADA INTEGRANTE DA FILA%0A%09for i := 0; i %3C len(fila); i++ %7B%0A%09%09fmt.Scan(&fila%5Bi%5D)%0A%09%7D%0A%0A%09// 3a QUANTAS PESSOAS SAIRAM DA FILA%0A%09fmt.Scan(&m)%0A%0A%09// 4a - IDENTIFICADORES DAS PESSOAS QUE SA%C3%8DRAM DA FILA%0A%09desistentes := make(%5B%5Dint, m)%0A%0A%09for i := 0; i %3C m; i++ %7B%0A%09%09fmt.Scan(&desistentes%5Bi%5D)%0A%09%7D%0A%0A%09novaFila := make(%5B%5Dint, 0, n-m)%0A%0A%09for i := range fila %7B%0A%09%09estaNosDesistentes := false%0A%0A%09%09for j := range desistentes %7B%0A%09%09%09if fila%5Bi%5D == desistentes%5Bj%5D %7B%0A%09%09%09%09estaNosDesistentes = true%0A%09%09%09%09break%0A%09%09%09%7D%0A%0A%09%09%7D%0A%0A%09%09if !estaNosDesistentes %7B%0A%09%09%09novaFila = append(novaFila, fila%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%0A%09for n := range novaFila %7B%0A%09%09fmt.Printf(%22%25d %22, novaFila%5Bn%5D)%0A%09%7D%0A%0A%09fmt.Println()%0A\n %7D%0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-13_20-08-05",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,881 +37,6 @@\n ) %7B%0A\n-%09var (%0A%09%09n int%0A%09%09m int%0A%09)%0A%0A%09// 1a ENTRADA - quantidades de pessoas na fila%0A%09fmt.Scan(&n)%0A%0A%09//vetor que armazena os identificadores de cada pessoa na fila%0A%09fila := make(%5B%5Dint, n)%0A%0A%09// 2a ENTRADA - DETERMINA%C3%87%C3%83O DO IDENTIFICADOR %C3%9ANICO DE CADA INTEGRANTE DA FILA%0A%09for i := 0; i %3C len(fila); i++ %7B%0A%09%09fmt.Scan(&fila%5Bi%5D)%0A%09%7D%0A%0A%09// 3a QUANTAS PESSOAS SAIRAM DA FILA%0A%09fmt.Scan(&m)%0A%0A%09// 4a - IDENTIFICADORES DAS PESSOAS QUE SA%C3%8DRAM DA FILA%0A%09desistentes := make(%5B%5Dint, m)%0A%0A%09for i := 0; i %3C m; i++ %7B%0A%09%09fmt.Scan(&desistentes%5Bi%5D)%0A%09%7D%0A%0A%09novaFila := make(%5B%5Dint, 0, n-m)%0A%0A%09for i := range fila %7B%0A%09%09estaNosDesistentes := false%0A%0A%09%09for j := range desistentes %7B%0A%09%09%09if fila%5Bi%5D == desistentes%5Bj%5D %7B%0A%09%09%09%09estaNosDesistentes = true%0A%09%09%09%09break%0A%09%09%09%7D%0A%0A%09%09%7D%0A%0A%09%09if !estaNosDesistentes %7B%0A%09%09%09novaFila = append(novaFila, fila%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%0A%09for n := range novaFila %7B%0A%09%09fmt.Printf(%22%25d %22, novaFila%5Bn%5D)%0A%09%7D%0A%0A%09fmt.Println()%0A\n %7D%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-04-13_20-08-06",
+            "content": "@@ -6,16 +6,17 @@\n ge main%0A\n+%0A\n import %22\n@@ -20,16 +20,17 @@\n t %22fmt%22%0A\n+%0A\n func mai\n@@ -35,10 +35,885 @@\n ain() %7B%0A\n+%09var (%0A%09%09n int%0A%09%09m int%0A%09)%0A%0A%09// 1a ENTRADA - quantidades de pessoas na fila%0A%09fmt.Scan(&n)%0A%0A%09//vetor que armazena os identificadores de cada pessoa na fila%0A%09fila := make(%5B%5Dint, n)%0A%0A%09// 2a ENTRADA - DETERMINA%C3%87%C3%83O DO IDENTIFICADOR %C3%9ANICO DE CADA INTEGRANTE DA FILA%0A%09for i := 0; i %3C len(fila); i++ %7B%0A%09%09fmt.Scan(&fila%5Bi%5D)%0A%09%7D%0A%0A%09// 3a QUANTAS PESSOAS SAIRAM DA FILA%0A%09fmt.Scan(&m)%0A%0A%09// 4a - IDENTIFICADORES DAS PESSOAS QUE SA%C3%8DRAM DA FILA%0A%09desistentes := make(%5B%5Dint, m)%0A%0A%09for i := 0; i %3C m; i++ %7B%0A%09%09fmt.Scan(&desistentes%5Bi%5D)%0A%09%7D%0A%0A%09novaFila := make(%5B%5Dint, 0, n-m)%0A%0A%09for i := range fila %7B%0A%09%09estaNosDesistentes := false%0A%0A%09%09for j := range desistentes %7B%0A%09%09%09if fila%5Bi%5D == desistentes%5Bj%5D %7B%0A%09%09%09%09estaNosDesistentes = true%0A%09%09%09%09break%0A%09%09%09%7D%0A%0A%09%09%7D%0A%0A%09%09if !estaNosDesistentes %7B%0A%09%09%09novaFila = append(novaFila, fila%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%0A%09for n := range novaFila %7B%0A%09%09fmt.Printf(%22%25d %22, novaFila%5Bn%5D)%0A%09%7D%0A%0A%09fmt.Println()%0A\n %7D%0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-13_20-08-06",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,881 +37,6 @@\n ) %7B%0A\n-%09var (%0A%09%09n int%0A%09%09m int%0A%09)%0A%0A%09// 1a ENTRADA - quantidades de pessoas na fila%0A%09fmt.Scan(&n)%0A%0A%09//vetor que armazena os identificadores de cada pessoa na fila%0A%09fila := make(%5B%5Dint, n)%0A%0A%09// 2a ENTRADA - DETERMINA%C3%87%C3%83O DO IDENTIFICADOR %C3%9ANICO DE CADA INTEGRANTE DA FILA%0A%09for i := 0; i %3C len(fila); i++ %7B%0A%09%09fmt.Scan(&fila%5Bi%5D)%0A%09%7D%0A%0A%09// 3a QUANTAS PESSOAS SAIRAM DA FILA%0A%09fmt.Scan(&m)%0A%0A%09// 4a - IDENTIFICADORES DAS PESSOAS QUE SA%C3%8DRAM DA FILA%0A%09desistentes := make(%5B%5Dint, m)%0A%0A%09for i := 0; i %3C m; i++ %7B%0A%09%09fmt.Scan(&desistentes%5Bi%5D)%0A%09%7D%0A%0A%09novaFila := make(%5B%5Dint, 0, n-m)%0A%0A%09for i := range fila %7B%0A%09%09estaNosDesistentes := false%0A%0A%09%09for j := range desistentes %7B%0A%09%09%09if fila%5Bi%5D == desistentes%5Bj%5D %7B%0A%09%09%09%09estaNosDesistentes = true%0A%09%09%09%09break%0A%09%09%09%7D%0A%0A%09%09%7D%0A%0A%09%09if !estaNosDesistentes %7B%0A%09%09%09novaFila = append(novaFila, fila%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%0A%09for n := range novaFila %7B%0A%09%09fmt.Printf(%22%25d %22, novaFila%5Bn%5D)%0A%09%7D%0A%0A%09fmt.Println()%0A\n %7D%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-04-13_20-15-22",
+            "content": "@@ -6,16 +6,17 @@\n ge main%0A\n+%0A\n import %22\n@@ -20,16 +20,17 @@\n t %22fmt%22%0A\n+%0A\n func mai\n@@ -39,91 +39,266 @@\n ) %7B%0A\n-%0A\n %09var \n-n, m int%0A%0A%09fmt.Scan(&n)%0A%09na_fila := make(%5B%5Dint, n)%0A%0A%09//identificadores unicos\n+(%0A%09%09n int%0A%09%09m int%0A%09)%0A%0A%09// 1a ENTRADA - quantidades de pessoas na fila%0A%09fmt.Scan(&n)%0A%0A%09//vetor que armazena os identificadores de cada pessoa na fila%0A%09fila := make(%5B%5Dint, n)%0A%0A%09// 2a ENTRADA - DETERMINA%C3%87%C3%83O DO IDENTIFICADOR %C3%9ANICO DE CADA INTEGRANTE DA FILA\n %0A%09fo\n@@ -344,11 +344,8 @@\n an(&\n-na_\n fila\n@@ -353,16 +353,54 @@\n i%5D)%0A%09%7D%0A%0A\n+%09// 3a QUANTAS PESSOAS SAIRAM DA FILA%0A\n %09fmt.Sca\n@@ -409,20 +409,77 @@\n &m)%0A\n-%09sairam_fila\n+%0A%09// 4a - IDENTIFICADORES DAS PESSOAS QUE SA%C3%8DRAM DA FILA%0A%09desistentes\n  := \n@@ -493,16 +493,17 @@\n int, m)%0A\n+%0A\n %09for i :\n@@ -536,26 +536,384 @@\n an(&\n-sairam_fila%5Bi%5D)%0A%09%7D%0A\n+desistentes%5Bi%5D)%0A%09%7D%0A%0A%09novaFila := make(%5B%5Dint, 0, n-m)%0A%0A%09for i := range fila %7B%0A%09%09estaNosDesistentes := false%0A%0A%09%09for j := range desistentes %7B%0A%09%09%09if fila%5Bi%5D == desistentes%5Bj%5D %7B%0A%09%09%09%09estaNosDesistentes = true%0A%09%09%09%09break%0A%09%09%09%7D%0A%0A%09%09%7D%0A%0A%09%09if !estaNosDesistentes %7B%0A%09%09%09novaFila = append(novaFila, fila%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%0A%09for n := range novaFila %7B%0A%09%09fmt.Printf(%22%25d %22, novaFila%5Bn%5D)%0A%09%7D%0A%0A%09fmt.Println()\n %0A%7D%0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-13_20-15-22",
+            "content": "@@ -280,13 +280,12 @@\n a%5Bi%5D)%0A%09%7D\n-%09\n %0A%0A%7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-13_20-16-19",
+            "content": "@@ -138,19 +138,16 @@\n i %3C len(\n-na_\n fila); i\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-13_20-16-37",
+            "content": "@@ -197,24 +197,27 @@\n an(&m)%0A%09\n-vai_sair\n+sairam_fila\n  := make\n@@ -221,20 +221,16 @@\n ake(\n-map%5Bint%5Dbool\n+%5B%5Dint, m\n )%0A%09f\n@@ -259,152 +259,37 @@\n %7B%0A%09%09\n-var x int%0A%09%09fmt.Scan(&x)%0A%09%09vai_sair%5Bx%5D = true%0A%09%7D%0A%0A%09for _, pessoa := range na_fila %7B%0A%09%09if !vai_sair%5Bpessoa%5D %7B%0A%09%09%09fmt.Printf(%22%25d%09%22, pessoa\n+fmt.Scan(&sairam_fila%5Bi%5D\n )%0A\n-%09\n %09%7D\n-%0A%09%7D\n+%09\n %0A%0A%7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-13_20-25-40",
+            "content": "@@ -382,17 +382,17 @@\n intf(%22%25d\n- \n+%09\n %22, pesso\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-13_20-25-48",
+            "content": "@@ -404,25 +404,8 @@\n %7D%0A%09%7D\n-%0A%09fmt.Print(%22%5Cn%22)\n %0A%0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-13_20-26-17",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\n\tvar n, m int\n\n\tfmt.Scan(&n)\n\tna_fila := make([]int, n)\n\n\t//identificadores unicos\n\tfor i := 0; i < len(na_fila); i++ {\n\t\tfmt.Scan(&na_fila[i])\n\t}\n\n\tfmt.Scan(&m)\n\tvai_sair := make(map[int]bool)\n\tfor i := 0; i < m; i++ {\n\t\tvar x int\n\t\tfmt.Scan(&x)\n\t\tvai_sair[x] = true\n\t}\n\n\tfor _, pessoa := range na_fila {\n\t\tif !vai_sair[pessoa] {\n\t\t\tfmt.Printf(\"%d \", pessoa)\n\t\t}\n\t}\n\tfmt.Print(\"\\n\")\n\n}\n",
+            "lines": "30"
+        }
+    ]
+}

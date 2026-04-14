@@ -2,8 +2,308 @@
     "patches": [
         {
             "label": "2026-03-11_11-28-25",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"qxcode\")\n    fmt.Println(\"qxcode\")\n    fmt.Println(\"qxcode\")\n    fmt.Println(\"qxcode\")\n    fmt.Println(\"qxcode\")\n    fmt.Println(\"qxcode\")\n    fmt.Println(\"qxcode\")\n    fmt.Println(\"qxcode\")\n}\n",
+            "content": "@@ -41,46 +41,210 @@\n     \n-var n, e int%0A%0A    fmt.Scan(&n $e)%0A%0A    \n+fmt.Println(%22qxcode%22)%0A    fmt.Println(%22qxcode%22)%0A    fmt.Println(%22qxcode%22)%0A    fmt.Println(%22qxcode%22)%0A    fmt.Println(%22qxcode%22)%0A    fmt.Println(%22qxcode%22)%0A    fmt.Println(%22qxcode%22)%0A    fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
             "lines": "12"
+        },
+        {
+            "label": "2026-03-28_15-27-43",
+            "content": "@@ -67,17 +67,17 @@\n Scan(&n \n-&\n+$\n e)%0A%0A    \n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-03-28_15-28-16",
+            "content": "@@ -1,12 +1,8 @@\n-    \n package \n@@ -6,20 +6,16 @@\n ge main%0A\n-    \n import %22\n@@ -19,20 +19,16 @@\n t %22fmt%22%0A\n-    \n func mai\n@@ -37,20 +37,16 @@\n ) %7B%0A    \n-   \n- \n var n, e\n@@ -55,20 +55,16 @@\n nt%0A%0A    \n-   \n- \n fmt.Scan\n@@ -66,17 +66,16 @@\n .Scan(&n\n-,\n  &e)%0A%0A  \n@@ -80,15 +80,7 @@\n     \n- \n-   %0A    \n+%0A\n %7D%0A\n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-03-28_15-29-55",
+            "content": "@@ -97,135 +97,8 @@\n e)%0A%0A\n-        fila = make(%5B%5Dint, n)%0A%0A        for i := 0; i %3C n; i++%7B%0A            fila%5Bi%5D = i + 1%0A        %7D%0A%0A        fmt.Print(fila)%0A%0A\n     \n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-03-28_15-41-59",
+            "content": "@@ -216,10 +216,8 @@\n rint\n-ln\n (fil\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-28_15-42-22",
+            "content": "@@ -106,17 +106,16 @@\n    fila \n-:\n = make(%5B\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-28_15-43-01",
+            "content": "@@ -129,31 +129,8 @@\n n)%0A%0A\n-        pos := e - 1%0A%0A%0A\n     \n@@ -209,297 +209,24 @@\n    f\n-or len(fila) %3E 0    %7B%0A            fmt.Print(%22%5B %22)%0A            for i, v := fila %7B%0A                if i == pos %7B%0A                    fmt.Printf(%22%25d %22, v)%0A                %7D else %7B%0A                    fmt.Printf(%22%25d %22, v)%0A                %7D%0A            %7D%0A            fmt.Println(%22 %5D%22)%0A        %7D\n+mt.Println(fila)\n %0A%0A  \n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-28_16-01-05",
+            "content": "@@ -373,17 +373,16 @@\n intf(%22%25d\n-%3E\n  %22, v)%0A \n@@ -511,196 +511,8 @@\n  %5D%22)\n-%0A%0A            if len(fila) == 1%7B%0A                break%0A            %7D   %0A%0A            proxVitima = (e + 1) %25 len(fila)%0A            fila = append(fila%5B:proxVitima%5D, fila%5BproxVitima+1:%5D, ...)\n %0A   \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-28_16-52-54",
+            "content": "@@ -305,14 +305,8 @@\n v :=\n- range\n  fil\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-28_16-54-38",
+            "content": "@@ -696,16 +696,21 @@\n tima+1:%5D\n+, ...\n )%0A      \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-28_16-55-04",
+            "content": "@@ -702,49 +702,8 @@\n :%5D)%0A\n-            pos = proxVitima %25 len(fila)%0A\n     \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-28_17-11-53",
+            "content": "@@ -610,17 +610,16 @@\n xVitima \n-:\n = (e + 1\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-28_17-12-31",
+            "content": "@@ -701,11 +701,8 @@\n +1:%5D\n-...\n )%0A  \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-28_17-16-33",
+            "content": "@@ -510,16 +510,17 @@\n rintln(%22\n+ \n %5D%22)%0A%0A   \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-28_17-17-13",
+            "content": "@@ -613,19 +613,21 @@\n ima := (\n-pos\n+e + 1\n ) %25 len(\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-28_17-17-38",
+            "content": "@@ -616,20 +616,16 @@\n  := (pos\n- + 1\n ) %25 len(\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-28_17-17-47",
+            "content": "@@ -1,8 +1,12 @@\n+    \n package \n@@ -10,16 +10,20 @@\n ge main%0A\n+    \n import %22\n@@ -27,16 +27,20 @@\n t %22fmt%22%0A\n+    \n func mai\n@@ -49,16 +49,20 @@\n ) %7B%0A    \n+  \n+  \n var n, e\n@@ -71,16 +71,20 @@\n nt%0A%0A    \n+ \n+   \n fmt.Scan\n@@ -97,11 +97,681 @@\n e)%0A%0A    \n+  \n-%0A\n+  fila := make(%5B%5Dint, n)%0A%0A        pos := e - 1%0A%0A%0A        for i := 0; i %3C n; i++%7B%0A            fila%5Bi%5D = i + 1%0A        %7D%0A%0A        for len(fila) %3E 0    %7B%0A            fmt.Print(%22%5B %22)%0A            for i, v := range fila %7B%0A                if i == pos %7B%0A                    fmt.Printf(%22%25d%3E %22, v)%0A                %7D else %7B%0A                    fmt.Printf(%22%25d %22, v)%0A                %7D%0A            %7D%0A            fmt.Println(%22%5D%22)%0A%0A            if len(fila) == 1%7B%0A                break%0A            %7D   %0A%0A            proxVitima := (pos + 1) %25 len(fila)%0A            fila = append(fila%5B:proxVitima%5D, fila%5BproxVitima+1:%5D...)%0A            pos = proxVitima %25 len(fila)%0A        %7D%0A%0A        %0A    \n %7D%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-13_17-34-20",
+            "content": "@@ -81,242 +81,7 @@\n     \n-lista := make(%5B%5Dint, n)%0A%0A    fmt.Print(%22%5B %22)%0A    for i := 0; i %3C n; i++ %7B%0A        if lista%5Bi%5D == e %7B%0A            fmt.Printf(%22%25d%3E %22, lista%5Bi%5D)%0A        %7D else %7B%0A            fmt.Printf(%22%25d %22, lista%5Bi%5D)%0A        %7D%0A    %7D%0A    fmt.Printf(%22 %5D%22)\n %0A%7D%0A\n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-04-13_17-38-36",
+            "content": "@@ -308,14 +308,15 @@\n Printf(%22\n+ \n %5D%22)%0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-13_17-38-53",
+            "content": "@@ -106,72 +106,8 @@\n n)%0A%0A\n-    for i := 0; i %3C n; i++ %7B%0A        fmt.Scan(&lista%5Bi%5D)%0A    %7D%0A%0A\n     \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-13_17-39-31",
+            "content": "@@ -101,11 +101,8 @@\n int,\n- 0,\n  n)%0A\n@@ -119,15 +119,14 @@\n  := \n-1\n+0\n ; i %3C\n-=\n  n; \n@@ -143,31 +143,26 @@\n     \n-lista = append(\n+fmt.Scan(&\n lista\n-, n\n+%5Bi%5D\n )%0A  \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-13_17-46-29",
+            "content": "@@ -165,17 +165,17 @@\n (lista, \n-i\n+n\n )%0A    %7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-13_17-46-38",
+            "content": "@@ -23,57 +23,163 @@\n mt%22%0A\n-%0A\n func \n-exibir_jogadores(lista %5B%5Dint, espada int) %7B\n+main() %7B%0A    var n, e int%0A%0A    fmt.Scan(&n, &e)%0A%0A    lista := make(%5B%5Dint, 0, n)%0A%0A    for i := 1; i %3C= n; i++ %7B%0A        lista = append(lista, i)%0A    %7D%0A\n %0A   \n@@ -252,13 +252,8 @@\n == e\n-spada\n  %7B%0A \n@@ -386,205 +386,9 @@\n f(%22%5D\n-%5Cn\n %22)%0A%7D%0A\n-func main() %7B%0A    var n, e int%0A%0A    fmt.Scan(&n, &e)%0A%0A    lista := make(%5B%5Dint, 0, n)%0A%0A    for i := 1; i %3C= n; i++ %7B%0A        lista = append(lista, i)%0A    %7D%0A%0A    exibir_jogadores(lista, e)%0A    %0A%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-13_17-48-38",
+            "content": "@@ -66,17 +66,8 @@\n ada \n-int, qtd \n int)\n@@ -473,19 +473,16 @@\n lista, e\n-, n\n )%0A    %0A%7D\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_17-49-17",
+            "content": "@@ -118,19 +118,17 @@\n  0; i %3C \n-qtd\n+n\n ; i++ %7B%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_17-49-38",
+            "content": "@@ -492,403 +492,8 @@\n , n)\n-%0A%0A    for len(lista) %3E 1 %7B%0A        indice_espada := 0 %0A        for i := 0; i %3C len(lista); i++ %7B%0A            if lista%5Bi%5D == e %0A            indice_espada = i%0A            break%0A        %7D%0A    %7D%0A%0A    indice_morto := (indice_espada + 1) %25 len(lista)%0A    lista = append(lista%5B:indice_morto%5D, lista%5Bindice_morto + 1%5D)%0A    e = lista%5Bindice_morto %25 len(lista)%5D%0A%0A    exibir_jogadores(lista, e, len(lista))\n %0A   \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_18-14-48",
+            "content": "@@ -493,31 +493,8 @@\n  n)%0A\n-    indice_espada := 0 \n %0A   \n@@ -523,16 +523,35 @@\n         \n+indice_espada := 0 \n %0A       \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-13_18-28-53",
+            "content": "@@ -497,107 +497,227 @@\n     \n-// parte de matar o pr%C3%B3ximo%0A%0A    espada : = e - 1%0A%0A    for len(lista %3E 1) %7B%0A        vai\n+indice_espada := 0 %0A    for len(lista) %3E 1 %7B%0A        %0A        for i := 0; i %3C len(lista); i++ %7B%0A            if lista%5Bi%5D == e %0A            indice_espada = i%0A            break%0A        %7D%0A    %7D%0A%0A    indice\n _mor\n-rer\n+to\n  := (\n+indice_\n espa\n@@ -737,21 +737,16 @@\n (lista)%0A\n-%0A\n-    \n     list\n@@ -763,26 +763,28 @@\n (lista%5B:\n-vai\n+indice\n _mor\n-rer\n+to\n %5D, lista\n@@ -788,57 +788,53 @@\n sta%5B\n-vai\n+indice\n _mor\n-rer\n+to\n  + 1\n- %5D...)%0A%0A        espada = vai\n+%5D)%0A    e = lista%5Bindice\n _mor\n-rer\n+to\n  %25 l\n@@ -846,15 +846,9 @@\n sta)\n-%0A    %7D \n+%5D\n %0A%0A  \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-13_18-54-26",
+            "content": "@@ -459,16 +459,77 @@\n  %7D%0A%0A    \n+exibir_jogadores(lista, e, n)%0A    // parte de matar o pr%C3%B3ximo\n %0A%0A    es\n@@ -573,46 +573,8 @@\n ) %7B%0A\n-        exibir_jogadores(lista, e, n)%0A\n     \n@@ -767,21 +767,16 @@\n lista, e\n-spada\n , len(li\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-13_18-57-42",
+            "content": "@@ -455,16 +455,22 @@\n %0A    %7D%0A%0A\n+    %0A%0A\n     espa\n@@ -473,16 +473,17 @@\n espada :\n+ \n = e - 1%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-13_18-58-14",
+            "content": "@@ -497,13 +497,13 @@\n ista\n-)\n  %3E 1\n+)\n  %7B%0A \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-13_18-58-29",
+            "content": "@@ -651,17 +651,17 @@\n rrer + 1\n-:\n+ \n %5D...)%0A%0A \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-13_18-58-53",
+            "content": "@@ -65,21 +65,33 @@\n pada int\n-) %7B%0A%09\n+, qtd int) %7B%0A    \n fmt.Prin\n@@ -98,17 +98,20 @@\n t(%22%5B %22)%0A\n-%09\n+    \n for i :=\n@@ -122,32 +122,38 @@\n i %3C \n-len(lista); i++ %7B%0A%09%09if i\n+qtd; i++ %7B%0A        if lista%5Bi%5D\n  == \n@@ -161,19 +161,28 @@\n spada %7B%0A\n-%09%09%09\n+            \n fmt.Prin\n@@ -202,18 +202,24 @@\n sta%5Bi%5D)%0A\n-%09%09\n+        \n %7D else %7B\n@@ -219,19 +219,28 @@\n  else %7B%0A\n-%09%09%09\n+            \n fmt.Prin\n@@ -263,16 +263,28 @@\n i%5D)%0A\n-%09%09%7D%0A%09%7D%0A%09\n+        %7D%0A    %7D%0A    \n fmt.\n@@ -292,19 +292,19 @@\n rint\n-ln\n+f\n (%22%5D\n+%5Cn\n %22)%0A%7D%0A\n-%0A\n func\n@@ -313,17 +313,20 @@\n ain() %7B%0A\n-%09\n+    \n var n, e\n@@ -330,17 +330,21 @@\n , e int%0A\n-%09\n+%0A    \n fmt.Scan\n@@ -353,17 +353,20 @@\n n, &e)%0A%0A\n-%09\n+    \n lista :=\n@@ -385,17 +385,20 @@\n  0, n)%0A%0A\n-%09\n+    \n for i :=\n@@ -415,18 +415,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n lista = \n@@ -448,21 +448,27 @@\n sta, i)%0A\n-%09%7D%0A%0A%09\n+    %7D%0A%0A    \n espada :\n@@ -476,17 +476,20 @@\n  e - 1%0A%0A\n-%09\n+    \n for len(\n@@ -501,18 +501,24 @@\n ) %3E 1 %7B%0A\n-%09%09\n+        \n exibir_j\n@@ -538,18 +538,21 @@\n a, e\n-spada)%0A%0A%09%09\n+, n)%0A        \n vai_\n@@ -588,18 +588,24 @@\n lista)%0A%0A\n-%09%09\n+        \n lista = \n@@ -647,17 +647,19 @@\n i_morrer\n-+\n+ + \n 1:%5D...)%0A\n@@ -663,69 +663,35 @@\n .)%0A%0A\n-%09%09if vai_morrer %3C espada %7B%0A%09%09%09espada--%0A%09%09%7D%0A%0A%09%09espada = espada\n+        espada = vai_morrer\n  %25 l\n@@ -704,13 +704,20 @@\n ta)%0A\n-%09%7D%0A%0A%09\n+    %7D %0A%0A    \n exib\n@@ -742,12 +742,29 @@\n , espada\n-)\n+, len(lista))%0A    \n %0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-13_19-01-19",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -46,26 +46,207 @@\n res(\n-jogadores %5B%5Dint, )\n+lista %5B%5Dint, espada int) %7B%0A%09fmt.Print(%22%5B %22)%0A%09for i := 0; i %3C len(lista); i++ %7B%0A%09%09if i == espada %7B%0A%09%09%09fmt.Printf(%22%25d%3E %22, lista%5Bi%5D)%0A%09%09%7D else %7B%0A%09%09%09fmt.Printf(%22%25d %22, lista%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(%22%5D%22)%0A%7D%0A\n %0Afun\n@@ -253,22 +253,20 @@\n c main()\n+ \n %7B%0A\n-    \n+%09\n var n, e\n@@ -274,22 +274,33 @@\n int%0A\n-%0A    jogadores\n+%09fmt.Scan(&n, &e)%0A%0A%09lista\n  := \n@@ -318,20 +318,17 @@\n  0, n)%0A%0A\n-    \n+%09\n for i :=\n@@ -349,265 +349,330 @@\n + %7B%0A\n-        jogadores = append(jogadores, i)%0A    %7D %0A    %0A    fmt.Printf(%22%5B %22)%0A    for i, elem := range n %7B%0A        if elem == e %7B%0A            fmt.Printf(%22%25d%3E %22, elem)%0A        %7D else %7B%0A            fmt.Printf(%22%25d %22, elem)%0A        %7D%0A    %7D%0A    fmt.Printf(%22%5D%5Cn%22)%0A    \n+%09%09lista = append(lista, i)%0A%09%7D%0A%0A%09espada := e - 1%0A%0A%09for len(lista) %3E 1 %7B%0A%09%09exibir_jogadores(lista, espada)%0A%0A%09%09vai_morrer := (espada + 1) %25 len(lista)%0A%0A%09%09lista = append(lista%5B:vai_morrer%5D, lista%5Bvai_morrer+1:%5D...)%0A%0A%09%09if vai_morrer %3C espada %7B%0A%09%09%09espada--%0A%09%09%7D%0A%0A%09%09espada = espada %25 len(lista)%0A%09%7D%0A%0A%09exibir_jogadores(lista, espada)\n %0A%7D%0A\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-13_19-06-38",
+            "content": "@@ -241,17 +241,17 @@\n     for \n-_\n+i\n , elem :\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-13_19-06-51",
+            "content": "@@ -97,30 +97,8 @@\n nt%0A%0A\n-    fmt.Scan(&n, &e)%0A%0A\n     \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-13_19-08-06",
+            "content": "@@ -25,11 +25,8 @@\n t%22%0A%0A\n-/* \n func\n@@ -65,11 +65,8 @@\n t, )\n- */\n %0Afun\n@@ -143,16 +143,19 @@\n e(%5B%5Dint,\n+ 0,\n  n)%0A%0A   \n@@ -263,17 +263,17 @@\n     for \n-i\n+_\n , elem :\n@@ -280,25 +280,17 @@\n = range \n-jogadores\n+n\n  %7B%0A     \n@@ -295,17 +295,20 @@\n      if \n-i\n+elem\n  == e %7B%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-13_19-09-27",
+            "content": "@@ -153,11 +153,8 @@\n int,\n- 0,\n  n)%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-13_19-09-46",
+            "content": "@@ -309,20 +309,17 @@\n      if \n-elem\n+i\n  == e %7B%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-13_19-10-04",
+            "content": "@@ -269,17 +269,17 @@\n     for \n-_\n+i\n , elem :\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-13_19-10-10",
+            "content": "@@ -21,16 +21,19 @@\n  %22fmt%22%0A%0A\n+/* \n func exi\n@@ -65,11 +65,186 @@\n %5Dint\n-) %7B\n+, ) */%0Afunc main()%7B%0A    var n, e int%0A%0A    fmt.Scan(&n, &e)%0A%0A    jogadores := make(%5B%5Dint, 0, n)%0A%0A    for i := 1; i %3C= n; i++ %7B%0A        jogadores = append(jogadores, i)%0A    %7D %0A    \n %0A   \n@@ -453,214 +453,8 @@\n n%22)%0A\n-%7D%0Afunc main()%7B%0A    var n, e int%0A%0A    fmt.Scan(&n, &e)%0A%0A    jogadores := make(%5B%5Dint, 0, n)%0A%0A    for i := 1; i %3C= n; i++ %7B%0A        jogadores = append(jogadores, i)%0A    %7D %0A    %0A    exibir_jogadores(jogadores)%0A\n     \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-13_19-10-54",
+            "content": "@@ -59,20 +59,8 @@\n s %5B%5D\n-int, espada \n int)\n@@ -144,13 +144,8 @@\n == e\n-spada\n  %7B%0A \n@@ -475,19 +475,16 @@\n ogadores\n-, e\n )%0A    %0A%7D\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-13_19-11-16",
+            "content": "@@ -461,387 +461,46 @@\n  %7D %0A\n-%0A    espada = e - 1%0A    %0A    for len(jogadores) %3E 1 %7B%0A        exibir_jogadores(jogadores, e)%0A        vai_morrer := (espada + 1) %25 len(jogadores)%0A        jogadores = append(jogadores%5B:vai_morrer%5D, jogadores%5Bvai_morrer + 1%5D...)%0A%0A        if vai_morrer %3C espada %7B%0A            espada--%0A        %7D%0A%0A        espada = espada %25 len(jogadores )%0A    %7D%0A%0A    exibir_jogadores(jogadores, espada\n+    %0A    exibir_jogadores(jogadores, e\n )%0A  \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-13_19-33-15",
+            "content": "@@ -544,29 +544,24 @@\n jogadores, e\n-spada\n )%0A        va\n@@ -684,16 +684,81 @@\n 1%5D...)%0A%0A\n+        if vai_morrer %3C espada %7B%0A            espada--%0A        %7D%0A%0A\n         \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-13_19-37-50",
+            "content": "@@ -469,17 +469,16 @@\n  espada \n-:\n = e - 1%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-13_19-38-08",
+            "content": "@@ -683,17 +683,16 @@\n rrer + 1\n-:\n %5D...)%0A%0A \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-13_19-38-25",
+            "content": "@@ -549,16 +549,21 @@\n dores, e\n+spada\n )%0A      \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-13_19-38-40",
+            "content": "@@ -764,21 +764,26 @@\n jogadores, e\n+spada\n )%0A    %0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-13_19-38-46",
+            "content": "@@ -491,35 +491,294 @@\n     \n-exibir_jogadores(jogadores, e)\n+for len(jogadores) %3E 1 %7B%0A        exibir_jogadores(jogadores, e)%0A        vai_morrer := (espada + 1) %25 len(jogadores)%0A        jogadores = append(jogadores%5B:vai_morrer%5D, jogadores%5Bvai_morrer + 1:%5D...)%0A%0A        espada = espada %25 len(jogadores )%0A    %7D%0A%0A    exibir_jogadores(jogadores, e)%0A    %0A%7D\n %0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-13_19-39-51",
+            "content": "@@ -74,17 +74,20 @@\n  int) %7B%0A\n-%09\n+    \n fmt.Prin\n@@ -91,21 +91,25 @@\n rint\n+f\n (%22%5B %22)%0A\n-%09\n+    \n for \n-i\n+_\n , el\n@@ -136,14 +136,23 @@\n s %7B%0A\n-%09%09if i\n+        if elem\n  == \n@@ -160,19 +160,28 @@\n spada %7B%0A\n-%09%09%09\n+            \n fmt.Prin\n@@ -197,18 +197,24 @@\n , elem)%0A\n-%09%09\n+        \n %7D else %7B\n@@ -218,11 +218,20 @@\n e %7B%0A\n-%09%09%09\n+            \n fmt.\n@@ -254,16 +254,28 @@\n em)%0A\n-%09%09%7D%0A%09%7D%0A%09\n+        %7D%0A    %7D%0A    \n fmt.\n@@ -283,19 +283,19 @@\n rint\n-ln\n+f\n (%22%5D\n+%5Cn\n %22)%0A%7D%0A\n-%0A\n func\n@@ -301,20 +301,22 @@\n c main()\n- \n %7B%0A\n-%09\n+    \n var n, e\n@@ -320,17 +320,21 @@\n , e int%0A\n-%09\n+%0A    \n fmt.Scan\n@@ -343,17 +343,20 @@\n n, &e)%0A%0A\n-%09\n+    \n jogadore\n@@ -379,17 +379,20 @@\n  0, n)%0A%0A\n-%09\n+    \n for i :=\n@@ -409,18 +409,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n jogadore\n@@ -454,398 +454,45 @@\n  i)%0A\n-%09%7D%0A%0A%09// posi%C3%A7%C3%A3o inicial da espada%0A%09espada := e - 1%0A%0A%09for len(jogadores) %3E 1 %7B%0A%09%09exibir_jogadores(jogadores, espada)%0A%0A%09%09// pr%C3%B3ximo morre%0A%09%09vai_morrer := (espada + 1) %25 len(jogadores)%0A%0A%09%09// remove da lista%0A%09%09jogadores = append(jogadores%5B:vai_morrer%5D, jogadores%5Bvai_morrer+1:%5D...)%0A%0A%09%09// passa a espada (SEM if, vers%C3%A3o limpa)%0A%09%09espada = vai_morrer %25 len(jogadores)%0A%09%7D%0A%0A%09// %C3%BAltimo sobrevivente%0A%09\n+    %7D %0A%0A    espada := e - 1%0A    %0A    \n exib\n@@ -520,13 +520,6 @@\n s, e\n-spada)%0A%7D\n+)\n %0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-13_19-41-46",
+            "content": "@@ -6,16 +6,17 @@\n ge main%0A\n+%0A\n import %22\n@@ -20,16 +20,17 @@\n t %22fmt%22%0A\n+%0A\n func exi\n@@ -74,20 +74,17 @@\n  int) %7B%0A\n-    \n+%09\n fmt.Prin\n@@ -88,19 +88,16 @@\n rint\n-f\n (%22%5B\n+ \n %22)%0A\n-    \n+%09\n for \n@@ -125,24 +125,18 @@\n dores %7B%0A\n-        \n+%09%09\n if i == \n@@ -144,28 +144,19 @@\n spada %7B%0A\n-            \n+%09%09%09\n fmt.Prin\n@@ -172,24 +172,18 @@\n , elem)%0A\n-        \n+%09%09\n %7D else %7B\n@@ -187,20 +187,11 @@\n e %7B%0A\n-            \n+%09%09%09\n fmt.\n@@ -214,28 +214,16 @@\n em)%0A\n-        %7D%0A    %7D%0A    \n+%09%09%7D%0A%09%7D%0A%09\n fmt.\n@@ -231,17 +231,18 @@\n rint\n-f\n+ln\n (%22%5D%22)%0A%7D%0A\n func\n@@ -237,16 +237,17 @@\n (%22%5D%22)%0A%7D%0A\n+%0A\n func mai\n@@ -252,20 +252,17 @@\n ain() %7B%0A\n-    \n+%09\n var n, e\n@@ -266,21 +266,36 @@\n , e int%0A\n-%0A    \n+%09fmt.Scan(&n, &e)%0A%0A%09\n jogadore\n@@ -296,16 +296,17 @@\n gadores \n+:\n = make(%5B\n@@ -318,20 +318,17 @@\n  0, n)%0A%0A\n-    \n+%09\n for i :=\n@@ -349,71 +349,433 @@\n + %7B%0A\n-        fmt.Scan(&jogadores%5Bi%5D)%0A    %7D%0A%0A    espada = e - 1%0A%0A    \n+%09%09jogadores = append(jogadores, i)%0A%09%7D%0A%0A%09// posi%C3%A7%C3%A3o inicial da espada%0A%09espada := e - 1%0A%0A%09for len(jogadores) %3E 1 %7B%0A%09%09exibir_jogadores(jogadores, espada)%0A%0A%09%09// pr%C3%B3ximo morre%0A%09%09vai_morrer := (espada + 1) %25 len(jogadores)%0A%0A%09%09// remove da lista%0A%09%09jogadores = append(jogadores%5B:vai_morrer%5D, jogadores%5Bvai_morrer+1:%5D...)%0A%0A%09%09// passa a espada (SEM if, vers%C3%A3o limpa)%0A%09%09espada = vai_morrer %25 len(jogadores)%0A%09%7D%0A%0A%09// %C3%BAltimo sobrevivente%0A%09\n exib\n@@ -806,11 +806,10 @@\n espada)%0A\n-%0A\n %7D%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-13_19-50-12",
+            "content": "@@ -328,17 +328,16 @@\n gadores \n-:\n = make(%5B\n@@ -429,17 +429,16 @@\n  espada \n-:\n = e - 1%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-13_19-50-21",
+            "content": "@@ -318,29 +318,8 @@\n nt%0A%0A\n-    fmt.Scan(&n, &e)%0A\n     \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-13_19-50-38",
+            "content": "@@ -339,13 +339,8 @@\n &e)%0A\n-    %0A\n     \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_19-50-56",
+            "content": "@@ -335,16 +335,20 @@\n &n, &e)%0A\n+    \n %0A    jog\n@@ -418,27 +418,18 @@\n     \n-jogadores = append(\n+fmt.Scan(&\n joga\n@@ -437,11 +437,11 @@\n ores\n-, i\n+%5Bi%5D\n )%0A  \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-13_19-51-39",
+            "content": "@@ -281,10 +281,8 @@\n f(%22%5D\n-%5Cn\n %22)%0A%7D\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-13_19-52-06",
+            "content": "@@ -89,17 +89,16 @@\n rintf(%22%5B\n- \n %22)%0A    f\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-13_19-52-16",
+            "content": "@@ -478,41 +478,8 @@\n  1%0A%0A\n-    for len(jogadores) %3E 1 %7B%0A    \n     \n@@ -517,206 +517,8 @@\n ada)\n-%0A        %0A        vai_morrer = (espada + 1) %25 len(jogadores)%0A        jogadores = append(jogadores%5B:vai_morrer%5D, jogadores%5Bvai_morrer + 1:%5D...)%0A        espada = vai_morrer %25 len(jogadores)%0A    %7D%0A    \n %0A%0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-13_19-59-52",
+            "content": "@@ -575,17 +575,16 @@\n _morrer \n-:\n = (espad\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-13_20-00-00",
+            "content": "@@ -750,46 +750,7 @@\n    %0A\n-    exibir_jogadores(jogadores, espada)\n %0A%7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-13_20-00-14",
+            "content": "package main\nimport \"fmt\"\nfunc exibir_jogadores(jogadores []int, espada int) {\n    fmt.Printf(\"[ \")\n    for i, elem := range jogadores {\n        if i == espada {\n            fmt.Printf(\"%d> \", elem)\n        } else {\n            fmt.Printf(\"%d \", elem)\n        }\n    }\n    fmt.Printf(\"]\\n\")\n}\nfunc main() {\n    var n, e int\n\n    fmt.Scan(&n, &e)\n\n    jogadores := make([]int, 0, n)\n\n    for i := 1; i <= n; i++ {\n        jogadores = append(jogadores, i)\n    }\n\n    espada := e - 1\n\n    for len(jogadores) > 1 {\n        exibir_jogadores(jogadores, espada)\n        \n        vai_morrer := (espada + 1) % len(jogadores)\n        jogadores = append(jogadores[:vai_morrer], jogadores[vai_morrer + 1:]...)\n        espada = vai_morrer % len(jogadores)\n    }\n    \n    exibir_jogadores(jogadores, espada)\n}\n",
+            "lines": "36"
         }
     ]
 }

@@ -16,3 +16,32 @@
 2026-03-20 15:08:44, MOVE, v:1, k:ed@gomos, mode:BACK
 2026-03-20 15:08:52, SELF, v:1, k:ed@gomos, self:1, rate:100, study:120, friend:nao, code:1
 2026-03-20 15:09:10, SELF, v:1, k:ed@pedra, self:1, rate:100, study:24, friend:nao, code:1, debug:1
+2026-03-20 15:21:59, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-20 15:22:00, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-20 15:22:01, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-20 15:22:02, EXEC, v:1, k:ed@pintando, mode:FREE
+2026-03-20 15:22:19, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-03-20 15:22:27, EXEC, v:1, k:ed@mumia, mode:FREE
+2026-03-20 15:26:32, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-03-20 15:26:33, EXEC, v:1, k:ed@mumia, mode:FREE
+2026-03-20 15:26:43, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-03-20 15:26:45, EXEC, v:1, k:ed@mumia, mode:FULL, rate:100
+2026-03-20 15:26:46, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-03-20 15:27:35, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-20 15:27:36, EXEC, v:1, k:ed@princesa, mode:FREE
+2026-03-20 15:29:16, MOVE, v:1, k:ed@manipulacao, mode:DOWN
+2026-03-20 15:29:17, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-20 15:29:58, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-03-20 15:30:01, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-20 15:31:28, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-03-20 15:36:15, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-20 15:36:18, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-03-20 15:37:00, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-20 15:37:15, EXEC, v:1, k:ed@baruel, mode:FREE
+2026-03-20 15:38:26, MOVE, v:1, k:ed@apagando, mode:PICK
+2026-03-20 15:38:58, MOVE, v:1, k:ed@apagando, mode:BACK
+2026-03-20 15:38:59, MOVE, v:1, k:ed@apagando, mode:PICK
+2026-03-20 15:39:01, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:5
+2026-03-20 15:39:03, MOVE, v:1, k:ed@apagando, mode:BACK
+2026-03-20 15:39:21, MOVE, v:1, k:ed@casais, mode:PICK
+2026-03-20 15:39:40, MOVE, v:1, k:ed@casais, mode:BACK

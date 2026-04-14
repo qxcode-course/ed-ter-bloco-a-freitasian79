@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-09_16-18-39",
+            "content": "@@ -316,28 +316,16 @@\n    %0A    \n-fmt.Println(\n process(\n@@ -330,13 +330,12 @@\n s(value)\n-)\n %0A%0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-09_16-19-01",
+            "content": "@@ -99,14 +99,13 @@\n     \n+b\n re\n-turn\n+ak\n %0A   \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-09_16-19-17",
+            "content": "@@ -229,17 +229,17 @@\n %5Cn%22, div\n-,\n+m\n  rest)%0A \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-09_16-19-33",
+            "content": "@@ -308,24 +308,41 @@\n &value)%0A    \n+%0A    fmt.Println(\n process(valu\n@@ -343,12 +343,13 @@\n s(value)\n+)\n %0A%0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-09_16-19-53",
+            "content": "@@ -212,17 +212,18 @@\n mt.Print\n-f\n+ln\n (%22%25d %25d%5C\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-09_16-23-41",
+            "content": "@@ -47,16 +47,30 @@\n int) %7B%0A%0A\n+    for %7B%0A    \n     if (\n@@ -91,16 +91,20 @@\n         \n+    \n return%0A \n@@ -110,15 +110,23 @@\n     \n+ \n+   \n %7D%0A%0A    \n+  \n+  \n div \n@@ -138,16 +138,20 @@\n lue / 2%0A\n+    \n     rest\n@@ -168,21 +168,29 @@\n %25 2%0A    \n-%0A\n+    %0A  \n     \n+  \n process(\n@@ -195,16 +195,20 @@\n s(div)%0A%0A\n+    \n     fmt.\n@@ -245,16 +245,22 @@\n        %0A\n+    %7D%0A\n %7D%0A%0Afunc \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-09_16-25-10",
+            "content": "package main\nimport \"fmt\"\n\nfunc process(value int) {\n\n    if (value == 0) {\n        return\n    }\n\n    div := value / 2\n    rest := value % 2\n    \n    process(div)\n\n    fmt.Printf(\"%d %d\\n\", div, rest)\n        \n}\n\nfunc main() {\n    var value int\n    fmt.Scan(&value)\n    process(value)\n\n}\n",
+            "lines": "24"
+        }
+    ]
+}

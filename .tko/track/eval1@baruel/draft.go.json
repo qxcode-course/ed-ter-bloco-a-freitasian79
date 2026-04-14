@@ -1,0 +1,79 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_11-06-44",
+            "content": "@@ -135,17 +135,16 @@\n _baruel \n-:\n = make(%5B\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-14_11-06-50",
+            "content": "@@ -250,211 +250,32 @@\n     \n-repetidas := %5B%5Dint%7B%7D%0A%0A    for i := 1; i %3C= baruel_possui; i++ %7B%0A        if lista_baruel%5Bi%5D == lista_baruel%5Bi - 1%5D %7B%0A            repetidas = append(repetidas, i)%0A        %7D%0A    %7D%0A%0A    fmt.Println(repetidas\n+fmt.Println(lista_baruel\n )%0A%7D%0A\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-14_11-08-47",
+            "content": "@@ -287,16 +287,17 @@\n = 1; i %3C\n+=\n  baruel_\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-14_11-09-15",
+            "content": "@@ -407,17 +407,9 @@\n as, \n-possui%5Bi%5D\n+i\n )%0A  \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-14_11-12-54",
+            "content": "@@ -403,28 +403,22 @@\n etidas, \n-lista_baruel\n+possui\n %5Bi%5D)%0A   \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-14_11-13-04",
+            "content": "@@ -403,17 +403,31 @@\n etidas, \n-i\n+lista_baruel%5Bi%5D\n )%0A      \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-14_11-13-22",
+            "content": "@@ -168,46 +168,8 @@\n sui)\n-%0A    album_baruel := make(map%5Bint%5Dint)\n %0A%0A  \n@@ -239,48 +239,8 @@\n i%5D)%0A\n-        album_baruel%5Blista_baruel%5Bi%5D%5D++%0A\n     \n@@ -432,209 +432,27 @@\n    f\n-altantes := %5B%5Dint%7B%7D%0A%0A    for i := 1; i %3C total; i++ %7B%0A        if album_baruel%5Bi%5D == 0 %7B%0A            faltantes = append(faltantes, i)%0A        %7D%0A    %7D%0A%0A    fmt.Println(repetidas)%0A    fmt.Println(faltante\n+mt.Println(repetida\n s)%0A%7D\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-14_11-19-32",
+            "content": "@@ -485,17 +485,9 @@\n as, \n-possui%5Bi%5D\n+i\n )%0A  \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-14_11-19-58",
+            "content": "@@ -481,28 +481,22 @@\n etidas, \n-lista_baruel\n+possui\n %5Bi%5D)%0A   \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-14_11-20-09",
+            "content": "@@ -674,308 +674,8 @@\n  %7D%0A%0A\n-    // imprimindo os resultados%0A%0A    if len(repetidas) == 0 %7B%0A        fmt.Println(%22N%22)%0A    %7D else %7B%0A        for i, v := range repetidas %7B%0A            fmt.Println(v)%0A            if i %3C len(repetidas)-1 %7B%0A                fmt.Print(%22 %22)%0A            %7D%0A        %7D%0A%0A        fmt.Println()%0A    %7D%0A%0A%0A    %0A%0A    %0A\n     \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-14_11-28-17",
+            "content": "@@ -930,23 +930,10 @@\n     \n-    %0A        %7D \n+%7D%0A\n %0A   \n@@ -951,17 +951,16 @@\n intln()%0A\n-%0A\n     %7D%0A%0A%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-14_11-28-49",
+            "content": "@@ -829,16 +829,18 @@\n mt.Print\n+ln\n (v)%0A    \n@@ -984,10 +984,64 @@\n  %0A%0A    %0A\n+    fmt.Println(repetidas)%0A    fmt.Println(faltantes)%0A\n %7D%0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-14_11-29-50",
+            "content": "@@ -974,261 +974,14 @@\n  %7D%0A%0A\n-    if len(faltantes) == 0 %7B%0A        fmt.Println(%22N%22)%0A    %7D else %7B%0A        for i, v := range faltantes %7B%0A            fmt.Print(v)%0A            if i %3C len(faltantes) - 1 %7B%0A                fmt.Print(%22 %22)%0A            %7D%0A        %7D%0A%0A        fmt.Println()%0A    %7D\n+%0A    %0A\n %0A   \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-14_11-32-41",
+            "content": "@@ -560,17 +560,16 @@\n = 1; i %3C\n-=\n  total; \n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-04-14_11-33-42",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var total, baruel_possui int\n\n    fmt.Scan(&total)\n    fmt.Scan(&baruel_possui)\n\n    lista_baruel := make([]int, baruel_possui)\n    album_baruel := make(map[int]int)\n\n    for i := range lista_baruel {\n        fmt.Scan(&lista_baruel[i])\n        album_baruel[lista_baruel[i]]++\n    }\n\n    repetidas := []int{}\n\n    for i := 1; i < baruel_possui; i++ {\n        if lista_baruel[i] == lista_baruel[i - 1] {\n            repetidas = append(repetidas, lista_baruel[i])\n        }\n    }\n\n    faltantes := []int{}\n\n    for i := 1; i <= total; i++ {\n        if album_baruel[i] == 0 {\n            faltantes = append(faltantes, i)\n        }\n    }\n\n    // imprimindo os resultados\n\n    if len(repetidas) == 0 {\n        fmt.Println(\"N\")\n    } else {\n        for i, v := range repetidas {\n            fmt.Print(v)\n            if i < len(repetidas)-1 {\n                fmt.Print(\" \")\n            }\n            \n        } \n        fmt.Println()\n\n    }\n\n    if len(faltantes) == 0 {\n        fmt.Println(\"N\")\n    } else {\n        for i, v := range faltantes {\n            fmt.Print(v)\n            if i < len(faltantes) - 1 {\n                fmt.Print(\" \")\n            }\n        }\n\n        fmt.Println()\n    }\n    \n}\n",
+            "lines": "62"
+        }
+    ]
+}

@@ -2,8 +2,38 @@
     "patches": [
         {
             "label": "2026-03-17_17-33-23",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\n\tanimais := make([]int, n)\n\n\tvar totalCasais int\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&animais[i])\n\t}\n\n\tfor i := 0; i < n; i++ {\n\t\tfor j := 0; j < n; j++ {\n\t\t\tif animais[i] > 0 || animais[i] < 0 {\n\t\t\t\tif animais[i] == animais[j]*-1 {\n\t\t\t\t\tanimais[j], animais[i] = 0, 0\n\t\t\t\t\ttotalCasais++\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\n\tfmt.Println(totalCasais)\n\n}\n",
+            "content": "@@ -6,16 +6,17 @@\n ge main%0A\n+%0A\n import %22\n@@ -20,16 +20,17 @@\n t %22fmt%22%0A\n+%0A\n func mai\n@@ -39,160 +39,366 @@\n ) %7B%0A\n-    qtd := 0%0A    fmt.Scan(&qtd)%0A%0A    animais := make(%5B%5Dint, qtd)%0A%0A    for i := range animais %7B%0A        fmt.Scan(&animais%5Bi%5D)%0A    %7D%0A%0A    fmt.Scan(anim\n+%09var n int%0A%09fmt.Scan(&n)%0A%0A%09animais := make(%5B%5Dint, n)%0A%0A%09var totalCasais int%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09fmt.Scan(&animais%5Bi%5D)%0A%09%7D%0A%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09for j := 0; j %3C n; j++ %7B%0A%09%09%09if animais%5Bi%5D %3E 0 %7C%7C animais%5Bi%5D %3C 0 %7B%0A%09%09%09%09if animais%5Bi%5D == animais%5Bj%5D*-1 %7B%0A%09%09%09%09%09animais%5Bj%5D, animais%5Bi%5D = 0, 0%0A%09%09%09%09%09totalCasais++%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Println(totalCas\n ais)%0A\n+%0A\n %7D%0A\n",
             "lines": "29"
+        },
+        {
+            "label": "2026-04-14_08-14-26",
+            "content": "@@ -164,24 +164,25 @@\n )%0A    %7D%0A\n+%0A\n     fmt.\n Println(\n@@ -177,14 +177,11 @@\n fmt.\n-Printl\n+Sca\n n(an\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-04-14_08-16-24",
+            "content": "@@ -101,47 +101,8 @@\n qtd)\n-%0A    var solteiros := make(map%5Bint%5Dint)\n %0A%0A  \n@@ -192,291 +192,7 @@\n ais)\n-%0A%0A    casais := 0%0A    for _, animal := range animais %7B    %0A        par_procurado := -animal%0A%0A        if solteiros%5Bpar_procurado%5D %3E 0 %7B%0A            casais++%0A            solteiros%5Bpar_procurado%5D--%0A        %7D else %7B%0A            solteiros%5Banimal%5D++%0A        %7D%0A    %7D%0A%0A    fmt.Println(casais)\n %0A%7D%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-14_08-42-51",
+            "content": "@@ -308,16 +308,17 @@\n ocurado \n+:\n = -anima\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-14_08-43-10",
+            "content": "@@ -98,24 +98,28 @@\n t, qtd)%0A    \n+var \n solteiros :=\n@@ -308,17 +308,16 @@\n ocurado \n-:\n = -anima\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-14_08-43-26",
+            "content": "@@ -194,24 +194,49 @@\n is%5Bi%5D)%0A    %7D\n+%0A    fmt.Println(animais)\n %0A%0A    casais\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-14_08-43-39",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    qtd := 0\n    fmt.Scan(&qtd)\n\n    animais := make([]int, qtd)\n    solteiros := make(map[int]int)\n\n    for i := range animais {\n        fmt.Scan(&animais[i])\n    }\n\n    casais := 0\n    for _, animal := range animais {    \n        par_procurado := -animal\n\n        if solteiros[par_procurado] > 0 {\n            casais++\n            solteiros[par_procurado]--\n        } else {\n            solteiros[animal]++\n        }\n    }\n\n    fmt.Println(casais)\n}\n",
+            "lines": "27"
         }
     ]
 }

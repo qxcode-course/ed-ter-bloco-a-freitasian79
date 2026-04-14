@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_10-42-38",
+            "content": "@@ -301,17 +301,16 @@\n ocurado \n-:\n = -anima\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_10-42-45",
+            "content": "@@ -453,22 +453,29 @@\n lteiros%5B\n-animal\n+par_procurado\n %5D++%0A    \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_10-43-16",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var quantidade int\n\n    fmt.Scan(&quantidade)\n\n    animais := make([]int, quantidade)\n    solteiros := make(map[int]int)\n\n    for i := range animais {\n        fmt.Scan(&animais[i])\n    }\n\n    casais := 0\n\n    for _, animal := range animais {\n        par_procurado := -animal\n\n        if solteiros[par_procurado] > 0{\n            casais++\n            solteiros[par_procurado]--\n        } else {\n            solteiros[animal]++\n        }\n    }\n\n    fmt.Println(casais)\n}\n",
+            "lines": "29"
+        }
+    ]
+}

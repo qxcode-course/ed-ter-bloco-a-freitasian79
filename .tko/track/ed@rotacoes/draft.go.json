@@ -1,0 +1,114 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-12_17-56-44",
+            "content": "@@ -54,97 +54,28 @@\n int%0A\n-    lista := make(%5B%5Dint, t)%0A    for i := 0; i %3C t; i++ %7B%0A        fmt.Scan(&lista%5Bi%5D)%0A    %7D\n+%0A    fmt.Scan(&t, &r)\n %0A%7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-04-12_18-04-44",
+            "content": "@@ -42,16 +42,19 @@\n    var t\n+, r\n  int%0A   \n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-04-12_18-05-00",
+            "content": "@@ -141,31 +141,7 @@\n    %7D\n-%0A%0A    fmt.Println(lista)\n %0A%7D%0A\n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-04-12_18-05-23",
+            "content": "@@ -156,80 +156,16 @@\n rint\n-(%22%5B%22)%0A%0A    for valor := range t %7B%0A        fmt.Printf(%22 %25d %22, valor)%0A    %7D\n+ln(lista)\n %0A%7D%0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-04-12_18-09-00",
+            "content": "@@ -229,27 +229,7 @@\n    %7D\n-%0A%0A    fmt.Print(%22%5D%22)\n %0A%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-04-12_18-09-14",
+            "content": "@@ -167,34 +167,32 @@\n     for \n-i := 0; i %3C t; i++\n+valor := range t\n  %7B%0A     \n@@ -213,24 +213,21 @@\n %22 %25d %22, \n-lista%5Bi%5D\n+valor\n )%0A    %7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-12_18-09-52",
+            "content": "@@ -79,25 +79,8 @@\n  t)%0A\n-    fmt.Scan(&t)%0A\n     \n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-12_18-14-03",
+            "content": "@@ -51,26 +51,8 @@\n int%0A\n-    fmt.Scan(&t)%0A%0A\n     \n@@ -79,16 +79,28 @@\n  t)%0A    \n+fmt.Scan(&t)\n %0A    for\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-12_18-14-20",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -45,12 +45,9 @@\n var \n-T, R\n+t\n  int\n@@ -65,13 +65,9 @@\n an(&\n-T, &R\n+t\n )%0A%0A \n@@ -94,11 +94,15 @@\n nt, \n-T\n+t\n )%0A\n+    \n %0A   \n@@ -110,33 +110,33 @@\n for i := 0; i %3C \n-T\n+t\n ; i++ %7B%0A        \n@@ -182,12 +182,12 @@\n t(%22%5B\n- \n %22)%0A\n+%0A\n     \n@@ -206,9 +206,9 @@\n i %3C \n-T\n+t\n ; i+\n@@ -231,16 +231,17 @@\n Printf(%22\n+ \n %25d %22, li\n@@ -254,16 +254,17 @@\n )%0A    %7D%0A\n+%0A\n     fmt.\n@@ -272,10 +272,8 @@\n rint\n-ln\n (%22%5D%22\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-12_18-19-56",
+            "content": "@@ -1,289 +1,106 @@\n-package main%0A%0Aimport %22fmt%22%0A%0Afunc main() %7B%0A    var T, R int%0A    fmt.Scan(&T, &R)%0A%0A    lista := make(%5B%5Dint, T)%0A%0A    for i := 0; i %3C T; i++ %7B%0A \n+@@ -167,17 +167,16 @@%0A %250A    %257D%250A%250A%0A-%250A%0A\n      \n-  \n fmt.\n-Scan(&lista%5Bi%5D)%0A    %7D%0A%0A%0A    fmt.Print(%22%5B %22)%0A    for i := 0; i %3C T; i++ %7B%0A        fmt.Printf(%22 %25d%22, lista%5Bi%5D)%0A    %7D%0A    fmt.Println(%22%5D%22)%0A%7D\n+%0A@@ -236,17 +236,16 @@%0A Printf(%2522%0A- %0A %2525d %2522, li\n %0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-04-12_18-25-17",
+            "content": "@@ -240,17 +240,16 @@\n ntf(%22 %25d\n- \n %22, lista\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-12_18-25-23",
+            "content": "@@ -237,16 +237,17 @@\n Printf(%22\n+ \n %25d %22, li\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-12_18-25-36",
+            "content": "@@ -283,293 +283,7 @@\n %22%5D%22)\n-%0A%0A    lista_reorganizada = make(%5B%5Dint, t)%0A%0A    for i := 0; i %3C T; i++ %7B%0A        novaPos = (i + R) %25 R%0A        lista_reorganizada%5BnovaPos%5D = lista%5Bi%5D%0A    %7D%0A%0A    fmt.Print(%22%5B %22)%0A    for i := 0; i %3C T; i++ %7B%0A        fmt.Printf(%22%25d %22, lista_reorganizada%5BnovaPos%5D)%0A    %7D%0A    fmt.Println(%22%5D%22)\n %0A%7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-12_18-41-14",
+            "content": "@@ -304,17 +304,16 @@\n anizada \n-:\n = make(%5B\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-12_18-41-30",
+            "content": "@@ -368,17 +368,16 @@\n novaPos \n-:\n = (i + R\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-12_18-42-01",
+            "content": "@@ -531,17 +531,23 @@\n anizada%5B\n-i\n+novaPos\n %5D)%0A    %7D\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-12_18-42-29",
+            "content": "@@ -311,33 +311,33 @@\n  := make(%5B%5Dint, \n-T\n+t\n )%0A%0A    for i := \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-12_18-42-45",
+            "content": "@@ -381,17 +381,17 @@\n  + R) %25 \n-T\n+R\n %0A       \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-12_18-43-17",
+            "content": "@@ -168,16 +168,129 @@\n     %7D%0A%0A%0A\n+    fmt.Print(%22%5B %22)%0A    for i := 0; i %3C T; i++ %7B%0A        fmt.Printf(%22%25d %22, lista%5Bi%5D)%0A    %7D%0A    fmt.Println(%22%5D%22)%0A%0A\n     list\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-12_18-43-39",
+            "content": "@@ -25,156 +25,8 @@\n t%22%0A%0A\n-func exibir_lista(lista %5B%5Dint) %7B%0A    fmt.Print(%22%5B %22)%0A    for i := 0; i %3C T; i++ %7B%0A        fmt.Printf(%22%25d %22, lista%5Bi%5D)%0A    %7D%0A    fmt.Println(%22%5D%22)%0A%7D%0A%0A\n func\n@@ -35,16 +35,16 @@\n ain() %7B%0A\n+\n     var \n@@ -163,24 +163,25 @@\n %5Bi%5D)%0A    %7D%0A%0A\n+%0A\n     lista_re\n@@ -332,39 +332,127 @@\n     \n-exibir_lista(lista_reorganizada\n+fmt.Print(%22%5B %22)%0A    for i := 0; i %3C T; i++ %7B%0A        fmt.Printf(%22%25d %22, lista_reorganizada%5Bi%5D)%0A    %7D%0A    fmt.Println(%22%5D%22\n )%0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-12_18-48-57",
+            "content": "@@ -51,21 +51,8 @@\n a %5B%5D\n-int, tamanho \n int)\n@@ -98,15 +98,9 @@\n i %3C \n-tamanho\n+T\n ; i+\n@@ -506,15 +506,12 @@\n ganizada\n-, T\n )%0A%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-12_18-49-20",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc exibir_lista(lista []int, tamanho int) {\n    fmt.Print(\"[ \")\n    for i := 0; i < tamanho; i++ {\n        fmt.Printf(\"%d \", lista[i])\n    }\n    fmt.Println(\"]\")\n}\n\nfunc main() {\n    var T, R int\n    fmt.Scan(&T, &R)\n\n    lista := make([]int, T)\n\n    for i := 0; i < T; i++ {\n        fmt.Scan(&lista[i])\n    }\n\n    lista_reorganizada := make([]int, T)\n\n    for i := 0; i < T; i++ {\n        novaPos := (i + R) % T\n        lista_reorganizada[novaPos] = lista[i]\n    }\n\n    exibir_lista(lista_reorganizada, T)\n}\n",
+            "lines": "31"
+        }
+    ]
+}
