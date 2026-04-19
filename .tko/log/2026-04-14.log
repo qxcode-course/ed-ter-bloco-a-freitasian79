@@ -221,3 +221,11 @@
 2026-04-14 11:57:27, MOVE, v:1, k:eval1@baruel, mode:BACK
 2026-04-14 11:57:36, MOVE, v:1, k:ed@baruel, mode:PICK
 2026-04-14 12:00:01, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-04-14 14:52:47, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-14 15:11:33, MOVE, v:1, k:ed@fractais_png, mode:BACK
+2026-04-14 15:24:41, EXEC, v:1, k:src@go, mode:FREE
+2026-04-14 15:30:09, EXEC, v:1, k:src@go, mode:FREE
+2026-04-14 15:49:31, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-14 15:50:43, MOVE, v:1, k:ed@fractais_png, mode:BACK
+2026-04-14 15:53:04, EXEC, v:1, k:fractais_png@go, mode:FREE, size:136
+2026-04-14 16:57:01, EXEC, v:1, k:fractais_png@go, mode:FREE, size:116

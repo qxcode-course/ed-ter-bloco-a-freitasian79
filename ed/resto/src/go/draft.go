@@ -1,24 +1,25 @@
-package main
-import "fmt"
 
-func process(value int) {
+    package main
+    import "fmt"
 
-    if (value == 0) {
-        return
+    func process(value int) {
+
+        if (value == 0) {
+            return
+        }
+
+        div := value / 2
+        rest := value % 2
+        
+        process(div)
+
+        fmt.Printf("%d %d\n", div, rest)
+            
     }
 
-    div := value / 2
-    rest := value % 2
-    
-    process(div)
+    func main() {
+        var value int
+        fmt.Scan(&value)
+        process(value)
 
-    fmt.Printf("%d %d\n", div, rest)
-        
-}
-
-func main() {
-    var value int
-    fmt.Scan(&value)
-    process(value)
-
-}
+    }

@@ -22,15 +22,16 @@ sources:
   quests: null
   tasks: null
 expanded:
-- eval1@teste-1
+- ed@rec
 - ed@map_set
 - ed@basic
-- ed@rec
+- ed@sandbox
 flags:
   inbox: inbox
-  panel: logs
-  show_panel: 'true'
-  task_graph_mode: executions
+  panel: help
+  show_panel: 'false'
+  task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: eval1@casais
+selected: ed@eh_primo
+selected_index: 6

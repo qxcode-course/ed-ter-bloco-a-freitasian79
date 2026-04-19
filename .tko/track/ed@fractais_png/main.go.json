@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-15_11-33-46",
+            "content": "@@ -128,22 +128,21 @@\n %7D%0A%0Afunc \n-arvore\n+embua\n (pen *Pe\n@@ -192,172 +192,100 @@\n %0A%09%7D%0A\n-%0A%09ang := 25.0%0A%09fator := 0.83%0A%09pen.Walk(dist)%0A%09pen.Right(ang)%0A%0A%09arvore(pen, dist * fator)%0A%09pen.Right(-2 * ang)%0A%09arvore(pen, dist * fator)%0A%09pen.Right(ang)%0A%09pen.Walk(-\n+%09%09pen.SetLineWidth(dist / 30)%0A%09%09pen.Walk(dist)%0A%09%09dist *= 0.96%0A%09%09pen.Right(90)%0A%0A%09%09embua(pen, \n dist\n@@ -321,9 +321,9 @@\n Pen(\n-7\n+5\n 00, \n@@ -345,16 +345,18 @@\n B(0, 0, \n+20\n 0)%0A%09pen.\n@@ -366,17 +366,16 @@\n Heading(\n-9\n 0)%0A%09pen.\n@@ -390,32 +390,31 @@\n ion(\n-350, 5\n+100, 1\n 00)%0A%09\n-arvore\n+embua\n (pen, \n-1\n+3\n 00)%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-16_01-02-01",
+            "content": "@@ -127,11 +127,8 @@\n %0A%7D%0A%0A\n-/* \n func\n@@ -172,17 +172,17 @@\n  dist %3C \n-2\n+1\n 0 %7B%0A%09%09re\n@@ -192,39 +192,37 @@\n n%0A%09%7D\n-%09%0A%09%0A%09pen.SetLineWidth(dist / 8)\n+%0A%0A%09ang := 25.0%0A%09fator := 0.83\n %0A%09pe\n@@ -245,28 +245,29 @@\n n.Right(\n-20)%0A%09circulo\n+ang)%0A%0A%09arvore\n (pen, di\n@@ -263,35 +263,37 @@\n ore(pen, dist * \n-0.8\n+fator\n )%0A%09pen.Right(-2 \n@@ -298,272 +298,57 @@\n 2 * \n-20)%0A%09circulo(pen, dist * 0.8)%0A%09pen.Right(20)%0A%09pen.Walk(-dist)%0A%7D */%0A%0Afunc circulos(pen *Pen, dist float64) %7B%0A%09pen.DrawCircle(dist)%0A%0A%09for range 6 %7B%0A%09%09pen.Left(60)%0A%0A%09\n+ang)%0A%09arvore(pen, dist * fator)%0A\n %09pen.\n-Up()%0A        pen.Walk(dist)%0A        pen.Down()%0A%0A%09%09circulos(pen, dist * 0.5)%0A%0A%09%09pen.Up()%0A        \n+Right(ang)%0A%09\n pen.\n@@ -356,36 +356,15 @@\n alk(\n+-\n dist)%0A\n-        pen.Down()%0A%09%7D%0A\n %7D%0Afu\n@@ -394,16 +394,14 @@\n Pen(\n-20\n+7\n 00, \n-20\n+5\n 00)%0A\n@@ -462,36 +462,32 @@\n ion(\n-1000, 10\n+350, 5\n 00)%0A%09\n-circulos\n+arvore\n (pen, \n-6\n+1\n 00)%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-16_17-39-35",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(inf, sup int) float64 {\n\treturn float64(rand.Intn(sup-inf+1) + inf)\n}\n\n/* func arvore(pen *Pen, dist float64) {\n\tif dist < 20 {\n\t\treturn\n\t}\t\n\t\n\tpen.SetLineWidth(dist / 8)\n\tpen.Walk(dist)\n\tpen.Right(20)\n\tcirculo(pen, dist * 0.8)\n\tpen.Right(-2 * 20)\n\tcirculo(pen, dist * 0.8)\n\tpen.Right(20)\n\tpen.Walk(-dist)\n} */\n\nfunc circulos(pen *Pen, dist float64) {\n\tpen.DrawCircle(dist)\n\n\tfor range 6 {\n\t\tpen.Left(60)\n\n\t\tpen.Up()\n        pen.Walk(dist)\n        pen.Down()\n\n\t\tcirculos(pen, dist * 0.5)\n\n\t\tpen.Up()\n        pen.Walk(dist)\n        pen.Down()\n\t}\n}\nfunc main() {\n\tpen := NewPen(2000, 2000)\n\tpen.SetRGB(0, 0, 0)\n\tpen.SetHeading(90)\n\tpen.SetPosition(1000, 1000)\n\tcirculos(pen, 600)\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "lines": "52"
+        }
+    ]
+}
