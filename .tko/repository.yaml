@@ -22,16 +22,15 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@rec
-- ed@map_set
 - ed@basic
-- ed@sandbox
+- ed@map_set
+- ed@rec
 flags:
-  inbox: inbox
-  panel: help
-  show_panel: 'false'
+  inbox: all
+  panel: logs
+  show_panel: 'true'
   task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: ed@eh_primo
-selected_index: 6
+selected: ed@queimada
+selected_index: 24
