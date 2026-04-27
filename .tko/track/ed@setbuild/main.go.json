@@ -1,0 +1,139 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-27_16-14-37",
+            "content": "@@ -376,16 +376,19 @@\n it%22:%0A%09%09%09\n+// \n value, _\n@@ -417,16 +417,19 @@\n %5B1%5D)%0A%09%09%09\n+// \n v = NewS\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-27_16-16-01",
+            "content": "@@ -56,126 +56,8 @@\n %0A)%0A%0A\n-func newSet(capacity int) *Set %7B%0A%09return &Set %7B%0A%09%09data: make(%5B%5Dint, capacity),%0A%09%09size: 0,%0A%09%09capacity: capacity,%0A%09%7D%0A%7D%0A%0A\n func\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-27_16-19-35",
+            "content": "@@ -55,63 +55,8 @@\n %22%0A)%0A\n-type Set struct %7B%0A%09data %5B%5Dint%0A%09size int%0A%09capacity int%0A%7D\n %0Afun\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-27_16-22-35",
+            "content": "@@ -112,17 +112,17 @@\n %0A%7D%0Afunc \n-N\n+n\n ewSet(ca\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-27_16-22-56",
+            "content": "@@ -302,16 +302,19 @@\n tdin)%0A%0A%09\n+// \n v := New\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-27_16-23-05",
+            "content": "@@ -53,19 +53,8 @@\n gs%22%0A\n-%09%22strconv%22%0A\n )%0Aty\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-27_16-27-08",
+            "content": "@@ -317,10 +317,9 @@\n )%0A%0A%09\n--_\n+v\n  := \n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-27_16-27-46",
+            "content": "@@ -313,16 +313,17 @@\n tdin)%0A%0A%09\n+-\n _ := New\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-27_16-27-53",
+            "content": "@@ -313,17 +313,17 @@\n tdin)%0A%0A%09\n-v\n+_\n  := NewS\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-27_16-28-09",
+            "content": "@@ -313,18 +313,16 @@\n tdin)%0A%0A%09\n-//\n v := New\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-27_16-30-02",
+            "content": "@@ -313,16 +313,18 @@\n tdin)%0A%0A%09\n+//\n v := New\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-27_16-31-52",
+            "content": "@@ -317,24 +317,21 @@\n )%0A%0A%09\n-fmt.Println(%22oi%22\n+v := NewSet(0\n )%0A%09f\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-27_16-45-24",
+            "content": "@@ -317,21 +317,24 @@\n )%0A%0A%09\n-v := NewSet(0\n+fmt.Println(%22oi%22\n )%0A%09f\n@@ -600,17 +600,16 @@\n %5D)%0A%09%09%09v \n-:\n = NewSet\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-27_16-45-38",
+            "content": "@@ -597,16 +597,17 @@\n %5D)%0A%09%09%09v \n+:\n = NewSet\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-27_16-47-08",
+            "content": "@@ -312,16 +312,32 @@\n Stdin)%0A%0A\n+%09v := NewSet(0)%0A\n %09for sca\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-27_16-50-49",
+            "content": "@@ -581,17 +581,16 @@\n %5D)%0A%09%09%09v \n-:\n = NewSet\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-27_16-51-01",
+            "content": "@@ -316,24 +316,8 @@\n n)%0A%0A\n-%09v := NewSet(0)%0A\n %09for\n@@ -581,16 +581,17 @@\n %5D)%0A%09%09%09v \n+:\n = NewSet\n@@ -719,42 +719,8 @@\n w%22:%0A\n-%09%09%09fmt.Printf(%22Data: %25v%22, v.data)%0A\n %09%09ca\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-27_17-26-53",
+            "content": "@@ -746,12 +746,28 @@\n rint\n-ln(v\n+f(%22Data: %25v%22, v.data\n )%0A%09%09\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-04-27_17-27-35",
+            "content": "@@ -240,337 +240,8 @@\n %0A%7D%0A%0A\n-func String(v *Vector) string %7B%0A%09return %22%5B%22 + Join(v.data, %22, %22) + %22%5D%22%0A%7D%0A%0Afunc Join(slice %5B%5Dint, sep string) string %7B%0A%09if len(slice) == 0 %7B%0A%09%09return %22%22%0A%09%7D%0A%09var result strings.Builder%0A%09fmt.Fprintf(&result, %22%25d%22, slice%5B0%5D)%0A%09for _, value := range slice%5B1:%5D %7B%0A%09%09fmt.Fprintf(&result, %22%25s%25d%22, sep, value)%0A%09%7D%0A%09return result.String()%0A%7D%0A%0A\n func\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-04-27_17-35-39",
+            "content": "@@ -251,19 +251,22 @@\n ring(v *\n-Set\n+Vector\n ) string\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-04-27_17-36-10",
+            "content": "@@ -1075,17 +1075,9 @@\n tln(\n-String(v)\n+v\n )%0A%09%09\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-04-27_17-36-44",
+            "content": "@@ -245,16 +245,22 @@\n unc \n+String\n (v *Set)\n Stri\n@@ -255,22 +255,16 @@\n (v *Set)\n-String\n  string \n@@ -1071,18 +1071,16 @@\n Println(\n-v.\n String(v\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-04-27_17-37-35",
+            "content": "@@ -294,18 +294,8 @@\n data\n-%5B0:v.size%5D\n , %22,\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-04-27_17-38-45",
+            "content": "@@ -255,18 +255,16 @@\n t)String\n-()\n  string \n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-04-27_17-39-17",
+            "content": "@@ -1092,16 +1092,17 @@\n .String(\n+v\n ))%0A%09%09cas\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-04-27_17-44-16",
+            "content": "@@ -1084,16 +1084,25 @@\n rintln(v\n+.String()\n )%0A%09%09case\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-04-27_17-47-28",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n\t\"strconv\"\n)\ntype Set struct {\n\tdata []int\n\tsize int\n\tcapacity int\n}\nfunc NewSet(capacity int) *Set {\n\treturn &Set {\n\t\tdata: make([]int, capacity),\n\t\tsize: 0,\n\t\tcapacity: capacity,\n\t}\n}\n\nfunc (v *Set)String() string {\n\treturn \"[\" + Join(v.data[0:v.size], \", \") + \"]\"\n}\n\nfunc Join(slice []int, sep string) string {\n\tif len(slice) == 0 {\n\t\treturn \"\"\n\t}\n\tvar result strings.Builder\n\tfmt.Fprintf(&result, \"%d\", slice[0])\n\tfor _, value := range slice[1:] {\n\t\tfmt.Fprintf(&result, \"%s%d\", sep, value)\n\t}\n\treturn result.String()\n}\n\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tv := NewSet(0)\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\tfmt.Println(line)\n\t\tparts := strings.Fields(line)\n\t\tif len(parts) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = parts[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\tv = NewSet(value)\n\t\tcase \"insert\":\n\t\t\t// for _, part := range parts[1:] {\n\t\t\t// \tvalue, _ := strconv.Atoi(part)\n\t\t\t// }\n\t\tcase \"show\":\n\t\t\tfmt.Println(v)\n\t\tcase \"erase\":\n\t\t\t// value, _ := strconv.Atoi(parts[1])\n\t\tcase \"contains\":\n\t\t\t// value, _ := strconv.Atoi(parts[1])\n\t\tcase \"clear\":\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "75"
+        }
+    ]
+}

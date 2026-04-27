@@ -14,8 +14,7 @@ type Pair struct {
 }
 
 func occurr(vet []int) []Pair {
-	_ = vet
-	return nil
+	return vet
 }
 
 func teams(vet []int) []Pair {
