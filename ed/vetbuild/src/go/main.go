@@ -97,7 +97,7 @@ func (v *Vector) PopBack() error{
 
 func (v *Vector) Insert(index int, value int) error{
 	if index < 0 || index > v.size {
-        return errors.New("fail: indice invalido")
+        return errors.New("index out of range")
     }
 
     if v.size == v.capacity {

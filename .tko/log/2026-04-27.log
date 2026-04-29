@@ -60,3 +60,5 @@
 2026-04-27 17:44:12, MOVE, v:1, k:ed@setbuild, mode:EDIT
 2026-04-27 17:47:28, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:75
 2026-04-27 17:47:26, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-04-27 18:03:07, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-04-27 18:13:17, MOVE, v:1, k:ed@setbuild, mode:BACK

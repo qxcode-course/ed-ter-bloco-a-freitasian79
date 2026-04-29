@@ -22,13 +22,25 @@ sources:
   quests: null
   tasks: null
 expanded:
+- ed@sandbox
+- ed@linear
+- eval1@eval1
+- ed@tree
+- ed@map_set
+- sandbox@sandbox
+- ed@basic
+- ed@backtrack
+- ed@list
+- ed@bfs
+- ed@dfs
+- ed@rec
 - ed@vector
 flags:
   inbox: all
-  panel: skills
-  show_panel: 'false'
+  panel: help
+  show_panel: 'true'
   task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: ed@bettersearch
-selected_index: 8
+selected: ed@setbuild
+selected_index: 54

@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-28_16-10-02",
+            "content": "@@ -41,133 +41,35 @@\n     \n-lista := %5B10, 20, 30, 40, 50%5D%0A%0A    alvo int%0A    fmt.Println(%22Digite o valor alvo que deseja encontrar: %22)%0A    fmt.Scan(&alvo)%0A\n+fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-28_16-11-33",
+            "content": "@@ -51,13 +51,8 @@\n := %5B\n-%5Dint%7B\n 10, \n@@ -65,17 +65,18 @@\n , 40, 50\n-%7D\n+%5D%0A\n %0A    alv\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-04-28_16-12-13",
+            "content": "@@ -74,21 +74,14 @@\n , 50\n-   \n %7D%0A    \n-var \n alvo\n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-04-28_16-12-23",
+            "content": "@@ -75,17 +75,16 @@\n  50   %7D%0A\n-%0A\n     var \n@@ -92,17 +92,16 @@\n lvo int%0A\n-%0A\n     fmt.\n@@ -179,29 +179,6 @@\n o)%0A%0A\n-    fmt.Println(lista)%0A\n %7D%0A\n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-04-28_16-12-43",
+            "content": "@@ -23,731 +23,187 @@\n mt%22%0A\n-%0Afunc busca_binaria(lista, alvo) int%7B%0A    start := 0%0A    end := len(lista) - 1%0A%0A    for start %3C= end %7B%0A        mid := (star + end) / 2%0A%0A        if lista%5Bmid%5D == alvo %7B%0A            return mid%0A        %7D%0A%0A        if lista%5Bmeio%5D %3C alvo %7B%0A            start = mid + 1 %0A        %7D else %7B%0A            end = mid - 1%0A        %7D%0A    %7D%0A%7D%0Afunc main() %7B%0A    lista := %5B%5Dint%7B10, 20, 30, 40, 50   %7D%0A%0A    var alvo int%0A%0A    fmt.Println(%22Digite o valor alvo que deseja encontrar: %22)%0A    fmt.Scan(&alvo)%0A%0A    fmt.Println(lista)%0A%0A    resultado := busca_binaria(lista, alvo)%0A%0A    if resultado != -1 %7B%0A        fmt.Printf(%22o valor desejado %5B%25resultado%5D foi encontrado com sucesso!%22, alvo)%0A    %7D else %7B%0A        fmt.Printf(%22Valor n%C3%A3o encontrado%22)%0A    %7D%0A\n+func main() %7B%0A    lista := %5B%5Dint%7B10, 20, 30, 40, 50   %7D%0A%0A    var alvo int%0A%0A    fmt.Println(%22Digite o valor alvo que deseja encontrar: %22)%0A    fmt.Scan(&alvo)%0A%0A    fmt.Println(lista)\n %0A%7D%0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-04-28_16-44-17",
+            "content": "@@ -48,24 +48,14 @@\n ista\n- %5B%5Dint\n , alvo\n- int\n ) in\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-28_16-44-50",
+            "content": "@@ -152,17 +152,16 @@\n := (star\n-t\n  + end) \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-28_16-45-06",
+            "content": "@@ -250,18 +250,19 @@\n  lista%5Bm\n-id\n+eio\n %5D %3C alvo\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-28_16-45-21",
+            "content": "@@ -354,23 +354,8 @@\n    %7D\n-%0A%0A    return -1\n %0A%7D%0Af\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-28_16-45-31",
+            "content": "@@ -644,69 +644,71 @@\n tf(%22\n-ALVO ENCONTRADO!%5Cn alvo: %5B%25d%5D indice: %5B%25d%5D%5Cn%22, alvo, resultad\n+o valor desejado %5B%25resultado%5D foi encontrado com sucesso!%22, alv\n o)%0A \n@@ -763,10 +763,8 @@\n rado\n-%5Cn\n %22)%0A \n@@ -775,244 +775,4 @@\n %0A%0A%7D%0A\n-%0Afunc (st *Set) Insert(value int) %7B%0A    index := 0%0A%0A    for index %3C st.size %7B%0A        if st.size%5Bindex%5D == value %7B%0A            return%0A        %7D%0A%0A        if st.data%5Bindex%5D %3E value %7B%0A            break%0A        %7D%0A%0A        index++%0A    %7D%0A%0A    %0A%7D%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-29_10-23-23",
+            "content": "@@ -771,8 +771,248 @@\n    %7D%0A%0A%7D%0A\n+%0Afunc (st *Set) Insert(value int) %7B%0A    index := 0%0A%0A    for index %3C st.size %7B%0A        if st.size%5Bindex%5D == value %7B%0A            return%0A        %7D%0A%0A        if st.data%5Bindex%5D %3E value %7B%0A            break%0A        %7D%0A%0A        index++%0A    %7D%0A%0A    %0A%7D%0A\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-04-29_10-23-58",
+            "content": "package main\nimport \"fmt\"\n\nfunc busca_binaria(lista []int, alvo int) int{\n    start := 0\n    end := len(lista) - 1\n\n    for start <= end {\n        mid := (start + end) / 2\n\n        if lista[mid] == alvo {\n            return mid\n        }\n\n        if lista[mid] < alvo {\n            start = mid + 1 \n        } else {\n            end = mid - 1\n        }\n    }\n\n    return -1\n}\nfunc main() {\n    lista := []int{10, 20, 30, 40, 50   }\n\n    var alvo int\n\n    fmt.Println(\"Digite o valor alvo que deseja encontrar: \")\n    fmt.Scan(&alvo)\n\n    fmt.Println(lista)\n\n    resultado := busca_binaria(lista, alvo)\n\n    if resultado != -1 {\n        fmt.Printf(\"ALVO ENCONTRADO!\\n alvo: [%d] indice: [%d]\\n\", alvo, resultado)\n    } else {\n        fmt.Printf(\"Valor n\u00e3o encontrado\\n\")\n    }\n\n}\n",
+            "lines": "42"
+        }
+    ]
+}
