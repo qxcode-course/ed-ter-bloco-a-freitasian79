@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-10_17-19-53",
+            "content": "@@ -23,943 +23,53 @@\n mt%22%0A\n-%0Atype Root struct %7B%0A    info int%0A    next *root%0A    prev *root%0A%7D%0A%0Atype Dlist struct %7B%0A    head *root%0A%7D%0A%0Afunc NewList() *Dlist %7B%0A    dlist := Dlist%7B%7D%0A    dlist.head = &root%7B%7D%0A    dlist.head.next = dlist.head%0A    dlist.head.prev = dlist.head%0A%0A    return &dlist%0A%7D%0A%0Afunc insert(ref *Root, value int) %7B%0A    anterior := ref.prev%0A%0A    C := &Root %7B%0A        info: value,%0A        next: ref,%0A        prev: anterior%0A    %7D%0A%0A    anterior.next = C%0A    ref.prev = C%0A%0A%7D%0A%0Afunc PushBack(list *Dlist, value int) %7B%0A    insert(list.head, value)%0A%7D%0A%0Afunc PushFront(list *Dlist, value int) %7B%0A    insert(lis.head.next, value)%0A%7D%0A%0Afunc print(list *Dlist) %7B%0A    it := list.head.next%0A    fmt.Print(%22%5B%22)%0A    for %7B%0A        if it == list.head %7B%0A            break%0A%0A        %7D%0A        fmt.Printf(%22 %25d%22, it.info)%0A        it = it.next%0A    %7D%0A%0A    fmt.Print(%22 %5D%22)%0A%7D%0Afunc main() %7B%0A    lista := NewList()%0A%0A    for i := range 10 %7B%0A        PushBack(list, i)%0A    %7D%0A%0A    print(list\n+func main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-10_17-46-33",
+            "content": "@@ -62,17 +62,17 @@\n   next *\n-R\n+r\n oot%0A    \n@@ -77,17 +77,17 @@\n   prev *\n-R\n+r\n oot%0A%7D%0A%0At\n@@ -115,17 +115,17 @@\n   head *\n-R\n+r\n oot%0A%7D%0A%0Af\n@@ -596,25 +596,24 @@\n   insert(lis\n-t\n .head.next, \n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-05-10_17-47-55",
+            "content": "@@ -955,13 +955,12 @@\n int(list\n-a\n )%0A%7D%0A\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-05-10_17-48-18",
+            "content": "@@ -422,17 +422,16 @@\n anterior\n-,\n %0A    %7D%0A%0A\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-05-10_17-49-20",
+            "content": "@@ -186,17 +186,17 @@\n head = &\n-R\n+r\n oot%7B%7D%0A  \n@@ -930,17 +930,16 @@\n ack(list\n-a\n , i)%0A   \n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-05-10_17-49-44",
+            "content": "@@ -846,10 +846,8 @@\n (%22 %5D\n-%5Cn\n %22)%0A%7D\n@@ -917,29 +917,28 @@\n         Push\n-Front\n+Back\n (lista, i)%0A \n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-05-10_21-19-16",
+            "content": "@@ -919,28 +919,29 @@\n         Push\n-Back\n+Front\n (lista, i)%0A \n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-05-11_17-09-25",
+            "content": "package main\nimport \"fmt\"\n\ntype Root struct {\n    info int\n    next *Root\n    prev *Root\n}\n\ntype Dlist struct {\n    head *Root\n}\n\nfunc NewList() *Dlist {\n    dlist := Dlist{}\n    dlist.head = &Root{}\n    dlist.head.next = dlist.head\n    dlist.head.prev = dlist.head\n\n    return &dlist\n}\n\nfunc insert(ref *Root, value int) {\n    anterior := ref.prev\n\n    C := &Root {\n        info: value,\n        next: ref,\n        prev: anterior,\n    }\n\n    anterior.next = C\n    ref.prev = C\n\n}\n\nfunc PushBack(list *Dlist, value int) {\n    insert(list.head, value)\n}\n\nfunc PushFront(list *Dlist, value int) {\n    insert(list.head.next, value)\n}\n\nfunc print(list *Dlist) {\n    it := list.head.next\n    fmt.Print(\"[\")\n    for {\n        if it == list.head {\n            break\n\n        }\n        fmt.Printf(\" %d\", it.info)\n        it = it.next\n    }\n\n    fmt.Print(\" ]\\n\")\n}\nfunc main() {\n    lista := NewList()\n\n    for i := range 10 {\n        PushBack(lista, i)\n    }\n\n    print(lista)\n}\n",
+            "lines": "67"
+        }
+    ]
+}

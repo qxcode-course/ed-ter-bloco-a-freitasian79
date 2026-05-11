@@ -1,0 +1,12 @@
+2026-05-09 22:46:31, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-05-09 22:46:33, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:100
+2026-05-09 22:46:34, MOVE, v:1, k:ed@bettersearch, mode:BACK
+2026-05-09 22:46:51, MOVE, v:1, k:ed@iterador, mode:PICK
+2026-05-09 22:46:52, EXEC, v:1, k:ed@iterador, mode:FULL, rate:33
+2026-05-09 22:48:38, MOVE, v:1, k:ed@iterador, mode:BACK
+2026-05-09 22:48:44, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-09 22:49:50, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:100
+2026-05-09 22:50:14, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-05-09 22:50:18, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-05-09 22:50:27, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:100
+2026-05-09 22:53:06, MOVE, v:1, k:ed@setbuild, mode:BACK

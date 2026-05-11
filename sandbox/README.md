@@ -10,4 +10,6 @@ Sinta-se à vontade para organizar seus rascunhos em subpastas dentro do sandbox
 <!--autoload_cluster=.-->
 - [ ]`@user_001 `[rascunho_triangulo](user_001/README.md)
 - [ ]`@user_002 `[rascunho_vetor-ordenado](user_002/README.md)
+- [ ]`@user_003 `[rascunho_magicsearch](user_003/README.md)
+- [ ]`@user_004 `[lista_d1_rasc](user_004/README.md)
 
