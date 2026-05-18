@@ -19,7 +19,6 @@ func eh_primo(x int, div int) bool {
 	}
 
 	return eh_primo(x, div + 1)
-
 }
 
 func enesimo_primo(n int, candidato int, primosEncontrados int) int {
@@ -42,9 +41,26 @@ func encontrar_primo(n int) int {
     return enesimo_primo(n, 2, 0)
 }
 func main() {
-    var numero int
+    var qtd_primos int
+    
+    fmt.Scan(&qtd_primos)
 
-    fmt.Scan(&numero)
+    lista_primos := make([]int, 0, qtd_primos)
 
-    fmt.Printf("%d\n", encontrar_primo(numero))
+    for i := 1; i <= qtd_primos; i++ {
+        lista_primos = append(lista_primos, encontrar_primo(i))    
+    }
+
+    fmt.Print("[")
+
+    for i, num := range lista_primos {
+        fmt.Print(num)
+
+        if i < len(lista_primos) - 1 {
+            fmt.Print(", ")
+        }
+    }
+
+    fmt.Print("]\n")
+
 }

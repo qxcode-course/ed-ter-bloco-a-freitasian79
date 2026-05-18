@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-17_16-51-11",
+            "content": "@@ -730,16 +730,20 @@\n     for \n+int \n i := 1; \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-05-17_16-51-23",
+            "content": "@@ -701,17 +701,16 @@\n s := mak\n-e\n (%5B%5Dint, \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-05-17_16-51-30",
+            "content": "@@ -822,17 +822,17 @@\n r_primo(\n-i\n+1\n ))    %0A \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-05-17_16-52-03",
+            "content": "@@ -713,11 +713,8 @@\n int,\n- 0,\n  qtd\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-05-17_16-53-24",
+            "content": "@@ -844,195 +844,8 @@\n  %7D%0A%0A\n-    fmt.Print(%22%5B%22)%0A%0A    for i, num := range lista_primos %7B%0A        fmt.Print(num)%0A%0A        if i %3C len(lista_primos) - 1 %7B%0A            fmt.Print(%22, %22)%0A        %7D%0A    %7D%0A%0A    fmt.Print(%22%5D%22)%0A%0A\n     \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-05-17_16-58-06",
+            "content": "@@ -1027,10 +1027,40 @@\n t(%22%5D%22)%0A%0A\n+    fmt.Println(lista_primos)%0A\n %7D%0A\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-05-17_16-58-30",
+            "content": "@@ -1027,10 +1027,8 @@\n t(%22%5D\n-%5Cn\n %22)%0A%0A\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-05-17_16-58-38",
+            "content": "package main\nimport \"fmt\"\n\nfunc eh_primo(x int, div int) bool {\n\tif x < 2 {\n\t\treturn false\n\t}\n\n\tif x == 2 {\n\t\treturn true\n\t}\n\n    if div * div > x {\n\t\treturn true\n\t}\n\n\tif x % div == 0 {\n\t\treturn false\n\t}\n\n\treturn eh_primo(x, div + 1)\n}\n\nfunc enesimo_primo(n int, candidato int, primosEncontrados int) int {\n    if eh_primo(candidato, 2) {\n        primosEncontrados++\n    }\n\n    if primosEncontrados == n {\n        return candidato\n    }   \n\n    return enesimo_primo(n, candidato + 1, primosEncontrados)\n}\n\nfunc encontrar_primo(n int) int {\n    if n <= 0 {\n        return 0\n    }\n\n    return enesimo_primo(n, 2, 0)\n}\nfunc main() {\n    var qtd_primos int\n    \n    fmt.Scan(&qtd_primos)\n\n    lista_primos := make([]int, 0, qtd_primos)\n\n    for i := 1; i <= qtd_primos; i++ {\n        lista_primos = append(lista_primos, encontrar_primo(i))    \n    }\n\n    fmt.Print(\"[\")\n\n    for i, num := range lista_primos {\n        fmt.Print(num)\n\n        if i < len(lista_primos) - 1 {\n            fmt.Print(\", \")\n        }\n    }\n\n    fmt.Print(\"]\\n\")\n\n}\n",
+            "lines": "66"
+        }
+    ]
+}

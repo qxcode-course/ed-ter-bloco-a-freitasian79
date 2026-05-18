@@ -12,4 +12,5 @@ Sinta-se à vontade para organizar seus rascunhos em subpastas dentro do sandbox
 - [ ]`@user_002 `[rascunho_vetor-ordenado](user_002/README.md)
 - [ ]`@user_003 `[rascunho_magicsearch](user_003/README.md)
 - [ ]`@user_004 `[lista_d1_rasc](user_004/README.md)
+- [ ]`@user_005 `[multisset](user_005/README.md)
 

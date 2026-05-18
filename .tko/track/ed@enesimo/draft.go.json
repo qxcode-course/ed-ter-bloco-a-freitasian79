@@ -2,8 +2,48 @@
     "patches": [
         {
             "label": "2026-04-28_23-03-56",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n",
+            "content": "@@ -23,544 +23,21 @@\n mt%22%0A\n-%0Afunc eh_primo(x int, div int) bool %7B%0A%09if x %3C 2 %7B%0A%09%09return false%0A%09%7D%0A%0A%09if x == 2 %7B%0A%09%09return true%0A%09%7D%0A%0A%09if x %25 div == 0 %7B%0A%09%09return false%0A%09%7D%0A%0A%09if div * div %3E x %7B%0A%09%09return true%0A%09%7D%0A%0A%09if x %25 div == 0 %7B%0A%09%09return false%0A%09%7D%0A%0A%09return eh_primo(x, div + 1)%0A%0A%7D%0A%0Afunc enesimo_primo(n int, candidato int, primosEncontrados int) int %7B%0A    if eh_primo(candidato, 2) %7B%0A        primosEncontrados++%0A    %7D%0A%0A    if primosEncontrados == n %7B%0A        return n%0A    %7D   %0A%0A    return enesimo_primo(n, candidato + 1, primosEncontrados)%0A%7D%0Afunc main() %7B%0A    count := 0;\n+func main() %7B\n %0A   \n",
             "lines": "5"
+        },
+        {
+            "label": "2026-05-17_16-20-50",
+            "content": "@@ -530,213 +530,69 @@\n )%0A%7D%0A\n-%0Afunc encontrar_primo(n int) int %7B%0A    if n %3E= 0 %7B%0A        return 0%0A    %7D%0A%0A    enesimo_primo(n, 2, 0)%0A%7D%0Afunc main() %7B%0A    var numero int%0A%0A    fmt.Scan(&numero)%0A%0A    fmt.Printf(%22%25d%22, encontrar_primo(numero)\n+func main() %7B%0A    count := 0;%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-05-17_16-23-30",
+            "content": "@@ -601,31 +601,24 @@\n %0A    %7D%0A%0A    \n-return \n enesimo_prim\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-05-17_16-23-43",
+            "content": "@@ -450,25 +450,17 @@\n  return \n-candidato\n+n\n %0A    %7D  \n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-05-17_16-25-04",
+            "content": "@@ -195,16 +195,54 @@\n rue%0A%09%7D%0A%0A\n+%09if x %25 div == 0 %7B%0A%09%09return false%0A%09%7D%0A%0A\n %09return \n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-05-17_16-25-43",
+            "content": "@@ -123,28 +123,24 @@\n %09%7D%0A%0A\n-    if div *\n+%09if x %25\n  div \n-%3E x\n+== 0\n  %7B%0A%09\n@@ -139,35 +139,36 @@\n == 0 %7B%0A%09%09return \n-tru\n+fals\n e%0A%09%7D%0A%0A%09if x %25 di\n@@ -157,36 +157,37 @@\n lse%0A%09%7D%0A%0A%09if \n-x %25\n+div *\n  div \n-== 0\n+%3E x\n  %7B%0A%09%09return \n@@ -182,28 +182,27 @@\n  %7B%0A%09%09return \n-fals\n+tru\n e%0A%09%7D%0A%0A%09retur\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-17_16-26-34",
+            "content": "@@ -543,17 +543,17 @@\n    if n \n-%3C\n+%3E\n = 0 %7B%0A  \n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-17_16-27-01",
+            "content": "@@ -689,10 +689,8 @@\n (%22%25d\n-%5Cn\n %22, e\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-17_16-31-13",
+            "content": "package main\nimport \"fmt\"\n\nfunc eh_primo(x int, div int) bool {\n\tif x < 2 {\n\t\treturn false\n\t}\n\n\tif x == 2 {\n\t\treturn true\n\t}\n\n    if div * div > x {\n\t\treturn true\n\t}\n\n\tif x % div == 0 {\n\t\treturn false\n\t}\n\n\treturn eh_primo(x, div + 1)\n\n}\n\nfunc enesimo_primo(n int, candidato int, primosEncontrados int) int {\n    if eh_primo(candidato, 2) {\n        primosEncontrados++\n    }\n\n    if primosEncontrados == n {\n        return candidato\n    }   \n\n    return enesimo_primo(n, candidato + 1, primosEncontrados)\n}\n\nfunc encontrar_primo(n int) int {\n    if n <= 0 {\n        return 0\n    }\n\n    return enesimo_primo(n, 2, 0)\n}\nfunc main() {\n    var numero int\n\n    fmt.Scan(&numero)\n\n    fmt.Printf(\"%d\\n\", encontrar_primo(numero))\n}\n",
+            "lines": "50"
         }
     ]
 }

@@ -32,7 +32,7 @@ func (st *Set) Insert(value int)  {
 		if st.data[index] == value {
 			return
 		} 
-
+			
 		if st.data[index] > value {
 			break
 		}
