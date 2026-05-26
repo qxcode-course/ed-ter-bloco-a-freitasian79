@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-20_10-42-40",
+            "content": "@@ -366,23 +366,8 @@\n    %7D\n-%0A%0A    return -1\n %0A%7D%0Af\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-05-20_10-42-49",
+            "content": "@@ -113,28 +113,8 @@\n  - 1\n-%0A    resultado := -1\n %0A%0A  \n@@ -223,17 +223,12 @@\n   re\n-sultado =\n+turn\n  mei\n@@ -241,69 +241,18 @@\n     \n-    comeco = meio + 1%0A%0A            return meio%0A        %7D else\n+%7D%0A%0A       \n  if \n@@ -353,25 +353,24 @@\n 1%0A        %7D%0A\n-%0A\n     %7D%0A%0A    r\n@@ -379,17 +379,10 @@\n urn \n-resultado\n+-1\n %0A%7D%0Af\n@@ -435,16 +435,19 @@\n  2, 3, 4\n+, 5\n %7D%0A%0A    f\n@@ -458,134 +458,10 @@\n rint\n-f(%22POSI%C3%87%C3%83O DO ELEMENTO DO MEIO: %25d%5Cn%22, BinarySearch(lista_inteiros, 1))%0A    fmt.Printf(%22%C3%9ALTIMA OCORR%C3%8ANCIA: %25d%5Cn%22, BinarySearch\n+ln\n (lis\n@@ -475,12 +475,11 @@\n iros, 1)\n-)\n %0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-05-20_11-16-00",
+            "content": "@@ -270,13 +270,14 @@\n     \n-start\n+comeco\n  = m\n@@ -275,32 +275,57 @@\n omeco = meio + 1\n+%0A%0A            return meio\n %0A        %7D else \n@@ -341,21 +341,20 @@\n %3E slice%5B\n-value\n+meio\n %5D %7B%0A    \n@@ -513,17 +513,17 @@\n %7B1, \n-2\n+1\n , 2, 3, \n 3, 3\n@@ -522,18 +522,170 @@\n  3, \n-3, 3\n+4\n %7D%0A%0A    \n+fmt.Printf(%22POSI%C3%87%C3%83O DO ELEMENTO DO MEIO: %25d%5Cn%22, BinarySearch(lista_inteiros, 1))%0A    fmt.Printf(%22%C3%9ALTIMA OCORR%C3%8ANCIA: %25d%5Cn%22, BinarySearch(lista_inteiros, 1))\n %0A%7D%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-05-20_19-29-17",
+            "content": "@@ -258,38 +258,37 @@\n eio%0A            \n-comeco\n+start\n  = meio + 1%0A    \n@@ -315,20 +315,21 @@\n %3E slice%5B\n-meio\n+value\n %5D %7B%0A    \n@@ -508,51 +508,7 @@\n     \n-fmt.Println(BinarySearch(lista_inteiros, 4))\n %0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-05-20_19-37-44",
+            "content": "package main\nimport \"fmt\"\n\nfunc BinarySearch(slice []int, value int) int {\n    comeco := 0\n    fim := len(slice) - 1\n    resultado := -1\n\n    for comeco <= fim {\n        meio := (comeco + fim) / 2\n\n        if slice[meio] == value {\n            resultado = meio\n            comeco = meio + 1\n        } else if value > slice[meio] {\n            comeco = meio + 1\n        } else {\n            fim = meio - 1\n        }\n\n    }\n\n    return resultado\n}\nfunc main() {\n    lista_inteiros := []int{1, 2, 2, 3, 3, 3}\n\n    fmt.Println(BinarySearch(lista_inteiros, 4))\n}\n",
+            "lines": "29"
+        }
+    ]
+}

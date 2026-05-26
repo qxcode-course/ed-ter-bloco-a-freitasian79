@@ -38,9 +38,7 @@ func (v *Vector) Reserve(newCapacity int) {
 
 	novaVetor := make([]int, newCapacity)
 
-	for i := 0; i < v.size; i++ {
-		novaVetor[i] = v.data[i]
-	}
+	copy(novaVetor, v.data)
 
 	v.data = novaVetor
 	v.capacity = newCapacity

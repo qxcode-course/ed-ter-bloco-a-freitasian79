@@ -1,0 +1,94 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-18_21-38-28",
+            "content": "@@ -115,55 +115,37 @@\n  %7B%0A%09\n-// busca binaria%0A%09start := 0%0A%09end := len(slice)\n+_, _ = slice, value%0A%09return 0\n %0A%7D%0A%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-05-20_10-33-28",
+            "content": "@@ -162,205 +162,8 @@\n ice)\n- - 1%0A%0A%09for start %3C= end %7B%0A%09%09middle := (start + end) / 2%0A%0A%09%09if slice%5Bmiddle%5D == value %7B%0A%09%09%09return middle%0A%09%09%7D%0A%0A%09%09if value %3E slice%5Bmiddle%5D %7B%0A%09%09%09start = middle + 1%0A%09%09%7D else %7B%0A%09%09%09end = middle - 1%0A%09%09%7D%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-05-20_10-35-41",
+            "content": "@@ -359,20 +359,8 @@\n %7D%0A%09%7D\n-%0A%0A%09return -1\n %0A%7D%0A%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-20_10-35-53",
+            "content": "@@ -249,99 +249,98 @@\n e %7B%0A\n-%0A\n %09%09%09\n-if\n+return\n  middle\n- == len(slice) - 1 %7C%7C slice%5Bmeio + 1%5D %3E value %7B%0A%09%09%09%09return meio%0A%09%09%09%7D%0A%0A%09%09%09start\n+%0A%09%09%7D%0A%0A%09%09if value %3E slice%5Bmiddle%5D %7B%0A%09%09%09start = middle + 1%0A%09%09%7D else %7B%0A%09%09%09end\n  = m\n@@ -341,25 +341,25 @@\n nd = middle \n-+\n+-\n  1%0A%09%09%7D%0A%09%7D%0A%0A%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-20_11-21-31",
+            "content": "@@ -287,21 +287,19 @@\n  slice%5Bm\n-iddle\n+eio\n  + 1%5D %3E \n@@ -318,21 +318,19 @@\n return m\n-iddle\n+eio\n %0A%09%09%09%7D%0A%0A%09\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-20_11-22-00",
+            "content": "@@ -370,22 +370,18 @@\n %09return \n-middle\n+-1\n %0A%7D%0A%0Afunc\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-20_11-22-31",
+            "content": "@@ -370,18 +370,22 @@\n %09return \n--1\n+middle\n %0A%7D%0A%0Afunc\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-20_11-22-40",
+            "content": "@@ -358,95 +358,8 @@\n + 1%0A\n-%09%09%7D else if value %3E slice%5Bmeio%5D %7B%0A%09%09%09start = middle + 1%0A%09%09%7D else %7B%0A%09%09%09end = middle - 1%0A\n %09%09%7D%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-20_11-24-45",
+            "content": "@@ -381,21 +381,19 @@\n  slice%5Bm\n-iddle\n+eio\n %5D %7B%0A%09%09%09s\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-20_11-24-54",
+            "content": "@@ -459,22 +459,18 @@\n %09return \n-middle\n+-1\n %0A%7D%0A%0Afunc\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-20_11-28-08",
+            "content": "@@ -459,18 +459,22 @@\n %09return \n--1\n+middle\n %0A%7D%0A%0Afunc\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-20_11-29-15",
+            "content": "@@ -168,26 +168,8 @@\n  1%0A%0A\n-%09resultado := -1%0A%0A\n %09for\n@@ -184,16 +184,16 @@\n = end %7B%0A\n+\n %09%09middle\n@@ -253,26 +253,89 @@\n %0A%09%09%09\n-resultado =\n+if middle == len(slice) - 1 %7C%7C slice%5Bmiddle + 1%5D %3E value %7B%0A%09%09%09%09return\n  middle\n+%0A%09%09%09%7D\n %0A%0A%09%09\n@@ -358,11 +358,8 @@\n + 1%0A\n-%09%09%0A\n %09%09%7D \n@@ -456,72 +456,17 @@\n %7D%0A%0A%09\n-if resultado == -1 %7B%0A%09%09return -1%0A%09%7D else %7B%0A%09%09return resultado%0A%09%7D\n+return -1\n %0A%7D%0A%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-20_11-35-58",
+            "content": "@@ -462,21 +462,25 @@\n %09return \n-start\n+resultado\n %0A%09%7D%0A%7D%0A%0Af\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-05-20_11-36-17",
+            "content": "@@ -163,16 +163,17 @@\n ce) - 1%0A\n+%0A\n %09resulta\n@@ -263,24 +263,29 @@\n value %7B%0A\n+%0A\n %09%09%09\n-start\n+resultado\n  = middl\n@@ -289,31 +289,34 @@\n ddle\n- +1\n+%0A\n %0A%09%09%09\n-resultado = meio\n+start = middle + 1%0A%09%09\n %0A%09%09%7D\n@@ -427,9 +427,9 @@\n ado \n-!\n+=\n = -1\n@@ -444,39 +444,38 @@\n urn \n-resultado%0A%09%7D %0A%0A%09return esquerda\n+-1%0A%09%7D else %7B%0A%09%09return start%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-05-20_11-39-37",
+            "content": "@@ -454,21 +454,24 @@\n %09return \n-start\n+esquerda\n %0A%7D%0A%0Afunc\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-05-20_11-39-43",
+            "content": "@@ -299,21 +299,19 @@\n tado = m\n-iddle\n+eio\n %0A%09%09%7D els\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-05-20_11-39-51",
+            "content": "@@ -277,25 +277,24 @@\n t = middle +\n- \n 1%0A%09%09%09resulta\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-05-20_19-40-35",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc MagicSearch(slice []int, value int) int {\n\t// busca binaria\n\tstart := 0\n\tend := len(slice) - 1\n\tresultado := -1\n\n\tfor start <= end {\n\t\tmiddle := (start + end) / 2\n\n\t\tif slice[middle] == value {\n\t\t\tstart = middle + 1\n\t\t\tresultado = middle\n\t\t} else if value > slice[middle] {\n\t\t\tstart = middle + 1\n\t\t} else {\n\t\t\tend = middle - 1\n\t\t}\n\t}\n\n\tif resultado != -1 {\n\t\treturn resultado\n\t} \n\n\treturn start\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Fields(scanner.Text())\n\tslice := make([]int, 0, 1)\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tresult := MagicSearch(slice, value)\n\tfmt.Println(result)\n}\n",
+            "lines": "51"
+        }
+    ]
+}

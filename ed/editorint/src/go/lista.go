@@ -111,3 +111,5 @@ func (l *List[T]) String() string {
 	}
 	return "[" + strings.Join(values, ", ") + "]"
 }
+
+

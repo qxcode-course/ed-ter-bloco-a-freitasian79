@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-20_22-36-16",
+            "content": "@@ -39,306 +39,8 @@\n %0A)%0A%0A\n-type Node%5BT comparable%5D struct %7B%0A%09Value T%0A%09next *Node%5BT%5D%0A%09prev *Node%5BT%5D%0A%09root *Node%5BT%5D%0A%7D%0A%0Atype LList struct %7B%0A%09root *Node%5BT%5D%0A%09size int%0A%7D%0A%0Afunc NewLList%5BT comparable%5D() *LList%5BT%5D %7B%0A%09root := &Node%5BT%5D%7B%7D%0A%09root.next = root%0A%09root.prev = root%0A%09root.root = root%0A%0A%09return &LList%5BT%5D%7Broot: root, size : 0%7D%0A%7D%0A%0A\n func\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-05-20_22-54-48",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"lista\"\n)\n\ntype Node[T comparable] struct {\n\tValue T\n\tnext *Node[T]\n\tprev *Node[T]\n\troot *Node[T]\n}\n\ntype LList struct {\n\troot *Node[T]\n\tsize int\n}\n\nfunc NewLList[T comparable]() *LList[T] {\n\troot := &Node[T]{}\n\troot.next = root\n\troot.prev = root\n\troot.root = root\n\n\treturn &LList[T]{root: root, size : 0}\n}\n\nfunc main() {\n    \n}\n",
+            "lines": "31"
+        }
+    ]
+}

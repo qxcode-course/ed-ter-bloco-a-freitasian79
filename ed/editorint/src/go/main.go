@@ -22,31 +22,100 @@ func (e *Editor) InsertChar(r rune) {
 func (e *Editor) KeyLeft() {
 	if e.it_char.Prev() != e.it_line.Value.End() {
 		e.it_char = e.it_char.Prev() // Move o cursor para a esquerda
+	} else {
+		e.it_line = e.it_line.Prev()
+		e.it_char = e.it_line.Value.Back()
 	}
 }
 
 func (e *Editor) KeyEnter() {
+	/* nova := NewList[rune]()
+	e.texto.Insert(e.it_line.Next(), nova)
+	e.it_line = e.it_line.Next()
+	e.it_char = e.it_line.Value.Front() */
+
 	nova := NewList[rune]()
 	e.texto.Insert(e.it_line.Next(), nova)
+
+	curr := e.it_char
+
+	for curr != e.it_line.Value.End() {
+		
+		next := curr.Next()
+
+		nova.PushBack(curr.Value)
+
+		e.it_line.Value.Erase(curr)
+
+		curr = next
+	}
+
 	e.it_line = e.it_line.Next()
 	e.it_char = e.it_line.Value.Front()
 }
 
 func (e *Editor) KeyRight() {
-	e.it_char = e.it_char.Next() // Move o cursor para a direita
+	if e.it_char.Next() != e.it_line.Value.End() {
+		e.it_char = e.it_char.Next()
+	} else {
+		e.it_line = e.it_line.Next()
+		e.it_char = e.it_line.Value.Front()
+	}
+	 // Move o cursor para a direita
 }
 
 func (e *Editor) KeyUp() {
+	
+	coluna_index := e.it_line.Value.IndexOf(e.it_char)
+
+	e.it_line = e.it_line.Prev()
+	e.it_char = e.it_line.Value.Front()
+
+	for i := 0; i < coluna_index; i++ {
+		if e.it_char == e.it_line.Value.End() {
+			break
+		}
+
+		e.it_char = e.it_char.Next()
+	}
 }
 
 func (e *Editor) KeyDown() {
+	
+	coluna_index := e.it_line.Value.IndexOf(e.it_char)
+
+	e.it_line = e.it_line.Next()
+	e.it_char = e.it_line.Value.Front()
+
+	for i := 0; i < coluna_index; i++ {
+		if e.it_char == e.it_line.Value.End(){
+			break
+		}
+
+		e.it_char = e.it_char.Next()
+	}
 }
 
 func (e *Editor) KeyBackspace() {
 
+	alvo := e.it_char.Prev()
+
+	if alvo == e.it_line.Value.End(){
+		return
+	}
+
+	e.it_line.Value.Erase(alvo)
 }
 
 func (e *Editor) KeyDelete() {
+	
+	alvo := e.it_char.Next()
+
+	if alvo == e.it_line.Value.End(){
+		return
+	}
+
+	e.it_line.Value.Erase(alvo)
 }
 
 func main() {

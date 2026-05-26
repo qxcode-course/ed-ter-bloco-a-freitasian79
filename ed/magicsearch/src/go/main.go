@@ -9,8 +9,29 @@ import (
 )
 
 func MagicSearch(slice []int, value int) int {
-	_, _ = slice, value
-	return 0
+	// busca binaria
+	start := 0
+	end := len(slice) - 1
+	resultado := -1
+
+	for start <= end {
+		middle := (start + end) / 2
+
+		if slice[middle] == value {
+			start = middle + 1
+			resultado = middle
+		} else if value > slice[middle] {
+			start = middle + 1
+		} else {
+			end = middle - 1
+		}
+	}
+
+	if resultado != -1 {
+		return resultado
+	} 
+
+	return start
 }
 
 func main() {

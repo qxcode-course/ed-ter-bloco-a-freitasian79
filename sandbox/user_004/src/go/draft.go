@@ -1,69 +1,86 @@
 package main
 import "fmt"
 
-type Root struct {
+type Node struct {
     info int
-    next *Root
-    prev *Root
+    next *Node
+    prev *Node
 }
 
-type Dlist struct {
-    head *Root
+type DList struct {
+    head *Node
 }
 
-func NewList() *Dlist {
-    dlist := Dlist{}
-    dlist.head = &Root{}
+func NewDList() *DList {
+    dlist := DList{}
+    dlist.head = &Node{}
     dlist.head.next = dlist.head
     dlist.head.prev = dlist.head
 
     return &dlist
 }
 
-func insert(ref *Root, value int) {
-    anterior := ref.prev
+func insert(ref *Node, value int) {
+    previous := ref.prev
 
-    C := &Root {
+    new_node := &Node {
         info: value,
         next: ref,
-        prev: anterior,
+        prev: previous,
     }
 
-    anterior.next = C
-    ref.prev = C
-
+    previous.next = new_node
+    ref.prev = new_node
 }
 
-func PushBack(list *Dlist, value int) {
+func (list *DList) PushBack(value int) {
     insert(list.head, value)
 }
 
-func PushFront(list *Dlist, value int) {
+func (list *DList) PushFront(value int) {
     insert(list.head.next, value)
 }
 
-func print(list *Dlist) {
-    it := list.head.next
+func show(list *DList) {
+    it := list.head.next 
+
     fmt.Print("[")
-    for {
-        if it == list.head {
-            break
-
-        }
+    for it = list.head.next; it != list.head; it = it.next {
         fmt.Printf(" %d", it.info)
-        it = it.next
     }
-
     fmt.Print(" ]\n")
 }
-func main() {
-    lista := NewList()
+//  AMBAS ESTÃO FUNCIONANDO ****
+func (list *DList) Clear() {
+    list.head.next = list.head
+    list.head.prev = list.head
+}
+
+func Clear(list *DList) {
+    list.head.next = list.head
+    list.head.prev = list.head
+}
+// *****************************
+
+func (list *DList) PopBack(){
+    removed := list.head.prev
+    new_last := removed.prev
+
+    new_last.next = list.head
+    list.head.prev = new_last
+
+}
+
+func main(){
+    list := NewDList()
 
     for i := range 10 {
-        PushBack(lista, i)
-        print(lista)
-        fmt.Print("* =============== *\n")
+        list.PushFront(i)
     }
-
-    print(lista)
+    
+    show(list)
+    list.PopBack()
+    show(list)
 }
+
+

@@ -114,20 +114,7 @@
         return nil
     }
 
-    func (ms *Multiset) Count(value int) int {
-        
-        counter := 0
-
-        for i := 0; i < ms.size; i++ {
-            if ms.data[i] == value {
-                counter++
-            } else if ms.data[i] > value {
-                break
-            }
-        }
-
-        return counter
-    }
+    
 
     func main() {
         ms := NewMultiSet(0)
