@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-27_16-05-29",
+            "content": "@@ -1,9 +1,8 @@\n-%09\n package \n@@ -7,17 +7,16 @@\n e main%0A%0A\n-%09\n type Sta\n@@ -34,17 +34,16 @@\n truct %7B%0A\n-%09\n %09data %5B%5D\n@@ -44,21 +44,19 @@\n ata %5B%5DT%0A\n-%09\n %7D%0A%0A\n-%09\n func New\n@@ -82,17 +82,16 @@\n ck%5BT%5D %7B%0A\n-%09\n %09return \n@@ -113,21 +113,19 @@\n  %5B%5DT%7B%7D%7D%0A\n-%09\n %7D%0A%0A\n-%09\n func (s \n@@ -151,17 +151,16 @@\n ue T) %7B%0A\n-%09\n %09s.data \n@@ -183,21 +183,19 @@\n  value)%0A\n-%09\n %7D%0A%0A\n-%09\n func (s \n@@ -211,25 +211,24 @@\n ) Top() T %7B%0A\n-%09\n %09if len(s.da\n@@ -238,17 +238,16 @@\n  == 0 %7B%0A\n-%09\n %09%09panic(\n@@ -264,21 +264,19 @@\n empty%22)%0A\n-%09\n %09%7D%0A\n-%09\n %09return \n@@ -297,21 +297,19 @@\n ata)-1%5D%0A\n-%09\n %7D%0A%0A\n-%09\n func (s \n@@ -336,17 +336,16 @@\n  bool %7B%0A\n-%09\n %09return \n@@ -365,13 +365,11 @@\n = 0%0A\n-%09\n %7D%0A%0A\n-%09\n func\n@@ -393,17 +393,16 @@\n p() T %7B%0A\n-%09\n %09if s.Is\n@@ -413,17 +413,16 @@\n y() %7B%0A%09%09\n-%09\n panic(%22s\n@@ -441,13 +441,11 @@\n y%22)%0A\n-%09\n %09%7D%0A\n-%09\n %09val\n@@ -472,17 +472,16 @@\n ata)-1%5D%0A\n-%09\n %09s.data \n@@ -505,17 +505,16 @@\n ata)-1%5D%0A\n-%09\n %09return \n@@ -519,11 +519,10 @@\n n value%0A\n-%09\n %7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-02_23-26-39",
+            "content": "@@ -316,11 +316,8 @@\n -1%5D%0A\n-%09%09%0A\n %09%7D%0A%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-11_16-21-10",
+            "content": "\tpackage main\n\n\ttype Stack[T any] struct {\n\t\tdata []T\n\t}\n\n\tfunc NewStack[T any]() *Stack[T] {\n\t\treturn &Stack[T]{data: []T{}}\n\t}\n\n\tfunc (s *Stack[T]) Push(value T) {\n\t\ts.data = append(s.data, value)\n\t}\n\n\tfunc (s *Stack[T]) Top() T {\n\t\tif len(s.data) == 0 {\n\t\t\tpanic(\"stack is empty\")\n\t\t}\n\t\treturn s.data[len(s.data)-1]\n\t\t\n\t}\n\n\tfunc (s *Stack[T]) IsEmpty() bool {\n\t\treturn len(s.data) == 0\n\t}\n\n\tfunc (s *Stack[T]) Pop() T {\n\t\tif s.IsEmpty() {\n\t\t\tpanic(\"stack is empty\")\n\t\t}\n\t\tvalue := s.data[len(s.data)-1]\n\t\ts.data = s.data[:len(s.data)-1]\n\t\treturn value\n\t}\n",
+            "lines": "34"
+        }
+    ]
+}

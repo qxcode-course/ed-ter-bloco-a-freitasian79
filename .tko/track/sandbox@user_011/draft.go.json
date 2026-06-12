@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-27_21-24-05",
+            "content": "@@ -199,21 +199,8 @@\n %5D %7B%0A\n-            %0A\n     \n@@ -426,27 +426,8 @@\n  dfs\n-(0, graph, visited)\n %0A%0A%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-05-27_21-24-25",
+            "content": "@@ -1,12 +1,8 @@\n-    \n package \n@@ -6,20 +6,16 @@\n ge main%0A\n-    \n import %22\n@@ -20,20 +20,16 @@\n  %22fmt%22%0A%0A\n-    \n func dfs\n@@ -82,20 +82,16 @@\n ool) %7B%0A%0A\n-    \n     visi\n@@ -109,20 +109,16 @@\n ue%0A%0A    \n-  \n-  \n fmt.Prin\n@@ -125,20 +125,16 @@\n tln(v)%0A%0A\n-    \n     for \n@@ -172,20 +172,16 @@\n         \n-    \n if !visi\n@@ -203,33 +203,25 @@\n             \n-    %0A    \n+%0A\n             \n@@ -261,35 +261,19 @@\n     \n-    %7D%0A        %7D%0A    %7D%0A%0A    \n+%7D%0A    %7D%0A%7D%0A%0A\n func\n@@ -282,33 +282,25 @@\n ain() %7B%0A    \n-    %0A    \n+%0A\n     graph :=\n@@ -300,16 +300,20 @@\n raph := \n+make\n (map%5Bint\n@@ -329,20 +329,16 @@\n         \n-    \n 0: %7B1, 2\n@@ -340,20 +340,16 @@\n %7B1, 2%7D,%0A\n-    \n         \n@@ -364,20 +364,16 @@\n         \n-    \n 2: %7B%7D,%0A \n@@ -383,34 +383,22 @@\n     \n-  \n-  \n 3: %7B%7D,%0A\n-    \n     %7D%0A%0A\n-    \n     \n@@ -428,28 +428,24 @@\n %5Dbool)%0A%0A    \n-  \n-  \n dfs(0, graph\n@@ -456,14 +456,10 @@\n sited)%0A%0A\n-    \n %7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-05-27_21-25-45",
+            "content": "@@ -360,16 +360,17 @@\n raph := \n+(\n map%5Bint%5D\n@@ -374,16 +374,17 @@\n nt%5D%5B%5Dint\n+)\n %7B%0A      \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-05-27_21-26-00",
+            "content": "@@ -1,8 +1,12 @@\n+    \n package \n@@ -10,17 +10,20 @@\n ge main%0A\n-%0A\n+    \n import %22\n@@ -28,16 +28,20 @@\n  %22fmt%22%0A%0A\n+    \n func dfs\n@@ -45,28 +45,31 @@\n dfs(\n-grid %5B%5D%5B%5Dbyte, i, j \n+v int, graph map%5Bint%5D%5B%5D\n int,\n@@ -77,19 +77,23 @@\n visited \n-%5B%5D%5B\n+map%5Bint\n %5Dbool) %7B\n@@ -97,157 +97,127 @@\n ) %7B%0A\n-%09rows := len(grid)%0A%09cols := len(grid%5B0%5D)%0A%0A%09// fora da matriz%0A%09if i %3C 0 %7C%7C j %3C 0 %7C%7C i %3E= rows %7C%7C j %3E= cols %7B%0A%09%09return%0A%09%7D%0A%0A%09// j%C3%A1 visitado%0A%09\n+%0A        visited%5Bv%5D = true%0A%0A        fmt.Println(v)%0A%0A        for _, vizinho := range graph%5Bv%5D %7B%0A            \n if \n+!\n visited%5B\n i%5D%5Bj\n@@ -216,386 +216,322 @@\n ted%5B\n-i%5D%5Bj%5D %7B%0A%09%09return%0A%09%7D%0A%0A%09visited%5Bi%5D%5Bj%5D = true%0A%09fmt.Println(%22visitando:%22, i, j)%0A%0A%09// 4 dire%C3%A7%C3%B5es%0A%09dfs(grid, i+1, j, visited)%0A%09dfs(grid, i-1, j, visited)%0A%09dfs(grid, i, j+1, visited)%0A%09dfs(grid, i, j-1, visited)%0A%7D%0A%0Afunc main() %7B%0A%09grid := %5B%5D%5B%5Dbyte%7B%0A%09%09%7B'A', 'B'%7D,%0A%09%09%7B'C', 'D'%7D,%0A%09%7D%0A%0A%09visited := make(%5B%5D%5B%5Dbool, 2)%0A%09for i := range visited %7B%0A%09%09visited%5Bi%5D = make(%5B%5Dbool, 2)%0A%09%7D%0A%0A%09dfs(grid, 0, 0\n+vizinho%5D %7B%0A                %0A                dfs(vizinho, graph, visited)%0A            %7D%0A        %7D%0A    %7D%0A%0A    func main() %7B%0A        %0A        graph := map%5Bint%5D%5B%5Dint%7B%0A            0: %7B1, 2%7D,%0A            1: %7B3%7D,%0A            2: %7B%7D,%0A            3: %7B%7D,%0A        %7D%0A%0A        visited := make(map%5Bint%5Dbool)%0A%0A        dfs(0, graph\n , vi\n@@ -537,10 +537,15 @@\n isited)%0A\n+%0A    \n %7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-05-27_21-51-00",
+            "content": "@@ -25,42 +25,8 @@\n t%22%0A%0A\n-type Pos struct %7B%0A    l, c int%0A%7D%0A%0A\n func\n@@ -49,15 +49,16 @@\n te, \n-pos Pos\n+i, j int\n , vi\n@@ -225,23 +225,30 @@\n isit\n-ado%5Bpos%5D = true\n+ed%5Bi%5D%5Bj%5D %7B%0A%09%09return%0A%09%7D\n %0A%0A%09v\n@@ -284,34 +284,26 @@\n tln(\n-string(grid%5Bpos.l%5D%5Bpos.c%5D)\n+%22visitando:%22, i, j\n )%0A%0A%09\n@@ -517,43 +517,79 @@\n ake(\n-map%5BPos%5Dbool)%0A%0A    start := Pos%7B0,0\n+%5B%5D%5B%5Dbool, 2)%0A%09for i := range visited %7B%0A%09%09visited%5Bi%5D = make(%5B%5Dbool, 2)%0A%09\n %7D%0A%0A%09\n@@ -602,13 +602,12 @@\n id, \n-start\n+0, 0\n , vi\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-05-27_22-14-26",
+            "content": "@@ -177,21 +177,17 @@\n %09if \n-pos.l\n+i\n  %3C 0 %7C%7C \n pos.\n@@ -186,21 +186,17 @@\n  %7C%7C \n-pos.c\n+j\n  %3C 0 %7C%7C \n pos.\n@@ -191,21 +191,17 @@\n  %3C 0 %7C%7C \n-pos.l\n+i\n  %3E= rows\n@@ -204,21 +204,17 @@\n rows %7C%7C \n-pos.c\n+j\n  %3E= cols\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-05-27_22-15-15",
+            "content": "@@ -96,23 +96,19 @@\n visited \n-map%5BPos\n+%5B%5D%5B\n %5Dbool) %7B\n@@ -274,38 +274,23 @@\n isit\n-ed\n+ado\n %5Bpos%5D \n-%7B%0A        return%0A    %7D\n+= true\n %0A%0A%09v\n@@ -296,19 +296,20 @@\n visited%5B\n-pos\n+i%5D%5Bj\n %5D = true\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-05-27_22-17-29",
+            "content": "@@ -399,22 +399,14 @@\n id, \n-pos.l+1, pos.c\n+i+1, j\n , vi\n@@ -427,22 +427,14 @@\n id, \n-pos.l-1, pos.c\n+i-1, j\n , vi\n@@ -451,28 +451,20 @@\n s(grid, \n-pos.l, pos.c\n+i, j\n +1, visi\n@@ -483,20 +483,12 @@\n id, \n-pos.l, pos.c\n+i, j\n -1, \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-05-27_22-17-56",
+            "content": "@@ -117,40 +117,8 @@\n  %7B%0A%09\n-pos := Pos%7Bl: l, c: c%7D%0A    %0A    \n rows\n@@ -321,17 +321,22 @@\n d%5Bpos%5D =\n+ true\n %0A\n-\n %09fmt.Pri\n@@ -399,14 +399,22 @@\n id, \n-i+1, j\n+pos.l+1, pos.c\n , vi\n@@ -435,14 +435,22 @@\n id, \n-i-1, j\n+pos.l-1, pos.c\n , vi\n@@ -467,20 +467,28 @@\n s(grid, \n-i, j\n+pos.l, pos.c\n +1, visi\n@@ -507,12 +507,20 @@\n id, \n-i, j\n+pos.l, pos.c\n -1, \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-05-27_22-22-03",
+            "content": "@@ -113,16 +113,48 @@\n ool) %7B%0A%09\n+pos := Pos%7Bl: l, c: c%7D%0A    %0A    \n rows := \n@@ -426,20 +426,14 @@\n id, \n-rows+1, cols\n+i+1, j\n , vi\n@@ -454,20 +454,14 @@\n id, \n-rows-1, cols\n+i-1, j\n , vi\n@@ -478,26 +478,20 @@\n s(grid, \n-rows, cols\n+i, j\n +1, visi\n@@ -510,18 +510,12 @@\n id, \n-rows, cols\n+i, j\n -1, \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-27_22-25-45",
+            "content": "@@ -21,16 +21,50 @@\n  %22fmt%22%0A%0A\n+type Pos struct %7B%0A    l, c int%0A%7D%0A%0A\n func dfs\n@@ -83,22 +83,15 @@\n te, \n-i, j, cols int\n+pos Pos\n , vi\n@@ -96,27 +96,27 @@\n visited map%5B\n-int\n+Pos\n %5Dbool) %7B%0A%09ro\n@@ -130,16 +130,38 @@\n en(grid)\n+%0A%09cols := len(grid%5B0%5D)\n %0A%0A%09// fo\n@@ -181,17 +181,21 @@\n %09if \n-i\n+pos.l\n  %3C 0 %7C%7C \n j %3C \n@@ -194,17 +194,21 @@\n  %7C%7C \n-j\n+pos.c\n  %3C 0 %7C%7C \n i %3E=\n@@ -203,17 +203,21 @@\n  %3C 0 %7C%7C \n-i\n+pos.l\n  %3E= rows\n@@ -220,17 +220,21 @@\n rows %7C%7C \n-j\n+pos.c\n  %3E= cols\n@@ -253,27 +253,8 @@\n %09%7D%0A%0A\n-%09id := i*cols + j%0A%0A\n %09// \n@@ -281,24 +281,34 @@\n ted%5B\n-id\n+pos\n %5D %7B%0A\n-%09%09\n+        \n return%0A\n-%09\n+    \n %7D%0A%0A%09\n@@ -319,18 +319,55 @@\n ted%5B\n-id%5D = true\n+pos%5D =%0A%09fmt.Println(string(grid%5Bpos.l%5D%5Bpos.c%5D))\n %0A%0A%09/\n@@ -394,15 +394,15 @@\n id, \n-i\n+rows\n +1,\n- j,\n  col\n@@ -428,15 +428,15 @@\n id, \n-i\n+rows\n -1,\n- j,\n  col\n@@ -462,20 +462,20 @@\n id, \n-i, j+1\n+rows\n , cols\n++1\n , vi\n@@ -496,20 +496,20 @@\n id, \n-i, j-1\n+rows\n , cols\n+-1\n , vi\n@@ -587,50 +587,8 @@\n %09%7D%0A%0A\n-%09rows := len(grid)%0A%09cols := len(grid%5B0%5D)%0A%0A\n %09vis\n@@ -608,19 +608,19 @@\n map%5B\n-int\n+Pos\n %5Dbool)%0A%0A\n %09dfs\n@@ -619,49 +619,56 @@\n l)%0A%0A\n-%09dfs(grid, 0, 0, cols, visited)%0A%0A%09_ = rows\n+    start := Pos%7B0,0%7D%0A%0A%09dfs(grid, start, visited)\n %0A%7D%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-05-27_22-38-13",
+            "content": "@@ -49,16 +49,22 @@\n te, i, j\n+, cols\n  int, vi\n@@ -69,19 +69,23 @@\n visited \n-%5B%5D%5B\n+map%5Bint\n %5Dbool) %7B\n@@ -107,30 +107,8 @@\n rid)\n-%0A%09cols := len(grid%5B0%5D)\n %0A%0A%09/\n@@ -184,16 +184,35 @@\n urn%0A%09%7D%0A%0A\n+%09id := i*cols + j%0A%0A\n %09// j%C3%A1 v\n@@ -232,19 +232,17 @@\n isited%5Bi\n-%5D%5Bj\n+d\n %5D %7B%0A%09%09re\n@@ -264,19 +264,17 @@\n ed%5Bi\n-%5D%5Bj\n+d\n %5D = true\n %0A%09fm\n@@ -273,41 +273,8 @@\n true\n-%0A%09fmt.Println(%22visitando:%22, i, j)\n %0A%0A%09/\n@@ -300,24 +300,30 @@\n rid, i+1, j,\n+ cols,\n  visited)%0A%09d\n@@ -338,16 +338,22 @@\n  i-1, j,\n+ cols,\n  visited\n@@ -372,16 +372,22 @@\n  i, j+1,\n+ cols,\n  visited\n@@ -406,16 +406,22 @@\n  i, j-1,\n+ cols,\n  visited\n@@ -495,72 +495,57 @@\n %7D%0A%0A%09\n-visited := make(%5B%5D%5B%5Dbool, 2)%0A%09for i := range visited %7B%0A%09\n+rows := len(grid)%0A%09cols := len(grid%5B0%5D)%0A%0A\n %09visited\n %5Bi%5D \n@@ -544,32 +544,30 @@\n ited\n-%5Bi%5D\n  \n+:\n = make(\n-%5B%5Dbool, 2)%0A%09%7D\n+map%5Bint%5Dbool)\n %0A%0A%09d\n@@ -580,16 +580,22 @@\n d, 0, 0,\n+ cols,\n  visited\n@@ -579,27 +579,38 @@\n id, 0, 0, cols, visited)\n+%0A%0A%09_ = rows\n %0A%7D%0A\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-05-27_22-39-08",
+            "content": "@@ -53,16 +53,34 @@\n i, j int\n+, visited %5B%5D%5B%5Dbool\n ) %7B%0A%09row\n@@ -117,16 +117,35 @@\n id%5B0%5D)%0A%0A\n+%09// fora da matriz%0A\n %09if i %3C \n@@ -201,40 +201,126 @@\n %7D%0A%0A%09\n-fmt.Println(string(grid%5Bi%5D%5Bj%5D))%0A\n+// j%C3%A1 visitado%0A%09if visited%5Bi%5D%5Bj%5D %7B%0A%09%09return%0A%09%7D%0A%0A%09visited%5Bi%5D%5Bj%5D = true%0A%09fmt.Println(%22visitando:%22, i, j)%0A%0A%09// 4 dire%C3%A7%C3%B5es\n %0A%09df\n@@ -329,24 +329,33 @@\n grid, i+1, j\n+, visited\n )%0A%09dfs(grid,\n@@ -361,16 +361,25 @@\n , i-1, j\n+, visited\n )%0A%09dfs(g\n@@ -389,16 +389,25 @@\n , i, j+1\n+, visited\n )%0A%09dfs(g\n@@ -417,16 +417,25 @@\n , i, j-1\n+, visited\n )%0A%7D%0A%0Afun\n@@ -496,16 +496,107 @@\n '%7D,%0A%09%7D%0A%0A\n+%09visited := make(%5B%5D%5B%5Dbool, 2)%0A%09for i := range visited %7B%0A%09%09visited%5Bi%5D = make(%5B%5Dbool, 2)%0A%09%7D%0A%0A\n %09dfs(gri\n@@ -602,12 +602,21 @@\n id, 0, 0\n+, visited\n )%0A%7D%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-05-27_22-56-13",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc dfs(grid [][]byte, i, j int) {\n\trows := len(grid)\n\tcols := len(grid[0])\n\n\tif i < 0 || j < 0 || i >= rows || j >= cols {\n\t\treturn\n\t}\n\n\tfmt.Println(string(grid[i][j]))\n\n\tdfs(grid, i+1, j)\n\tdfs(grid, i-1, j)\n\tdfs(grid, i, j+1)\n\tdfs(grid, i, j-1)\n}\n\nfunc main() {\n\tgrid := [][]byte{\n\t\t{'A', 'B'},\n\t\t{'C', 'D'},\n\t}\n\n\tdfs(grid, 0, 0)\n}\n",
+            "lines": "28"
+        }
+    ]
+}

@@ -213,4 +213,3 @@ func (e *Editor) Draw() {
 	}
 	e.screen.Show()
 }
-

@@ -15,16 +15,32 @@ func getNeig(p Pos) []Pos {
 }
 
 func inside(grid [][]rune, p Pos) bool {
-	return !(p.l < 0 || p.l >= len(grid) || p.c < 0 || p.c >= len(grid[0]))
+	return !(p.l < 0 || p.l >= len(grid[0]) || p.c < 0 || p.c >= len(grid[0]))
 }
 
 func match(grid [][]rune, p Pos, value rune) bool {
 	return inside(grid, p) && grid[p.l][p.c] == value
 }
 
-// Função recursiva que tenta encontrar o caminho do início ao fim
-func search(grid [][]rune, startPos, endPos Pos) bool {
-	_, _, _ = grid, startPos, endPos
+func search(grid [][]rune, pos, endPos Pos, visited map[Pos]bool) bool {
+	if !match(grid, pos, ' ') || visited[pos] {
+		return false
+	}
+
+	visited[pos] = true
+
+	if pos == endPos {
+		grid[pos.l][pos.c] = '-'
+		return true
+	}
+
+	for _, elem := range getNeig(pos) {
+		if search(grid, elem, endPos, visited) {
+			grid[pos.l][pos.c] = '.'
+			return true
+		}
+	}
+
 	return false
 }
 
@@ -37,27 +53,28 @@ func main() {
 	grid := make([][]rune, nl)
 
 	// Lê a gridriz
-	for i := range nl {
+	for i := 0; i < nl; i++ {
 		scanner.Scan()
 		grid[i] = []rune(scanner.Text())
 	}
 
 	// Procura posições de início e endPos e conserta para _
 	var startPos, endPos Pos
-	for l := range nl {
-		for c := range nc {
-			if grid[l][c] == 'I' {
-				grid[l][c] = ' '
-				startPos = Pos{l, c}
+	for i := 0; i < nl; i++ {
+		for c := 0; c < nc; c++ {
+			if grid[i][c] == 'I' {
+				grid[i][c] = ' '
+				startPos = Pos{i, c}
 			}
-			if grid[l][c] == 'F' {
-				grid[l][c] = ' '
-				endPos = Pos{l, c}
+			if grid[i][c] == 'F' {
+				grid[i][c] = ' '
+				endPos = Pos{i, c}
 			}
 		}
 	}
-
-	search(grid, startPos, endPos)
+	
+	visited := make(map[Pos]bool, 0)
+	search(grid, startPos, endPos, visited)
 
 	// Imprime o labirinto final
 	for _, line := range grid {

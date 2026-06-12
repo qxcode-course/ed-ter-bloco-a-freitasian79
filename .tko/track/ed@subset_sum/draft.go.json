@@ -1,0 +1,124 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-11_16-42-31",
+            "content": "@@ -188,31 +188,7 @@\n    %7D\n-%0A%0A    fmt.Print(numeros)\n %0A%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-06-11_16-42-41",
+            "content": "@@ -190,28 +190,8 @@\n  %7D%0A%0A\n-    fmt.Print(n, k)%0A\n     \n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-11_16-43-00",
+            "content": "@@ -203,10 +203,8 @@\n rint\n-ln\n (n, \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-11_16-43-57",
+            "content": "@@ -23,263 +23,8 @@\n mt%22%0A\n-%0Afunc subsetSum(numeros %5B%5Dint, n, index, somaAtual, alvo int) bool %7B%0A    if somaAtual == alvo %7B%0A        return true%0A    %7D%0A%0A    if somaAtual %3E alvo %7B%0A        return false%0A    %7D%0A%0A    return subsetSum(numeros, n, index+1, somaAtual+numeros%5Bindex%5D, alvo)%0A%0A%7D%0A%0A\n func\n@@ -186,10 +186,55 @@\n %0A    %7D%0A%0A\n+    fmt.Println(n, k)%0A    fmt.Print(numeros)%0A\n %7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-11_17-16-21",
+            "content": "@@ -445,76 +445,6 @@\n  %7D%0A%0A\n-    result := subsetSum(numeros, n, 0, 0, k)%0A%0A    fmt.Println(result)%0A\n %7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-06-11_17-17-28",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -29,39 +29,331 @@\n unc \n-main()%7B%0A%09var (%0A%09%09n, k int%0A%09)%0A%0A%09\n+subsetSum(numeros %5B%5Dint, n, index, somaAtual, alvo int) bool %7B%0A    if somaAtual == alvo %7B%0A        return true%0A    %7D%0A%0A    if somaAtual %3E alvo %7B%0A        return false%0A    %7D%0A%0A    return subsetSum(numeros, n, index+1, somaAtual+numeros%5Bindex%5D, alvo)%0A%0A%7D%0A%0Afunc main() %7B%0A    var (%0A        n, k int%0A    )%0A%0A    fmt.Scan(&n, &k)%0A%0A    \n nume\n@@ -375,17 +375,20 @@\n nt, n)%0A%0A\n-%09\n+    \n for i :=\n@@ -408,10 +408,16 @@\n + %7B%0A\n-%09%09\n+        \n fmt.\n@@ -438,13 +438,65 @@\n i%5D)%0A\n-%09%7D%0A%0A%09\n+    %7D%0A%0A    result := subsetSum(numeros, n, 0, 0, k)%0A%0A    \n fmt.\n@@ -503,19 +503,18 @@\n Println(\n-numeros\n+result\n )%0A%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-11_18-25-37",
+            "content": "@@ -142,27 +142,8 @@\n %09%7D%0A%0A\n-%09fmt.Println(n, k)%0A\n %09fmt\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-11_18-26-42",
+            "content": "@@ -60,27 +60,8 @@\n %09)%0A%0A\n-%09fmt.Scan(&n, &k)%0A%0A\n %09num\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-11_18-27-04",
+            "content": "@@ -25,223 +25,8 @@\n t%22%0A%0A\n-func SubSum(numeros %5B%5Dint, index, target int) bool %7B%0A%09current_sum == target %7B%0A%09%09return true%0A%09%7D%0A%0A%09if current_sum %3E target %7B%0A%09%09return false%0A%09%7D%0A%0A%09return SubSum(numeros, index+1, current_sum+numeros%5Bindex%5D, target) %0A%7D%0A%0A\n func\n@@ -34,16 +34,16 @@\n main()%7B%0A\n+\n %09var (%0A%09\n@@ -162,105 +162,46 @@\n %7D%0A%0A%09\n-result := SubSum(numeros, 0, 0\n+fmt.Println(n\n , k)%0A\n-%0A%09if result %7B%0A%09%09fmt.Println(%22true%22)%0A%09%7D else %7B%0A%09%09return false%0A%09%7D\n+%09fmt.Println(numeros)\n %0A%7D%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-06-11_18-32-16",
+            "content": "@@ -460,28 +460,20 @@\n %7B%0A%09%09\n-fmt.Println(%22\n+return \n false\n-%22)\n %0A%09%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-06-11_18-32-28",
+            "content": "@@ -58,21 +58,8 @@\n dex,\n- current_sum,\n  tar\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-06-11_18-33-03",
+            "content": "@@ -88,19 +88,16 @@\n bool %7B%0A%09\n-if \n current_\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-06-11_18-33-39",
+            "content": "@@ -252,57 +252,8 @@\n et) \n-%7C%7C%0A%09SubSum(numeros, index+1, current_sum, target)\n %0A%7D%0A%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-06-11_18-34-58",
+            "content": "@@ -54,19 +54,16 @@\n , index,\n- n,\n  current\n@@ -162,22 +162,8 @@\n get \n-%7C%7C index == n \n %7B%0A%09%09\n@@ -211,19 +211,16 @@\n index+1,\n- n,\n  current\n@@ -470,11 +470,8 @@\n , 0,\n- n,\n  0, \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-06-11_18-36-17",
+            "content": "@@ -288,35 +288,32 @@\n umeros, index+1,\n- n,\n  current_sum, ta\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-06-11_18-36-43",
+            "content": "@@ -30,30 +30,336 @@\n unc \n+SubSum(numeros %5B%5Dint, index, n, current_sum, target int) bool %7B%0A%09if current_sum == target %7B%0A%09%09return true%0A%09%7D%0A%0A%09if current_sum %3E target %7C%7C index == n %7B%0A%09%09return false%0A%09%7D%0A%0A%09return SubSum(numeros, index+1, n, current_sum+numeros%5Bindex%5D, target) %7C%7C%0A%09SubSum(numeros, index+1, n, current_sum, target)%0A%7D%0A%0Afunc \n main()\n- \n %7B%0A%09var \n+(%0A%09%09\n n, k int\n %0A%0A%09f\n@@ -354,16 +354,19 @@\n n, k int\n+%0A%09)\n %0A%0A%09fmt.S\n@@ -382,19 +382,19 @@\n k)%0A%0A%09num\n-b\n er\n+o\n s := mak\n@@ -451,18 +451,18 @@\n &num\n-b\n er\n+o\n s%5Bi%5D)%0A%09%7D\n %0A%7D%0A\n@@ -458,11 +458,123 @@\n s%5Bi%5D)%0A%09%7D\n+%0A%0A%09result := SubSum(numeros, 0, n, 0, k)%0A%0A%09if result %7B%0A%09%09fmt.Println(%22true%22)%0A%09%7D else %7B%0A%09%09fmt.Println(%22false%22)%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-06-11_18-41-11",
+            "content": "@@ -153,27 +153,7 @@\n )%0A%09%7D\n-%0A%0A%09fmt.Scan(numbers)\n %0A%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-06-11_18-41-21",
+            "content": "@@ -160,14 +160,11 @@\n fmt.\n-Printl\n+Sca\n n(nu\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-11_18-41-38",
+            "content": "@@ -25,302 +25,8 @@\n t%22%0A%0A\n-func Sum(numbers %5B%5Dint, index, n, current_sum, target int) bool %7B%0A%09if current_sum == target %7B%0A%09%09return true%0A%09%7D%0A%0A%09if current_sum %3E target %7C%7C index == n %7B%0A%09%09return false%0A%09%7D%0A%0A%09return Sum(numbers, index+1, n, current_sum+numeros%5Bindex%5D, target) %7C%7C%0A%09Sum(numbers, index+1, n, current_sum, target)%0A%7D%0A%0A\n func\n@@ -35,16 +35,16 @@\n ain() %7B%0A\n+\n %09var n, \n@@ -156,56 +156,27 @@\n %7D%0A%0A%09\n-result := Sum(numbers, 0, n, current_sum, target\n+fmt.Println(numbers\n )%0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-11_19-02-31",
+            "content": "@@ -499,79 +499,7 @@\n get)\n-%0A%0A%09if result %7B%0A%09%09fmt.Println(%22true%22)%0A%09%7D else %7B%0A%09%09fmt.Println(%22false%22)%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-06-11_19-02-50",
+            "content": "@@ -488,17 +488,22 @@\n nt_sum, \n-k\n+target\n )%0A%0A%09if r\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-06-11_19-03-10",
+            "content": "@@ -241,19 +241,19 @@\n _sum+num\n-b\n er\n+o\n s%5Bindex%5D\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-06-11_19-04-01",
+            "content": "@@ -475,17 +475,27 @@\n , 0, n, \n-0\n+current_sum\n , k)%0A%0A%09i\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-06-11_19-04-18",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc Sum(numbers []int, index, n, current_sum, target int) bool {\n\tif current_sum == target {\n\t\treturn true\n\t}\n\n\tif current_sum > target || index == n {\n\t\treturn false\n\t}\n\n\treturn Sum(numbers, index+1, n, current_sum+numbers[index], target) ||\n\tSum(numbers, index+1, n, current_sum, target)\n}\n\nfunc main() {\n\tvar n, k int\n\n\tfmt.Scan(&n, &k)\n\n\tnumbers := make([]int, n)\n\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&numbers[i])\n\t}\n\n\tresult := Sum(numbers, 0, n, 0, k)\n\n\tif result {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "lines": "36"
+        }
+    ]
+}

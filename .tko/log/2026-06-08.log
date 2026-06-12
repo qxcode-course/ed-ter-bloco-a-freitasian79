@@ -1,0 +1,10 @@
+2026-06-08 21:32:27, MOVE, v:1, k:ed@ilhas, mode:PICK
+2026-06-08 21:33:36, MOVE, v:1, k:ed@ilhas, mode:BACK
+2026-06-08 21:33:38, MOVE, v:1, k:ed@dfs_read, mode:PICK
+2026-06-08 23:18:00, MOVE, v:1, k:ed@dfs_read, mode:BACK
+2026-06-08 23:18:30, MOVE, v:1, k:ed@subset_sum, mode:DOWN
+2026-06-08 23:18:31, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-08 23:19:39, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-08 23:18:30, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-08 23:18:30, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-08 23:18:30, MOVE, v:1, k:ed@subset_sum, mode:EDIT

@@ -1,0 +1,122 @@
+2026-06-11 16:09:26, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-06-11 16:10:28, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-06-11 16:10:29, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-06-11 16:12:49, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-06-11 16:21:10, EXEC, v:1, k:ed@wordsearch, mode:FULL, size:88, fail:COMP
+2026-06-11 16:21:28, EXEC, v:1, k:ed@wordsearch, mode:FULL, size:91, fail:COMP
+2026-06-11 16:21:29, EXEC, v:1, k:ed@wordsearch, mode:FULL, fail:COMP
+2026-06-11 16:22:15, EXEC, v:1, k:ed@wordsearch, mode:FULL, size:91, fail:COMP
+2026-06-11 16:22:16, EXEC, v:1, k:ed@wordsearch, mode:FULL, fail:COMP
+2026-06-11 16:22:13, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-06-11 16:23:14, EXEC, v:1, k:ed@wordsearch, mode:FULL, size:96, fail:COMP
+2026-06-11 16:23:15, EXEC, v:1, k:ed@wordsearch, mode:FULL, fail:COMP
+2026-06-11 16:23:53, EXEC, v:1, k:ed@wordsearch, mode:FULL, size:97, fail:COMP
+2026-06-11 16:25:29, EXEC, v:1, k:ed@wordsearch, mode:FULL, size:97, fail:COMP
+2026-06-11 16:26:09, EXEC, v:1, k:ed@wordsearch, mode:FULL, size:97, fail:COMP
+2026-06-11 16:26:10, EXEC, v:1, k:ed@wordsearch, mode:FULL, fail:COMP
+2026-06-11 16:27:01, EXEC, v:1, k:ed@wordsearch, mode:FULL, size:97, fail:COMP
+2026-06-11 16:27:02, EXEC, v:1, k:ed@wordsearch, mode:FULL, fail:COMP
+2026-06-11 16:27:15, EXEC, v:1, k:ed@wordsearch, mode:FULL, size:97, fail:COMP
+2026-06-11 16:27:29, EXEC, v:1, k:ed@wordsearch, mode:FULL, size:97, fail:COMP
+2026-06-11 16:27:28, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-06-11 16:27:46, EXEC, v:1, k:ed@wordsearch, mode:FULL, size:97, fail:COMP
+2026-06-11 16:27:48, EXEC, v:1, k:ed@wordsearch, mode:FULL, fail:COMP
+2026-06-11 16:29:11, EXEC, v:1, k:ed@wordsearch, mode:FULL, size:97, fail:COMP
+2026-06-11 16:29:27, EXEC, v:1, k:ed@wordsearch, mode:FULL, size:97, fail:COMP
+2026-06-11 16:32:34, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100, size:97
+2026-06-11 16:32:39, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-06-11 16:32:29, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-06-11 16:32:52, SELF, v:1, k:ed@wordsearch, self:1, rate:100, study:60
+2026-06-11 16:33:22, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-11 16:33:39, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-11 16:33:41, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-11 16:42:31, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:15
+2026-06-11 16:42:41, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:17
+2026-06-11 16:42:40, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-11 16:43:00, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:18
+2026-06-11 16:43:57, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:18
+2026-06-11 16:44:08, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-11 17:04:27, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-11 17:04:30, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-11 17:06:34, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-11 17:12:09, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-11 17:16:21, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:30
+2026-06-11 17:17:28, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:4, size:33
+2026-06-11 17:17:25, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-11 17:31:29, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-11 17:31:38, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-11 17:37:43, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:4
+2026-06-11 17:38:28, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-11 17:38:27, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-11 18:24:26, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-11 18:25:37, EXEC, v:1, k:ed@subset_sum, mode:FULL, size:17, fail:COMP
+2026-06-11 18:25:38, EXEC, v:1, k:ed@subset_sum, mode:FULL, fail:COMP
+2026-06-11 18:25:39, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-11 18:25:42, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-11 18:25:43, EXEC, v:1, k:ed@subset_sum, mode:FULL, fail:COMP
+2026-06-11 18:25:54, EXEC, v:1, k:ed@subset_sum, mode:FULL, fail:COMP
+2026-06-11 18:25:55, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-11 18:25:57, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-11 18:25:58, EXEC, v:1, k:ed@subset_sum, mode:FULL, fail:COMP
+2026-06-11 18:25:59, EXEC, v:1, k:ed@subset_sum, mode:FULL, fail:COMP
+2026-06-11 18:25:59, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-11 18:26:12, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-11 18:26:13, EXEC, v:1, k:ed@subset_sum, mode:FULL, fail:COMP
+2026-06-11 18:26:42, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:18
+2026-06-11 18:27:04, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:20
+2026-06-11 18:27:58, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-11 18:32:16, EXEC, v:1, k:ed@subset_sum, mode:FULL, size:37, fail:COMP
+2026-06-11 18:32:28, EXEC, v:1, k:ed@subset_sum, mode:FULL, size:37, fail:COMP
+2026-06-11 18:32:29, EXEC, v:1, k:ed@subset_sum, mode:FULL, fail:COMP
+2026-06-11 18:33:03, EXEC, v:1, k:ed@subset_sum, mode:FULL, size:37, fail:COMP
+2026-06-11 18:32:57, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-11 18:33:39, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:4, size:37
+2026-06-11 18:33:40, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:4
+2026-06-11 18:34:59, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:38
+2026-06-11 18:36:17, EXEC, v:1, k:ed@subset_sum, mode:FULL, size:38, fail:COMP
+2026-06-11 18:36:18, EXEC, v:1, k:ed@subset_sum, mode:FULL, fail:COMP
+2026-06-11 18:36:43, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:100, size:38
+2026-06-11 18:36:46, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-11 18:37:06, SELF, v:1, k:ed@subset_sum, self:1, rate:100, study:100
+2026-06-11 18:36:42, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-11 18:39:41, MOVE, v:1, k:ed@subset_sum, mode:DOWN
+2026-06-11 18:39:45, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-11 18:41:11, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:15
+2026-06-11 18:41:21, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:17
+2026-06-11 18:41:38, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:17
+2026-06-11 18:39:41, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-11 18:39:41, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-11 18:41:36, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-11 18:47:13, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0
+2026-06-11 18:54:00, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-11 19:02:31, EXEC, v:1, k:ed@subset_sum, mode:FULL, size:30, fail:COMP
+2026-06-11 19:02:50, EXEC, v:1, k:ed@subset_sum, mode:FULL, size:36, fail:COMP
+2026-06-11 19:03:10, EXEC, v:1, k:ed@subset_sum, mode:FULL, size:36, fail:COMP
+2026-06-11 19:04:01, EXEC, v:1, k:ed@subset_sum, mode:FULL, size:36, fail:COMP
+2026-06-11 19:04:18, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:100, size:36
+2026-06-11 19:04:18, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-11 19:04:16, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-11 19:04:31, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-06-11 19:04:54, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-06-11 19:04:59, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-06-11 19:04:59, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-06-11 19:05:02, MOVE, v:1, k:ed@permutacoes, mode:DOWN
+2026-06-11 19:05:04, MOVE, v:1, k:ed@permutacoes, mode:PICK
+2026-06-11 19:05:51, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:20, size:9
+2026-06-11 19:06:02, MOVE, v:1, k:ed@permutacoes, mode:BACK
+2026-06-11 19:06:03, MOVE, v:1, k:ed@permutacoes, mode:PICK
+2026-06-11 19:07:39, MOVE, v:1, k:ed@permutacoes, mode:BACK
+2026-06-11 19:08:00, MOVE, v:1, k:ed@ilhas, mode:PICK
+2026-06-11 19:08:31, MOVE, v:1, k:ed@ilhas, mode:BACK
+2026-06-11 19:08:41, MOVE, v:1, k:ed@cercado, mode:DOWN
+2026-06-11 19:08:42, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-06-11 19:08:58, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-06-11 19:09:02, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-06-11 19:07:56, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-11 19:08:41, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-06-11 19:08:41, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-06-11 19:10:52, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-06-11 19:42:31, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-06-11 20:05:02, EXEC, v:1, k:ed@cercado, mode:FULL, size:49, fail:COMP
+2026-06-11 20:04:58, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-06-11 20:09:36, MOVE, v:1, k:ed@cercado, mode:BACK

@@ -11,6 +11,7 @@ func exibir_jogadores(jogadores []int, espada int) {
     }
     fmt.Printf("]\n")
 }
+
 func main() {
     var n, e int
 

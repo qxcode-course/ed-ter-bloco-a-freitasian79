@@ -1,0 +1,174 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-26_18-14-20",
+            "content": "@@ -6,16 +6,17 @@\n ge main%0A\n+%0A\n import %22\n@@ -21,16 +21,50 @@\n  %22fmt%22%0A%0A\n+type Pos struct %7B%0A    l, c int%0A%7D%0A%0A\n func dfs\n@@ -100,38 +100,20 @@\n l %7B%0A\n+%0A\n     //\n-verificar se est%C3%A1 dentro\n+ fora\n  da \n@@ -220,20 +220,8 @@\n   //\n- verificar a\n  par\n@@ -249,11 +249,11 @@\n  == \n-%22#%22\n+'#'\n  %7B%0A \n@@ -257,32 +257,38 @@\n %7B%0A        return\n+ false\n %0A    %7D%0A%0A    // v\n@@ -290,28 +290,10 @@\n  // \n-verificar caminho ja\n+j%C3%A1\n  vis\n@@ -297,17 +297,16 @@\n visitado\n- \n %0A    if \n@@ -323,11 +323,11 @@\n  == \n-%22-%22\n+'v'\n  %7B%0A \n@@ -339,24 +339,30 @@\n   return\n+ false\n %0A    %7D%0A%0A\n     if g\n@@ -349,24 +349,47 @@\n alse%0A    %7D%0A%0A\n+    // encontrou sa%C3%ADda%0A\n     if grid%5B\n@@ -401,11 +401,11 @@\n  == \n-%22E%22\n+'E'\n  %7B%0A \n@@ -426,24 +426,46 @@\n true%0A    %7D%0A%0A\n+    // marca visitado%0A\n     grid%5Bl%5D%5B\n@@ -472,142 +472,330 @@\n c%5D =\n-=\n  '\n--\n+v\n '%0A%0A    \n-dfs(grid, l)%0A%7D%0A%0Afunc printGrid(grid %5B%5D%5B%5Drune) %7B%0A%0A    for _, line := range grid %7B%0A        fmt.Println(string(line))%0A    %7D\n+// tenta esquerda%0A    if dfs(grid, l, c-1) %7B%0A        return true%0A    %7D%0A%0A    // tenta direita%0A    if dfs(grid, l, c+1) %7B%0A        return true%0A    %7D%0A%0A    // tenta cima%0A    if dfs(grid, l-1, c) %7B%0A        return true%0A    %7D%0A%0A    // tenta baixo%0A    if dfs(grid, l+1, c) %7B%0A        return true%0A    %7D%0A%0A    return false\n %0A%7D%0A\n+%0A\n func\n@@ -804,20 +804,16 @@\n ain() %7B%0A\n-    \n %0A    gri\n@@ -827,18 +827,24 @@\n %5B%5Drune%7B%0A\n-%09%09\n+        \n %5B%5Drune(%22\n@@ -850,24 +850,28 @@\n %22S..\n-#.\n %22),%0A\n-%09%09\n+        \n %5B%5Drune(%22\n .#..\n@@ -870,19 +870,23 @@\n ne(%22\n-.#..\n+##\n .%22),%0A\n-%09%09\n+        \n %5B%5Dru\n@@ -895,62 +895,51 @@\n (%22..\n-#E.\n+E\n %22),%0A\n-%09%09%5B%5Drune(%22.....%22),%0A%09%7D%0A\n     \n+%7D%0A\n %0A    \n-printGrid(grid)%0A%0A\n+fmt.Println(dfs(grid, 0, 0))\n %0A%7D%0A\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-05-27_00-10-48",
+            "content": "@@ -20,16 +20,447 @@\n  %22fmt%22%0A%0A\n+func dfs(grid %5B%5D%5B%5Drune, l, c int) bool %7B%0A    //verificar se est%C3%A1 dentro da matriz%0A    if l %3C 0 %7C%7C l %3E= len(grid) %7C%7C c %3C 0 %7C%7C c %3E= len(grid%5B0%5D) %7B%0A        return false%0A    %7D%0A%0A    // verificar a parede%0A    if grid%5Bl%5D%5Bc%5D == %22#%22 %7B%0A        return%0A    %7D%0A%0A    // verificar caminho ja visitado %0A    if grid%5Bl%5D%5Bc%5D == %22-%22 %7B%0A        return%0A    %7D%0A%0A    if grid%5Bl%5D%5Bc%5D == %22E%22 %7B%0A        return true%0A    %7D%0A%0A    grid%5Bl%5D%5Bc%5D == '-'%0A%0A    dfs(grid, l)%0A%7D%0A\n %0Afunc pr\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-27_00-31-06",
+            "content": "@@ -24,275 +24,8 @@\n t%22%0A%0A\n-type Pos struct %7B%0A    l, c int%0A%7D%0A%0Afunc getNeig(p Pos) %5B%5DPos %7B%0A    return %5B%5DPos%7B%7Bp.l, p.c + 1%7D, %7Bp.l, p.c -1%7D, %7Bp.l - 1, p.c%7D, %7Bp.l + 1, p.c%7D%7D%0A%7D%0A%0Afunc inside(grid %5B%5D%5B%5Drune, p Pos) bool %7B%0A    return (p.l %3C 0 %7C%7C p.c %3E len(grid%5B0%5D %7C%7C p.c %3C 0 %7C%7C p.l %3E len(grid%5B0%5D)))   %0A%7D%0A\n %0Afun\n@@ -278,64 +278,7 @@\n d)%0A%0A\n-    fmt.Println(len(grid))%0A    fmt.Println(len(grid%5B0%5D))%0A\n %0A%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-05-27_00-40-10",
+            "content": "@@ -223,33 +223,33 @@\n n (p.l %3C 0 %7C%7C p.\n-l\n+c\n  %3E len(grid%5B0%5D %7C\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-05-27_00-41-28",
+            "content": "@@ -252,17 +252,17 @@\n 0%5D %7C%7C p.\n-l\n+c\n  %3C 0 %7C%7C \n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-05-27_00-41-39",
+            "content": "@@ -246,17 +246,16 @@\n (grid%5B0%5D\n-)\n  %7C%7C p.l \n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-05-27_00-41-50",
+            "content": "@@ -281,16 +281,19 @@\n rid%5B0%5D))\n+)  \n  %0A%7D%0A%0Afun\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-05-27_00-41-58",
+            "content": "@@ -559,30 +559,22 @@\n tln(\n-%22Numero de linhas: %22 +\n+len(grid))%0A   \n  fmt\n@@ -590,14 +590,17 @@\n len(grid\n+%5B0%5D\n ))%0A%0A%7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-05-27_00-43-47",
+            "content": "@@ -578,16 +578,28 @@\n as: %22 + \n+fmt.Println(\n len(grid\n@@ -599,12 +599,13 @@\n en(grid)\n+)\n %0A%0A%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-05-27_00-44-01",
+            "content": "@@ -587,13 +587,12 @@\n en(grid)\n-)\n %0A%0A%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-05-27_00-44-07",
+            "content": "@@ -575,17 +575,18 @@\n inhas: %22\n-,\n+ +\n  len(gri\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-05-27_00-44-28",
+            "content": "@@ -592,64 +592,7 @@\n d))%0A\n-    fmt.Println(%22Numero de colunas: %22, len(grid%5B0%5D))%0A    \n %0A%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-05-27_00-44-54",
+            "content": "@@ -221,9 +221,8 @@\n urn \n-!\n (p.l\n@@ -234,17 +234,16 @@\n %7C%7C p.l %3E\n-=\n  len(gri\n@@ -253,17 +253,17 @@\n %5D) %7C%7C p.\n-c\n+l\n  %3C 0 %7C%7C \n@@ -264,17 +264,17 @@\n  0 %7C%7C p.\n-c\n+l\n  %3E len(g\n@@ -290,112 +290,8 @@\n %0A%7D%0A%0A\n-func match(grid %5B%5D%5B%5Drune, p Pos, value rune) %7B%0A    return inside(grid, p) && grid%5Bp.l%5D%5Bp.c%5D == value%0A%7D%0A%0A\n func\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-05-27_09-41-56",
+            "content": "@@ -332,21 +332,16 @@\n ue rune)\n- bool\n  %7B%0A    r\n@@ -396,140 +396,8 @@\n %0A%7D%0A%0A\n-func search(grid %5B%5D%5B%5Drune, endPos, p Pos, value rune) %7B%0A    if !match(grid, p, '.' %7C%7C visited%5Bpos%5D) %7B%0A        return false%0A    %7D%0A%7D%0A%0A\n func\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-05-27_09-50-13",
+            "content": "@@ -784,131 +784,8 @@\n rid)\n-%0A    startPos, endPos := Pos%7B0,0%7D, Pos%7B2,2%7D%0A    visited = make(map%5BPos%5Dbool, 0)%0A    search(grid, startPos, endPos, visited)\n %0A%0A  \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-27_09-54-27",
+            "content": "@@ -836,17 +836,16 @@\n visited \n-:\n = make(m\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-05-27_09-54-33",
+            "content": "@@ -492,16 +492,18 @@\n isited%5Bp\n+os\n %5D) %7B%0A   \n@@ -914,30 +914,108 @@\n     fmt.\n-p\n+P\n rint\n-Grid\n+ln(%22Numero de linhas: %22, len(grid))%0A    fmt.Println(%22Numero de colunas: %22, len\n (grid\n+%5B0%5D)\n )%0A    %0A%7D\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-05-27_09-55-47",
+            "content": "@@ -453,30 +453,8 @@\n rune\n-, visited map%5BPos%5Dbool\n ) %7B%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-27_09-56-19",
+            "content": "@@ -550,247 +550,8 @@\n   %7D%0A\n-%0A    visited%5Bp%5D = true%0A%0A    if p == endPos %7B%0A        grid%5Bp.l%5D%5Bp.c%5D == '-'%0A        return true%0A    %7D%0A%0A    for _, elem := range getNeig(p) %7B%0A        if search(grid, endPos, elem, visited) %7B%0A            grid%5Bp.l%5D%5Bp.c%5D = '-'%0A        %7D%0A    %7D%0A%0A\n %7D%0A%0Af\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-27_10-05-44",
+            "content": "@@ -501,17 +501,16 @@\n , p, '.'\n-)\n  %7C%7C visi\n@@ -515,16 +515,17 @@\n sited%5Bp%5D\n+)\n  %7B%0A     \n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-05-27_10-08-51",
+            "content": "@@ -472,21 +472,16 @@\n os%5Dbool)\n- bool\n  %7B%0A    i\n@@ -785,33 +785,16 @@\n %0A    %7D%0A%0A\n-    return false%0A\n %7D%0A%0Afunc \n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-05-27_10-09-35",
+            "content": "@@ -612,32 +612,33 @@\n grid%5Bp.l%5D%5Bp.c%5D =\n+=\n  '-'%0A        ret\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-05-27_10-09-57",
+            "content": "@@ -434,24 +434,36 @@\n dPos, p Pos,\n+ value rune,\n  visited map\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-05-27_10-10-57",
+            "content": "@@ -1182,24 +1182,16 @@\n     fmt.\n-Println(\n printGri\n@@ -1197,17 +1197,16 @@\n id(grid)\n-)\n %0A    %0A%7D%0A\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-05-27_10-11-26",
+            "content": "@@ -1173,20 +1173,33 @@\n isited)%0A\n+%0A\n     \n+fmt.Println(\n printGri\n@@ -1205,11 +1205,17 @@\n id(grid)\n+)%0A    \n %0A%7D%0A\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-05-27_10-11-43",
+            "content": "@@ -1053,25 +1053,8 @@\n id)%0A\n-    fmt.Pritln()%0A\n     \n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-05-27_10-11-59",
+            "content": "@@ -1056,25 +1056,24 @@\n %0A    fmt.Pri\n-n\n tln()%0A    st\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-05-27_10-12-07",
+            "content": "@@ -764,32 +764,8 @@\n '-'%0A\n-            return true%0A\n     \n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-05-27_10-12-36",
+            "content": "@@ -1192,21 +1192,21 @@\n id, \n-endPos, start\n+startPos, end\n Pos,\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-05-27_10-13-48",
+            "content": "@@ -245,16 +245,19 @@\n len(grid\n+%5B0%5D\n ) %7C%7C p.c\n@@ -269,17 +269,16 @@\n %7C%7C p.c %3E\n-=\n  len(gri\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-05-27_10-17-49",
+            "content": "@@ -977,17 +977,17 @@\n %5B%5Drune(%22\n-.\n+S\n ..#.%22),%0A\n@@ -1018,17 +1018,17 @@\n une(%22..#\n-.\n+E\n .%22),%0A%09%09%5B\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-05-27_10-20-12",
+            "content": "@@ -1133,9 +1133,9 @@\n s%7B2,\n-3\n+2\n %7D%0A  \n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-05-27_10-20-34",
+            "content": "@@ -600,33 +600,33 @@\n id%5Bp.l%5D%5Bp.c%5D = '\n-*\n+-\n '%0A        return\n@@ -759,9 +759,9 @@\n  = '\n-*\n+-\n '%0A  \n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-05-27_10-20-55",
+            "content": "package main\nimport \"fmt\"\n\ntype Pos struct {\n    l, c int\n}\n\nfunc getNeig(p Pos) []Pos {\n    return []Pos{{p.l, p.c + 1}, {p.l, p.c -1}, {p.l - 1, p.c}, {p.l + 1, p.c}}\n}\n\nfunc inside(grid [][]rune, p Pos) bool {\n    return !(p.l < 0 || p.l >= len(grid) || p.c < 0 || p.c >= len(grid[0])) \n}\n\nfunc match(grid [][]rune, p Pos, value rune) bool {\n    return inside(grid, p) && grid[p.l][p.c] == value\n}\n\nfunc search(grid [][]rune, endPos, p Pos, visited map[Pos]bool) bool {\n    if !match(grid, p, '.') || visited[p] {\n        return false\n    }\n\n    visited[p] = true\n\n    if p == endPos {\n        grid[p.l][p.c] = '*'\n        return true\n    }\n\n    for _, elem := range getNeig(p) {\n        if search(grid, endPos, elem, visited) {\n            grid[p.l][p.c] = '*'\n            return true\n        }\n    }\n\n    return false\n}\n\nfunc printGrid(grid [][]rune) {\n\n    for _, line := range grid {\n        fmt.Println(string(line))\n    }\n}\nfunc main() {\n    \n    grid := [][]rune{\n\t\t[]rune(\"...#.\"),\n\t\t[]rune(\".#...\"),\n\t\t[]rune(\"..#..\"),\n\t\t[]rune(\".....\"),\n\t}\n    \n    printGrid(grid)\n    fmt.Println()\n    startPos, endPos := Pos{0,0}, Pos{2,3}\n    visited := make(map[Pos]bool, 0)\n    search(grid, endPos, startPos, visited)\n    printGrid(grid)\n}\n",
+            "lines": "63"
+        }
+    ]
+}

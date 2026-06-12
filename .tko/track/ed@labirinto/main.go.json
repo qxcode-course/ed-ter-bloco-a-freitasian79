@@ -1,0 +1,84 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-26_18-34-35",
+            "content": "@@ -57,14 +57,15 @@\n  str\n+P\n uct %7B%0A\n-\n %09l, \n@@ -523,91 +523,64 @@\n  Pos\n-, visited map%5BPos%5Dbool) bool %7B%0A%09%0A%09// quero verificar se ele ta dentro do labirinto%0A\n+) bool %7B%0A%09_, _, _ = grid, startPos, endPos%0A%09return false\n %0A%7D%0A%0A\n@@ -1140,40 +1140,8 @@\n %0A%09%7D%0A\n-%09%0A%09visited := make(map%5BPos%5Dbool)\n %0A%09se\n@@ -1171,17 +1171,8 @@\n dPos\n-, visited\n )%0A%0A%09\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-05-26_18-57-12",
+            "content": "@@ -605,253 +605,8 @@\n nto%0A\n-%09if !match(grid, pos, value) %7C%7C visited%5Bpos%5D %7B%0A%09%09return false%0A%09%7D%0A%0A%09if grid%5BstartPos.l%5D%5BstartPos.c%5D == '#' %7B%0A%09%09return false%0A%09%7D%0A%0A%09if startPos = endPos %7B%0A%09%09return true%0A%09%7D%0A%0A%09visited%5BstartPos%5D = true%0A%09grid%5BstartPos.l%5D%5BstartPos.c%5D = '.'%0A%0A%09return false\n %0A%7D%0A%0A\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-05-26_18-58-11",
+            "content": "@@ -742,17 +742,16 @@\n artPos =\n-=\n  endPos \n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-05-26_18-58-19",
+            "content": "@@ -621,16 +621,23 @@\n rid, pos\n+, value\n ) %7C%7C vis\n@@ -637,30 +637,25 @@\n  %7C%7C visited%5B\n-startP\n+p\n os%5D %7B%0A%09%09retu\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-05-26_18-58-58",
+            "content": "@@ -618,22 +618,17 @@\n h(grid, \n-startP\n+p\n os) %7C%7C v\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-05-26_18-59-25",
+            "content": "@@ -626,23 +626,16 @@\n startPos\n-, value\n ) %7C%7C vis\n@@ -665,17 +665,16 @@\n rn false\n-%09\n %0A%09%7D%0A%0A%09if\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-05-26_19-01-47",
+            "content": "@@ -628,19 +628,21 @@\n artPos, \n-'#'\n+value\n ) %7C%7C vis\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-05-26_19-04-18",
+            "content": "@@ -632,16 +632,37 @@\n os, '#')\n+ %7C%7C visited%5BstartPos%5D\n  %7B%0A%09%09ret\n@@ -662,32 +662,33 @@\n %7B%0A%09%09return false\n+%09\n %0A%09%7D%0A%0A%09if grid%5Bst\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-05-26_19-21-52",
+            "content": "@@ -514,21 +514,16 @@\n , endPos\n-, pos\n  Pos, vi\n@@ -549,16 +549,68 @@\n  bool %7B%0A\n+%09%0A%09// quero verificar se ele ta dentro do labirinto%0A\n %09if !mat\n@@ -622,17 +622,22 @@\n id, \n-p\n+startP\n os, '#')\n  %7C%7C \n@@ -636,24 +636,8 @@\n '#')\n- %7C%7C visited%5Bpos%5D\n  %7B%0A%09\n@@ -659,34 +659,78 @@\n %7D%0A%0A%09\n-visited%5Bpos%5D = true%0A%0A%09if p\n+if grid%5BstartPos.l%5D%5BstartPos.c%5D == '#' %7B%0A%09%09return false%0A%09%7D%0A%0A%09if startP\n os =\n@@ -747,16 +747,17 @@\n %0A%09%09retur\n+n\n  true%0A%09%7D\n@@ -763,100 +763,68 @@\n %7D%0A%0A%09\n-for _, elem := range getNeig(pos) %7B%0A%09%09if search(grid, elem, visited) %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%7D\n+visited%5BstartPos%5D = true%0A%09grid%5BstartPos.l%5D%5BstartPos.c%5D = '.'\n %0A%0A%09r\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-05-26_23-54-37",
+            "content": "@@ -663,25 +663,24 @@\n os %7B%0A%09%09retur\n-n\n  true%0A%09%7D%0A%0A%09f\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-05-26_23-54-47",
+            "content": "@@ -497,16 +497,26 @@\n %5D%5B%5Drune,\n+ startPos,\n  endPos,\n@@ -738,24 +738,16 @@\n d, elem,\n- endPos,\n  visited\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-05-26_23-55-20",
+            "content": "@@ -567,17 +567,17 @@\n , pos, '\n- \n+#\n ') %7C%7C vi\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-05-26_23-56-06",
+            "content": "@@ -502,17 +502,17 @@\n ne, \n-pos, endP\n+endPos, p\n os P\n@@ -1152,55 +1152,43 @@\n for \n-i\n+l\n  := \n-0; i %3C nl; i++ %7B%0A%09%09for c := 0; c %3C nc; c++\n+range nl %7B%0A%09%09for c := range nc\n  %7B%0A%09\n@@ -1392,25 +1392,30 @@\n h(grid, \n-end\n+start\n Pos, \n-p\n+endP\n os, visi\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-05-27_00-02-27",
+            "content": "@@ -988,38 +988,32 @@\n z%0A%09for i := \n-0; i %3C nl; i++\n+range nl\n  %7B%0A%09%09scanner\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-05-27_00-07-18",
+            "content": "@@ -654,35 +654,8 @@\n s %7B%0A\n-%09%09grid%5Bpos.l%5D%5Bpos.c%5D = '.'%0A\n %09%09re\n@@ -752,36 +752,8 @@\n ) %7B%0A\n-%09%09%09grid%5Bpos.l%5D%5Bpos.c%5D = '.'%0A\n %09%09%09r\n@@ -1207,33 +1207,33 @@\n ++ %7B%0A%09%09%09if grid%5B\n-i\n+l\n %5D%5Bc%5D == 'I' %7B%0A%09%09\n@@ -1231,33 +1231,33 @@\n  'I' %7B%0A%09%09%09%09grid%5B\n-i\n+l\n %5D%5Bc%5D = ' '%0A%09%09%09%09s\n@@ -1262,33 +1262,33 @@\n %09startPos = Pos%7B\n-i\n+l\n , c%7D%0A%09%09%09%7D%0A%09%09%09if \n@@ -1288,25 +1288,25 @@\n %0A%09%09%09if grid%5B\n-i\n+l\n %5D%5Bc%5D == 'F' \n@@ -1316,17 +1316,17 @@\n %09%09%09grid%5B\n-i\n+l\n %5D%5Bc%5D = '\n@@ -1345,17 +1345,17 @@\n s = Pos%7B\n-i\n+l\n , c%7D%0A%09%09%09\n@@ -1398,11 +1398,8 @@\n bool\n-, 0\n )%0A%09s\n@@ -1410,30 +1410,25 @@\n h(grid, \n-start\n+end\n Pos, \n-endP\n+p\n os, visi\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-05-27_00-09-33",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl, c int\n}\n\nfunc getNeig(p Pos) []Pos {\n\treturn []Pos{{p.l, p.c - 1}, {p.l - 1, p.c}, {p.l, p.c + 1}, {p.l + 1, p.c}}\n}\n\nfunc inside(grid [][]rune, p Pos) bool {\n\treturn !(p.l < 0 || p.l >= len(grid) || p.c < 0 || p.c >= len(grid[0]))\n}\n\nfunc match(grid [][]rune, p Pos, value rune) bool {\n\treturn inside(grid, p) && grid[p.l][p.c] == value\n}\n\n// Fun\u00e7\u00e3o recursiva que tenta encontrar o caminho do in\u00edcio ao fim\nfunc search(grid [][]rune, pos, endPos Pos, visited map[Pos]bool) bool {\n\tif !match(grid, pos, ' ') || visited[pos] {\n\t\treturn false\n\t}\n\n\tvisited[pos] = true\n\n\tif pos == endPos {\n\t\tgrid[pos.l][pos.c] = '.'\n\t\treturn true\n\t}\n\n\tfor _, elem := range getNeig(pos) {\n\t\tif search(grid, elem, endPos, visited) {\n\t\t\tgrid[pos.l][pos.c] = '.'\n\t\t\treturn true\n\t\t}\n\t}\n\n\treturn false\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tnl_nc := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(nl_nc, \"%d %d\", &nl, &nc)\n\tgrid := make([][]rune, nl)\n\n\t// L\u00ea a gridriz\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tgrid[i] = []rune(scanner.Text())\n\t}\n\n\t// Procura posi\u00e7\u00f5es de in\u00edcio e endPos e conserta para _\n\tvar startPos, endPos Pos\n\tfor i := 0; i < nl; i++ {\n\t\tfor c := 0; c < nc; c++ {\n\t\t\tif grid[i][c] == 'I' {\n\t\t\t\tgrid[i][c] = ' '\n\t\t\t\tstartPos = Pos{i, c}\n\t\t\t}\n\t\t\tif grid[i][c] == 'F' {\n\t\t\t\tgrid[i][c] = ' '\n\t\t\t\tendPos = Pos{i, c}\n\t\t\t}\n\t\t}\n\t}\n\t\n\tvisited := make(map[Pos]bool, 0)\n\tsearch(grid, startPos, endPos, visited)\n\n\t// Imprime o labirinto final\n\tfor _, line := range grid {\n\t\tfmt.Println(string(line))\n\t}\n}\n",
+            "lines": "84"
+        }
+    ]
+}

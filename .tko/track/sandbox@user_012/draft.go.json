@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-01_21-04-15",
+            "content": "package main\n\nimport \"fmt\"\n\ntype Node struct {\n\tinfo rune\n\tnext *Node\n\tprev *Node\n}\n\ntype Editor struct {\n\thead *Node\n\tcursor *Node\n}\n\nfunc NewEditor() *Editor {\n\tsentinela := &Node{}\n\tsentinela.next = sentinela\t\n\tsentinela.prev = sentinela\n\treturn &Editor{head: sentinela, cursor: sentinela}\n}\n\nfunc (edt *Editor) BackSpace(ref *Node) {\n\t\n\ttarget := edt.cursor.prev\n\n\ttarget.prev.next = target.next\n\ttarget.next.prev = target.prev\n\n}\n\nfunc main(){\n\n    editor := NewEditor()\n\n\tvar word string\n\n\tfmt.Scan(&word)\n\n    for _, elem := range word {\n        if elem == '|' {\n            editor.BackSpace(editor.cursor)\n        }\n    }\n\t\n}\n",
+            "lines": "46"
+        }
+    ]
+}

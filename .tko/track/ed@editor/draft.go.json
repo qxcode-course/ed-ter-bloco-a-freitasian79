@@ -1,0 +1,79 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-01_16-45-22",
+            "content": "@@ -317,11 +317,14 @@\n ord \n+str\n in\n-t\n+g\n %0A%0A%09f\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-06-01_16-45-32",
+            "content": "@@ -317,14 +317,11 @@\n ord \n-str\n in\n-g\n+t\n %0A%0A%09f\n@@ -338,27 +338,7 @@\n ord)\n-%0A%0A%09fmt.Println(word)\n %0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-06-01_16-45-58",
+            "content": "@@ -293,148 +293,8 @@\n %0A%7D%0A%0A\n-func (edt *Editor) BackSpace(ref *Node) %7B%0A%09%0A%09target := edt.cursor.prev%0A%0A%09target.prev.next = target.next%0A%09target.next.prev = target.prev%0A%0A%7D%0A%0A\n func\n@@ -338,12 +338,30 @@\n (&word)%0A\n-%09\n+%0A%09fmt.Println(word)\n %0A%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-06-01_22-04-10",
+            "content": "@@ -312,287 +312,34 @@\n or) \n-Insert(ch rune) %7B%0A    newNode := &Node%7Binfo: ch%7D%0A%0A    newNode.prev = edt.cursor%0A    newNode.next = edt.cursor.next%0A%0A    edt.cursor.next.prev = newNode%0A%09edt.cursor.next = newNode%0A%0A    edt.cursor = newNode%0A%7D%0A%0Afunc (edt *Editor) BackSpace() %7B%0A%09%0A%09if edt.cursor != edt.head %7B%0A        \n+BackSpace(ref *Node) %7B%0A%09%0A%09\n targ\n@@ -358,15 +358,16 @@\n rsor\n-%0A%0A%09    \n+.prev%0A%0A%09\n targ\n@@ -394,20 +394,16 @@\n t.next%0A%09\n-    \n target.n\n@@ -430,747 +430,58 @@\n ev%0A%0A\n-        edt.cursor = target.prev%0A    %7D%0A%0A%7D%0A%0A%0Afunc (edt *Editor) Print()%7B%0A    if edt.cursor == edt.head %7B%0A        fmt.Print(%22%7C%22)%0A    %7D%0A%0A    for i := edt.head.next; i != edt.head; i = i.next %7B%0A        fmt.Print(string(i.info))%0A%0A        if i == edt.cursor %7B%0A            fmt.Print(%22%7C%22)%0A        %7D%0A    %7D%0A%0A    fmt.Println()%0A%7D%0A%0Afunc (edt *Editor) MoveLeft() %7B%0A%0A    if edt.cursor != edt.head %7B%0A        edt.cursor = edt.cursor.prev%0A    %7D%0A%7D%0A%0Afunc (edt *Editor) MoveRight() %7B%0A%0A    if edt.cursor != edt.head %7B%0A        edt.cursor = edt.cursor.next%0A    %7D%0A%7D%0A%0Afunc (edt *Editor) Delete() %7B%0A%0A%7D%0A%0Afunc main()%7B%0A%0A    editor := NewEditor()%0A%0A%09var word string%0A%0A%09fmt.Scan(&word)%0A%0A    for _, letra := range word %7B%0A        editor.Insert(letra)%0A    %7D%0A%0A    editor.Print(\n+%7D%0A%0Afunc main()%7B%0A%0A%09var word string%0A%0A%09fmt.Scan(&word\n )%0A%09%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-06-01_22-04-27",
+            "content": "@@ -297,17 +297,8 @@\n func\n-%0A%0A// func\n  (ed\n@@ -326,19 +326,16 @@\n rune) %7B%0A\n-// \n     newN\n@@ -358,19 +358,16 @@\n o: ch%7D%0A%0A\n-// \n     newN\n@@ -388,19 +388,16 @@\n .cursor%0A\n-// \n     newN\n@@ -424,19 +424,16 @@\n r.next%0A%0A\n-// \n     edt.\n@@ -459,19 +459,16 @@\n newNode%0A\n-// \n %09edt.cur\n@@ -487,19 +487,16 @@\n ewNode%0A%0A\n-// \n     edt.\n@@ -516,11 +516,8 @@\n ode%0A\n-// \n %7D%0A%0Af\n@@ -1269,20 +1269,23 @@\n c main()\n- \n %7B%0A\n-%09\n+%0A    \n editor :\n@@ -1316,16 +1316,17 @@\n  string%0A\n+%0A\n %09fmt.Sca\n@@ -1339,18 +1339,24 @@\n d)%0A%0A\n-%09\n+    \n for _, \n-ch\n+letra\n  := \n@@ -1372,235 +1372,48 @@\n d %7B%0A\n-%09%09switch ch %7B%0A%09%09case '%3C':%0A%09%09%09editor.MoveLeft()%0A%0A%09%09case '%3E':%0A%09%09%09editor.MoveRight()%0A%0A%09%09case 'B':%0A%09%09%09editor.BackSpace()%0A%0A%09%09case 'D':%0A%09%09%09editor.Delete()%0A%0A%09%09case 'R':%0A%09%09%09editor.Insert('%5Cn')%0A%0A%09%09default:%0A%09%09%09editor.Insert(ch)%0A%09%09%7D%0A%09%7D%0A%0A%09\n+        editor.Insert(letra)%0A    %7D%0A%0A    \n edit\n@@ -1423,10 +1423,12 @@\n Print()%0A\n+%09%0A\n %7D%0A\n",
+            "lines": "97"
+        },
+        {
+            "label": "2026-06-01_22-37-38",
+            "content": "@@ -1250,24 +1250,57 @@\n xt%0A    %7D%0A%7D%0A%0A\n+func (edt *Editor) Delete() %7B%0A%0A%7D%0A\n %0Afunc main()\n",
+            "lines": "114"
+        },
+        {
+            "label": "2026-06-01_22-37-49",
+            "content": "@@ -289,16 +289,21 @@\n ela%7D%0A%7D%0A%0A\n+func%0A\n %0A// func\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-06-01_22-38-55",
+            "content": "@@ -286,24 +286,27 @@\n tinela%7D%0A%7D%0A%0A%0A\n+// \n func (edt *E\n@@ -330,16 +330,19 @@\n rune) %7B%0A\n+// \n     newN\n@@ -365,16 +365,19 @@\n o: ch%7D%0A%0A\n+// \n     newN\n@@ -398,16 +398,19 @@\n .cursor%0A\n+// \n     newN\n@@ -437,16 +437,19 @@\n r.next%0A%0A\n+// \n     edt.\n@@ -475,16 +475,19 @@\n newNode%0A\n+// \n %09edt.cur\n@@ -506,16 +506,19 @@\n ewNode%0A%0A\n+// \n     edt.\n@@ -530,24 +530,27 @@\n r = newNode%0A\n+// \n %7D%0A%0Afunc (edt\n",
+            "lines": "110"
+        },
+        {
+            "label": "2026-06-01_22-39-05",
+            "content": "@@ -1164,21 +1164,16 @@\n t.cursor\n-.next\n  != edt.\n@@ -1446,19 +1446,16 @@\n ce()%0A%0A%09%09\n-// \n case 'D'\n@@ -1462,11 +1462,8 @@\n :%0A%09%09\n-// \n %09edi\n",
+            "lines": "110"
+        },
+        {
+            "label": "2026-06-01_22-40-04",
+            "content": "@@ -1234,199 +1234,8 @@\n %0A%7D%0A%0A\n-func (edt *Editor) Delete()%7B%0A%09if edt.cursor == edt.head %7B%0A%09%09target := edt.head.next%0A%09%7D else %7B%0A%09%09target := edt.head.next%0A%09%7D%0A%0A%09target.prev.next = target.next%0A%09target.next.prev = target.prev%0A%7D%0A%0A\n %0Afun\n",
+            "lines": "110"
+        },
+        {
+            "label": "2026-06-01_22-51-40",
+            "content": "@@ -1638,24 +1638,27 @@\n kSpace()%0A%0A%09%09\n+// \n case 'D':%0A%09%09\n@@ -1653,24 +1653,27 @@\n case 'D':%0A%09%09\n+// \n %09editor.Dele\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-06-01_22-51-54",
+            "content": "@@ -1263,28 +1263,8 @@\n ()%7B%0A\n-%0A%09var target *Node%0A%0A\n %09if \n@@ -1289,32 +1289,33 @@\n head %7B%0A%09%09target \n+:\n = edt.head.next%0A\n@@ -1333,16 +1333,17 @@\n %09target \n+:\n = edt.he\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-06-01_22-52-43",
+            "content": "@@ -1376,50 +1376,8 @@\n %09%7D%0A%0A\n-%09if edt.cursor == edt.head %7B%0A%09%09return%0A%09%7D%0A%0A\n %09tar\n",
+            "lines": "124"
+        },
+        {
+            "label": "2026-06-01_22-53-39",
+            "content": "@@ -1354,30 +1354,28 @@\n arget = edt.\n-cursor\n+head\n .next%0A%09%7D%0A%0A%09i\n",
+            "lines": "128"
+        },
+        {
+            "label": "2026-06-01_23-04-22",
+            "content": "package main\n\nimport \"fmt\"\n\ntype Node struct {\n\tinfo rune\n\tnext *Node\n\tprev *Node\n}\n\ntype Editor struct {\n\thead *Node\n\tcursor *Node\n}\n\nfunc NewEditor() *Editor {\n\tsentinela := &Node{}\n\tsentinela.next = sentinela\t\n\tsentinela.prev = sentinela\n\treturn &Editor{head: sentinela, cursor: sentinela}\n}\n\n\nfunc (edt *Editor) Insert(ch rune) {\n    newNode := &Node{info: ch}\n\n    newNode.prev = edt.cursor\n    newNode.next = edt.cursor.next\n\n    edt.cursor.next.prev = newNode\n\tedt.cursor.next = newNode\n\n    edt.cursor = newNode\n}\n\nfunc (edt *Editor) BackSpace() {\n\t\n\tif edt.cursor != edt.head {\n        target := edt.cursor\n\n\t    target.prev.next = target.next\n\t    target.next.prev = target.prev\n\n        edt.cursor = target.prev\n    }\n\n}\n\n\nfunc (edt *Editor) Print(){\n    if edt.cursor == edt.head {\n        fmt.Print(\"|\")\n    }\n\n    for i := edt.head.next; i != edt.head; i = i.next {\n        fmt.Print(string(i.info))\n\n        if i == edt.cursor {\n            fmt.Print(\"|\")\n        }\n    }\n\n    fmt.Println()\n}\n\nfunc (edt *Editor) MoveLeft() {\n\n    if edt.cursor != edt.head {\n        edt.cursor = edt.cursor.prev\n    }\n}\n\nfunc (edt *Editor) MoveRight() {\n\n    if edt.cursor.next != edt.head {\n        edt.cursor = edt.cursor.next\n    }\n}\n\nfunc (edt *Editor) Delete(){\n\n\tvar target *Node\n\n\tif edt.cursor == edt.head {\n\t\ttarget = edt.head.next\n\t} else {\n\t\ttarget = edt.cursor.next\n\t}\n\n\tif edt.cursor == edt.head {\n\t\treturn\n\t}\n\n\ttarget.prev.next = target.next\n\ttarget.next.prev = target.prev\n}\n\n\nfunc main() {\n\teditor := NewEditor()\n\n\tvar word string\n\tfmt.Scan(&word)\n\n\tfor _, ch := range word {\n\t\tswitch ch {\n\t\tcase '<':\n\t\t\teditor.MoveLeft()\n\n\t\tcase '>':\n\t\t\teditor.MoveRight()\n\n\t\tcase 'B':\n\t\t\teditor.BackSpace()\n\n\t\tcase 'D':\n\t\t\teditor.Delete()\n\n\t\tcase 'R':\n\t\t\teditor.Insert('\\n')\n\n\t\tdefault:\n\t\t\teditor.Insert(ch)\n\t\t}\n\t}\n\n\teditor.Print()\n}\n",
+            "lines": "128"
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-01_23-14-58",
+            "content": "@@ -23,201 +23,118 @@\n mt%22%0A\n-%0A\n func \n-combination(k, n int) int %7B%0A    if n == 0 %7C%7C k == n %7B%0A        return 1%0A    %7D%0A%0A    combination(k - 1, n - 1) + combination(k - 1, n)%0A%7D%0A%0Afunc main() %7B%0A    var k, n int%0A%0A    fmt.Scan(&k, &n)%0A\n+main() %7B%0A    var number1, number2 int%0A%0A    fmt.Scan(&number1, &number2)%0A%0A    fmt.Println(number1, number2)\n %0A%7D%0A\n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-06-01_23-17-21",
+            "content": "@@ -218,28 +218,6 @@\n n)%0A%0A\n-    combination(k, n)%0A\n %7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-01_23-17-36",
+            "content": "@@ -222,20 +222,8 @@\n     \n-fmt.Println(\n comb\n@@ -235,13 +235,11 @@\n on(k, n)\n-)%0A\n %0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_23-18-14",
+            "content": "@@ -60,17 +60,17 @@\n %0A    if \n-k\n+n\n  == 0 %7C%7C\n@@ -107,23 +107,16 @@\n  %7D%0A%0A    \n-return \n combinat\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-01_23-19-15",
+            "content": "@@ -131,14 +131,18 @@\n on(k\n--\n+ - \n 1, n\n--\n+ - \n 1) +\n@@ -159,13 +159,15 @@\n on(k\n+ - 1\n , n\n--1\n )%0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-01_23-20-18",
+            "content": "@@ -41,13 +41,12 @@\n ion(\n-n, k \n+k, n\n  int\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-01_23-21-44",
+            "content": "@@ -127,22 +127,22 @@\n ination(\n-n\n+k\n -1, \n-k\n+n\n -1) + co\n@@ -155,14 +155,14 @@\n ion(\n+k, \n n-1\n-, k\n )%0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-01_23-22-59",
+            "content": "package main\nimport \"fmt\"\n\nfunc combination(n, k  int) int {\n    if k == 0 || k == n {\n        return 1\n    }\n\n    return combination(n-1, k-1) + combination(n-1, k)\n}\n\nfunc main() {\n    var k, n int\n\n    fmt.Scan(&k, &n)\n\n    fmt.Println(combination(k, n))\n\n}\n",
+            "lines": "19"
+        }
+    ]
+}

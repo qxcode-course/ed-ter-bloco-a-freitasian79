@@ -17,3 +17,8 @@ Sinta-se à vontade para organizar seus rascunhos em subpastas dentro do sandbox
 - [ ] `@user_007 🛠️ 👤 type=make xp=1 tier=1 loss=part :self` [magic_search](user_007/README.md)
 - [ ] `@user_008 🛠️ 👤 type=make xp=1 tier=1 loss=part :self` [listaligada_comtemplate](user_008/README.md)
 
+- [ ] `@user_009 🛠️ 👤 type=make xp=1 tier=1 loss=part :self` [labirinto](user_009/README.md)
+- [ ] `@user_010 🛠️ 👤 type=make xp=1 tier=1 loss=part :self` [word_search](user_010/README.md)
+- [ ] `@user_011 🛠️ 👤 type=make xp=1 tier=1 loss=part :self` [number_of_islands](user_011/README.md)
+- [ ] `@user_012 🛠️ 👤 type=make xp=1 tier=1 loss=part :self` [editor de texto](user_012/README.md)
+- [ ] `@user_013 🛠️ 👤 type=make xp=1 tier=1 loss=part :self` [numero-de-ilhas](user_013/README.md)

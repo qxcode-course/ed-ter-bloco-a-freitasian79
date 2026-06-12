@@ -1,0 +1,139 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-02_16-01-02",
+            "content": "@@ -44,20 +44,16 @@\n t, graph\n- map\n %5Bint%5D%5B%5Di\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-02_16-01-30",
+            "content": "@@ -62,104 +62,11 @@\n %5Dint\n-, visited map%5Bint%5Dbool) %7B%0A    if visited%5Bnode%5D %7B%0A        return%0A    %7D%0A%0A    visited%5Bnode%5D = true%0A\n+) %7B\n %0A   \n@@ -149,25 +149,16 @@\n h, graph\n-, visited\n )%0A    %7D%0A\n@@ -263,43 +263,8 @@\n %09%7D%0A%0A\n-    visited := make(map%5Bint%5Dbool)%0A%0A\n     \n@@ -279,17 +279,8 @@\n raph\n-, visited\n )%0A%7D%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-02_16-18-19",
+            "content": "@@ -327,12 +327,12 @@\n 2: %7B\n-1, 3\n+4, 5\n %7D,%0A%09\n@@ -340,25 +340,26 @@\n 3: %7B\n-1, 2, 4\n+%7D,%0A%09%094: %7B\n %7D,%0A%09%09\n-4\n+5\n : %7B\n-3\n %7D,%0A%09\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-06-02_16-19-59",
+            "content": "@@ -20,19 +20,16 @@\n  %22fmt%22%0A%0A\n-// \n func dfs\n@@ -80,27 +80,24 @@\n int%5Dbool) %7B%0A\n-// \n     if visit\n@@ -107,26 +107,24 @@\n node%5D %7B%0A\n-//\n         \n  return%0A\n@@ -119,29 +119,22 @@\n     \n- \n return%0A\n-// \n     %7D%0A%0A\n-// \n     \n@@ -155,19 +155,16 @@\n = true%0A%0A\n-// \n     fmt.\n@@ -178,19 +178,16 @@\n (node)%0A%0A\n-// \n     for \n@@ -222,18 +222,16 @@\n %5D %7B%0A\n-//\n         \n  dfs\n@@ -222,25 +222,24 @@\n %5D %7B%0A        \n- \n dfs(neigh, g\n@@ -257,26 +257,17 @@\n ed)%0A\n-// \n     %7D%0A\n-// %7D%0A%0A// \n+%7D%0A%0A\n func\n@@ -276,23 +276,20 @@\n ain() %7B%0A\n-//\n     \n- \n graph :=\n@@ -304,19 +304,16 @@\n %5D%5B%5Dint%7B%0A\n-// \n %09%091: %7B2,\n@@ -317,19 +317,16 @@\n %7B2, 3%7D,%0A\n-// \n %09%092: %7B1,\n@@ -330,19 +330,16 @@\n %7B1, 3%7D,%0A\n-// \n %09%093: %7B1,\n@@ -346,19 +346,16 @@\n  2, 4%7D,%0A\n-// \n %09%094: %7B3%7D\n@@ -360,18 +360,12 @@\n 3%7D,%0A\n-// \n %09%7D%0A%0A\n-// \n     \n@@ -395,19 +395,16 @@\n %5Dbool)%0A%0A\n-// \n     dfs(\n@@ -426,684 +426,6 @@\n ed)%0A\n-// %7D%0A%0A%0Atype Pos struct %7B%0A%09l int%0A%09c int%0A%7D%0A%0Afunc dfs(grid %5B%5D%5B%5Dint, l, c int, visited map%5BPos%5Dbool) %7B%0A%0A%09// Fora da matriz%0A%09if l %3C 0 %7C%7C l %3E= len(grid) %7B%0A%09%09return%0A%09%7D%0A%0A%09if c %3C 0 %7C%7C c %3E= len(grid%5B0%5D) %7B%0A%09%09return%0A%09%7D%0A%0A%09// %C3%81gua%0A%09if grid%5Bl%5D%5Bc%5D == 0 %7B%0A%09%09return%0A%09%7D%0A%0A%09pos := Pos%7Bl, c%7D%0A%0A%09// J%C3%A1 visitado%0A%09if visited%5Bpos%5D %7B%0A%09%09return%0A%09%7D%0A%0A%09visited%5Bpos%5D = true%0A%0A%09fmt.Printf(%22Visitando (%25d,%25d)%5Cn%22, l, c)%0A%0A%09// cima%0A%09dfs(grid, l-1, c, visited)%0A%0A%09// baixo%0A%09dfs(grid, l+1, c, visited)%0A%0A%09// esquerda%0A%09dfs(grid, l, c-1, visited)%0A%0A%09// direita%0A%09dfs(grid, l, c+1, visited)%0A%7D%0A%0Afunc main() %7B%0A%09grid := %5B%5D%5B%5Dint%7B%0A%09%09%7B1, 1, 0%7D,%0A%09%09%7B0, 1, 0%7D,%0A%09%09%7B0, 0, 1%7D,%0A%09%7D%0A%0A%09visited := make(map%5BPos%5Dbool)%0A%0A%09dfs(grid, 0, 0, visited)%0A\n %7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-06-02_16-32-47",
+            "content": "@@ -508,15 +508,16 @@\n t %7B%0A\n-    l, \n+%09l int%0A%09\n c in\n@@ -575,22 +575,40 @@\n os%5Dbool)\n+ \n %7B%0A\n-    \n+%0A%09// Fora da matriz%0A%09\n if l %3C 0\n@@ -626,18 +626,34 @@\n n(grid) \n-%7C%7C\n+%7B%0A%09%09return%0A%09%7D%0A%0A%09if\n  c %3C 0 %7C\n@@ -678,132 +678,206 @@\n ) %7B%0A\n-        return%0A    %7D%0A%0A    if grid%5Bl%5D%5Bc%5D == 0 %7B%0A        return%0A    %7D%0A%0A    pos := Pos%7Bl, c%7D%0A%0A    if visited%5Bpos%5D == true%0A%0A    \n+%09%09return%0A%09%7D%0A%0A%09// %C3%81gua%0A%09if grid%5Bl%5D%5Bc%5D == 0 %7B%0A%09%09return%0A%09%7D%0A%0A%09pos := Pos%7Bl, c%7D%0A%0A%09// J%C3%A1 visitado%0A%09if visited%5Bpos%5D %7B%0A%09%09return%0A%09%7D%0A%0A%09visited%5Bpos%5D = true%0A%0A%09fmt.Printf(%22Visitando (%25d,%25d)%5Cn%22, l, c)%0A%0A%09// cima%0A%09\n dfs(\n@@ -892,32 +892,42 @@\n 1, c, visited)%0A%0A\n+%09// baixo%0A\n %09dfs(grid, l+1, \n@@ -931,32 +931,45 @@\n 1, c, visited)%0A%0A\n+%09// esquerda%0A\n %09dfs(grid, l, c-\n@@ -981,16 +981,28 @@\n sited)%0A%0A\n+%09// direita%0A\n %09dfs(gri\n@@ -1021,18 +1021,18 @@\n isited)%0A\n-%0A\n %7D\n+%0A\n %0Afunc ma\n@@ -1039,15 +1039,12 @@\n in()\n+ \n %7B%0A\n-%0A    \n+%09\n grid\n@@ -1056,24 +1056,18 @@\n %5D%5B%5Dint%7B%0A\n-        \n+%09%09\n %7B1, 1, 0\n@@ -1065,32 +1065,26 @@\n %09%7B1, 1, 0%7D,%0A\n-        \n+%09%09\n %7B0, 1, 0%7D,%0A \n@@ -1082,24 +1082,18 @@\n  1, 0%7D,%0A\n-        \n+%09%09\n %7B0, 0, 1\n@@ -1097,20 +1097,15 @@\n , 1%7D\n-%0A    %7D%0A%0A    \n+,%0A%09%7D%0A%0A%09\n visi\n@@ -1129,11 +1129,38 @@\n os%5Dbool)\n+%0A%0A%09dfs(grid, 0, 0, visited)\n %0A%7D%0A\n",
+            "lines": "87"
+        },
+        {
+            "label": "2026-06-02_16-39-10",
+            "content": "@@ -751,16 +751,17 @@\n d%5Bpos%5D =\n+=\n  true%0A%0A \n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-06-02_16-39-21",
+            "content": "@@ -753,49 +753,8 @@\n pos%5D\n- %7B%0A        return%0A    %7D%0A%0A    visited%5Bpos%5D\n  = t\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-06-02_16-41-04",
+            "content": "@@ -547,13 +547,16 @@\n nt, \n-p Pos\n+l, c int\n , vi\n@@ -1055,42 +1055,7 @@\n ool)\n-%0A%0A    dfs(grid, Pos%7B0, 0%7D, visited)\n %0A%7D%0A\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-06-02_16-42-46",
+            "content": "@@ -580,18 +580,16 @@\n %0A    if \n-p.\n l %3C 0 %7C%7C\n@@ -589,18 +589,16 @@\n  %3C 0 %7C%7C \n-p.\n l %3E= len\n@@ -607,18 +607,16 @@\n rid) %7C%7C \n-p.\n c %3C 0 %7C%7C\n@@ -616,18 +616,16 @@\n  %3C 0 %7C%7C \n-p.\n c %3E= len\n@@ -674,15 +674,11 @@\n rid%5B\n-p.\n l%5D%5B\n-p.\n c%5D =\n@@ -701,24 +701,46 @@\n turn%0A    %7D%0A%0A\n+    pos := Pos%7Bl, c%7D%0A%0A\n     if visit\n@@ -743,16 +743,18 @@\n isited%5Bp\n+os\n %5D %7B%0A    \n@@ -784,16 +784,18 @@\n isited%5Bp\n+os\n %5D = true\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-06-02_16-43-45",
+            "content": "@@ -800,17 +800,13 @@\n id, \n-p.\n l-1, \n-p.\n c, v\n@@ -829,17 +829,13 @@\n id, \n-p.\n l+1, \n-p.\n c, v\n@@ -854,23 +854,19 @@\n s(grid, \n-p.\n l, \n-p.\n c-1, vis\n@@ -887,15 +887,11 @@\n id, \n-p.\n l, \n-p.\n c+1,\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-06-02_16-45-42",
+            "content": "@@ -577,38 +577,8 @@\n l)%7B%0A\n-    p := Pos%7Bl: l, c: c%7D%0A    %0A\n     \n@@ -644,16 +644,16 @@\n d%5B0%5D) %7B%0A\n+\n         \n@@ -786,30 +786,8 @@\n ue%0A%0A\n-    pos := Pos%7Bl, c%7D%0A%0A\n     \n@@ -984,32 +984,32 @@\n      %7B0, 1, 0%7D,%0A\n+\n         %7B0, 0, 1\n@@ -1009,17 +1009,16 @@\n 0, 0, 1%7D\n-,\n %0A    %7D%0A%0A\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-06-02_16-53-25",
+            "content": "@@ -594,24 +594,28 @@\n l: l, c: c%7D%0A\n+    \n %0A    if p.l \n@@ -852,25 +852,18 @@\n id, \n-Pos%7Bp.l - \n+p.l-\n 1, p.c\n-%7D\n , vi\n@@ -872,16 +872,9 @@\n ted)\n- // Cima\n+%0A\n %0A%09df\n@@ -885,25 +885,18 @@\n id, \n-Pos%7Bp.l + \n+p.l+\n 1, p.c\n-%7D\n , vi\n@@ -905,17 +905,9 @@\n ted)\n- // Baixo\n+%0A\n %0A%09df\n@@ -914,28 +914,24 @@\n s(grid, \n-Pos%7B\n p.l, p.c\n  - 1%7D, v\n@@ -926,13 +926,10 @@\n  p.c\n- - 1%7D\n+-1\n , vi\n@@ -938,20 +938,9 @@\n ted)\n- // Esquerda\n+%0A\n %0A%09df\n@@ -951,20 +951,16 @@\n id, \n-Pos%7B\n p.l, p.c\n  + 1\n@@ -959,13 +959,10 @@\n  p.c\n- + 1%7D\n++1\n , vi\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-06-02_16-59-08",
+            "content": "@@ -1,8 +1,29 @@\n+@@ -1,1173 +1,83 @@%0A-\n package \n@@ -30,23 +30,33 @@\n main\n-%0A\n+%250A\n import \n-%22fmt%22%0A%0A\n+%2522fmt%2522%250A%250A\n // f\n@@ -82,23 +82,31 @@\n raph map\n-%5Bint%5D%5B%5D\n+%255Bint%255D%255B%255D\n int, vis\n@@ -117,21 +117,29 @@\n  map\n-%5Bint%5Dbool) %7B%0A\n+%255Bint%255Dbool) %257B%250A\n //  \n@@ -151,25 +151,33 @@\n  visited\n-%5B\n+%255B\n node\n-%5D %7B%0A\n+%255D %257B%250A\n //      \n@@ -189,19 +189,27 @@\n turn\n-%0A\n+%250A\n //     \n-%7D%0A%0A\n+%257D%250A%250A\n //  \n@@ -222,23 +222,31 @@\n ited\n-%5B\n+%255B\n node\n-%5D\n+%255D\n  = true\n-%0A%0A\n+%250A%250A\n //  \n@@ -265,18 +265,22 @@\n ln(node)\n-%0A%0A\n+%250A%250A\n //     f\n@@ -309,17 +309,25 @@\n raph\n-%5B\n+%255B\n node\n-%5D %7B%0A\n+%255D %257B%250A\n //  \n@@ -363,24 +363,36 @@\n ted)\n-%0A\n+%250A\n //     \n-%7D%0A// %7D%0A%0A\n+%257D%250A// %257D%250A%250A\n // f\n@@ -402,18 +402,22 @@\n  main() \n-%7B%0A\n+%257B%250A\n //     g\n@@ -431,91 +431,151 @@\n  map\n-%5Bint%5D%5B%5Dint%7B%0A// %09%091: %7B2, 3%7D,%0A// %09%092: %7B1, 3%7D,%0A// %09%093: %7B1, 2, 4%7D,%0A// %09%094: %7B3%7D,%0A// %09%7D%0A%0A\n+%255Bint%255D%255B%255Dint%257B%250A// %2509%25091: %257B2, 3%257D,%250A// %2509%25092: %257B1, 3%257D,%250A// %2509%25093: %257B1, 2, 4%257D,%250A// %2509%25094: %257B3%257D,%250A// %2509%257D%250A%250A\n //  \n@@ -600,20 +600,28 @@\n (map\n-%5Bint%5Dbool)%0A%0A\n+%255Bint%255Dbool)%250A%250A\n //  \n@@ -649,16 +649,26 @@\n ted)\n-%0A// %7D%0A%0A%0A\n+%250A// %257D%250A%250A%250A\n type\n@@ -679,18 +679,22 @@\n  struct \n-%7B%0A\n+%257B%250A\n     l, c\n@@ -701,12 +701,20 @@\n  int\n-%0A%7D%0A%0A\n+%250A%257D%250A%250A\n func\n@@ -723,20 +723,28 @@\n fs(grid \n-%5B%5D%5B%5D\n+%255B%255D%255B%255D\n int, p P\n@@ -762,44 +762,62 @@\n  map\n-%5BPos%5Dbool)%7B%0A%0A    if p.l %3C 0 %7C%7C\n+%255BPos%255Dbool)%257B%250A%250A    if p.l %253C 0 %257C%257C\n  p.l \n-%3E\n+%253E\n = le\n@@ -828,27 +828,39 @@\n id) \n-%7C%7C p.c %3C 0 %7C%7C\n+%257C%257C p.c %253C 0 %257C%257C\n  p.c \n-%3E\n+%253E\n = le\n@@ -869,15 +869,23 @@\n grid\n-%5B0%5D) %7B%0A\n+%255B0%255D) %257B%250A\n     \n@@ -890,32 +890,40 @@\n       return\n-%0A\n+%250A\n     \n-%7D%0A%0A\n+%257D%250A%250A\n     if grid%5B\n@@ -925,26 +925,38 @@\n grid\n-%5Bp.l%5D%5Bp.c%5D == 0 %7B%0A\n+%255Bp.l%255D%255Bp.c%255D == 0 %257B%250A\n     \n@@ -961,32 +961,40 @@\n       return\n-%0A\n+%250A\n     \n-%7D%0A%0A\n+%257D%250A%250A\n     if visit\n@@ -999,14 +999,22 @@\n ited\n-%5Bp%5D %7B%0A\n+%255Bp%255D %257B%250A\n     \n@@ -1023,24 +1023,32 @@\n   return\n-%0A\n+%250A\n     \n-%7D%0A%0A\n+%257D%250A%250A\n     visi\n@@ -1054,42 +1054,118 @@\n ited\n-%5Bp%5D = true%0A%0A    pos := Pos%7Bl, c%7D%0A%0A\n+%255Bp%255D = true%250A%250A%0A+@@ -572,16 +572,41 @@%250A s%25255Dbool)%25257B%250A+%25250A%0A     p%0A-os%0A  := Pos%0A-%257Bl, c%257D%250A%250A\n     \n@@ -1173,25 +1173,27 @@\n fs(grid, Pos\n-%7B\n+%257B\n p.l - 1, p.c\n@@ -1188,25 +1188,27 @@\n p.l - 1, p.c\n-%7D\n+%257D\n , visited) /\n@@ -1213,18 +1213,22 @@\n  // Cima\n-%0A%09\n+%250A%2509\n dfs(grid\n@@ -1232,17 +1232,19 @@\n rid, Pos\n-%7B\n+%257B\n p.l + 1,\n@@ -1247,17 +1247,19 @@\n + 1, p.c\n-%7D\n+%257D\n , visite\n@@ -1269,18 +1269,22 @@\n // Baixo\n-%0A%09\n+%250A%2509\n dfs(grid\n@@ -1280,33 +1280,35 @@\n %2509dfs(grid, Pos\n-%7B\n+%257B\n p.l, p.c - 1%7D, v\n@@ -1303,17 +1303,19 @@\n  p.c - 1\n-%7D\n+%257D\n , visite\n@@ -1332,10 +1332,14 @@\n erda\n-%0A%09\n+%250A%2509\n dfs(\n@@ -1347,17 +1347,19 @@\n rid, Pos\n-%7B\n+%257B\n p.l, p.c\n@@ -1362,17 +1362,19 @@\n  p.c + 1\n-%7D\n+%257D\n , visite\n@@ -1379,12 +1379,20 @@\n ted)\n-%0A%0A%7D%0A\n+%250A%250A%257D%250A\n func\n@@ -1402,11 +1402,17 @@\n in()\n-%7B%0A%0A\n+%257B%250A%250A\n     \n@@ -1423,25 +1423,37 @@\n  := \n-%5B%5D%5B%5Dint%7B%0A\n+%255B%255D%255B%255Dint%257B%250A\n         \n %7B1, \n@@ -1452,27 +1452,33 @@\n     \n-%7B\n+%257B\n 1, 1, 0\n-%7D,%0A\n+%257D,%250A\n         \n %7B0, \n@@ -1477,27 +1477,33 @@\n     \n-%7B\n+%257B\n 0, 1, 0\n-%7D,%0A\n+%257D,%250A\n         \n %7B0, \n@@ -1502,26 +1502,38 @@\n     \n-%7B\n+%257B\n 0, 0, 1\n-%7D,%0A    %7D%0A%0A\n+%257D,%250A    %257D%250A%250A\n     \n@@ -1555,20 +1555,28 @@\n (map\n-%5BPos%5Dbool)%0A%0A\n+%255BPos%255Dbool)%250A%250A\n     \n@@ -1592,14 +1592,18 @@\n  Pos\n-%7B\n+%257B\n 0, 0\n-%7D\n+%257D\n , vi\n@@ -1612,7 +1612,58 @@\n ted)\n-%0A%7D\n+%250A%257D%0A+%25257Bl: l, c: c%25257D%250A %25250A%25250A    if%0A %250A\n %0A\n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-06-02_17-01-04",
+            "content": "@@ -1,1151 +1,78 @@\n-package main%0Aimport %22fmt%22%0A%0A// func dfs(node int, graph map%5Bint%5D%5B%5Dint, visited map%5Bint%5Dbool) %7B%0A//     if visited%5Bnode%5D %7B%0A//         return%0A//     %7D%0A%0A//     visited%5Bnode%5D = true%0A%0A//     fmt.Println(node)%0A%0A//     for _, neigh := range graph%5Bnode%5D %7B%0A//         dfs(neigh, graph, visited)%0A//     %7D%0A// %7D%0A%0A// func main() %7B%0A//     graph := map%5Bint%5D%5B%5Dint%7B%0A// %09%091: %7B2, 3%7D,%0A// %09%092: %7B1, 3%7D,%0A// %09%093: %7B1, 2, 4%7D,%0A// %09%094: %7B3%7D,%0A// %09%7D%0A%0A//     visited := make(map%5Bint%5Dbool)%0A%0A//     dfs(1, graph, visited)%0A// %7D%0A%0A%0Atype Pos struct %7B%0A    l, c int%0A%7D%0A%0Afunc dfs(grid %5B%5D%5B%5Dint, p Pos, visited map%5BPos%5Dbool)%7B%0A%0A    if p.l %3C 0 %7C%7C p.l %3E= len(grid) %7C%7C p.c %3C 0 %7C%7C p.c %3E= len(grid%5B0%5D) %7B%0A        return%0A    %7D%0A%0A    if grid%5Bp.l%5D%5Bp.c%5D == 0 %7B%0A        return%0A    %7D%0A%0A    if visited%5Bp%5D %7B%0A        return%0A    %7D%0A%0A    visited%5Bp%5D = true%0A%0A    dfs(grid, Pos%7Bp.l - 1, p.c%7D, visited) // Cima%0A%09dfs(grid, Pos%7Bp.l + 1, p.c%7D, visited) // Baixo%0A%09dfs(grid, Pos%7Bp.l, p.c - 1%7D, visited) // Esquerda%0A%09dfs(grid, Pos%7Bp.l, p.c + 1%7D, visited)%0A%0A%7D%0Afunc main()%7B%0A%0A    grid := %5B%5D%5B%5Dint%7B%0A        %7B1, 1, 0%7D,%0A        %7B0, 1, 0%7D,%0A        %7B0, 0, 1%7D,%0A    %7D%0A%0A    visited := make(map%5BPos%5Dbool)%0A%0A    dfs(grid, Pos%7B0, 0%7D, visited)%0A%7D\n+@@ -783,16 +783,38 @@%0A = true%250A%250A%0A+    pos := Pos%257Bl, c%257D%250A%250A%0A     dfs(\n %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-06-02_17-01-40",
+            "content": "@@ -10,269 +10,530 @@\n ain%0A\n-%0A\n import \n-(%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A)%0A%0Afunc backtrack()%0Afunc exist(grid %5B%5D%5B%5Dbyte, word string) \n+%22fmt%22%0A%0A// func dfs(node int, graph map%5Bint%5D%5B%5Dint, visited map%5Bint%5D\n bool\n+)\n  %7B%0A\n-%09for l := 0; l %3C len(grid); i++ %7B%0A%09%09for c := 0; c %3C len(grid%5B0%5D; c++) %7B%0A%09%09%09if grid%5Bl%5D%5Bc%5D == word%5B0%5D%0A%09%09%09return true%0A%09%09%7D%0A%09%7D%0A%7D%0A%0Apackage main%0A%0Aimport %22fmt%22\n+//     if visited%5Bnode%5D %7B%0A//         return%0A//     %7D%0A%0A//     visited%5Bnode%5D = true%0A%0A//     fmt.Println(node)%0A%0A//     for _, neigh := range graph%5Bnode%5D %7B%0A//         dfs(neigh, graph, visited)%0A//     %7D%0A// %7D%0A%0A// func main() %7B%0A//     graph := map%5Bint%5D%5B%5Dint%7B%0A// %09%091: %7B2, 3%7D,%0A// %09%092: %7B1, 3%7D,%0A// %09%093: %7B1, 2, 4%7D,%0A// %09%094: %7B3%7D,%0A// %09%7D%0A%0A//     visited := make(map%5Bint%5Dbool)%0A%0A//     dfs(1, graph, visited)%0A// %7D%0A%0A%0Atype Pos struct %7B%0A    l, c int%0A%7D\n %0A%0Afunc \n-exist\n+dfs\n (gri\n@@ -542,119 +542,149 @@\n %5B%5D%5B%5D\n-byte, word string) \n+int, p Pos, visited map%5BPos%5D\n bool\n- %7B%0A%0A%09for l := 0; l %3C len(grid); l++ %7B%0A%09%09for c := 0; c %3C len(grid%5B0%5D); c++ %7B%0A%0A%09%09%09\n+)%7B%0A%0A    if p.l %3C 0 %7C%7C p.l %3E= len(grid) %7C%7C p.c %3C 0 %7C%7C p.c %3E= len(grid%5B0%5D) %7B%0A        return%0A    %7D%0A%0A    \n if grid%5B\n l%5D%5Bc\n@@ -683,72 +683,302 @@\n rid%5B\n+p.\n l%5D%5B\n+p.\n c%5D == \n-word%5B0\n+0 %7B%0A        return%0A    %7D%0A%0A    if visited%5Bp\n %5D %7B%0A\n-%09%09%09%09return true%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09return false%0A%7D%0A\n+        return%0A    %7D%0A%0A    visited%5Bp%5D = true%0A%0A    dfs(grid, Pos%7Bp.l - 1, p.c%7D, visited) // Cima%0A%09dfs(grid, Pos%7Bp.l + 1, p.c%7D, visited) // Baixo%0A%09dfs(grid, Pos%7Bp.l, p.c - 1%7D, visited) // Esquerda%0A%09dfs(grid, Pos%7Bp.l, p.c + 1%7D, visited)%0A%0A%7D\n %0Afun\n@@ -989,13 +989,15 @@\n in()\n- \n %7B%0A%0A\n-%09\n+    \n grid\n@@ -1008,119 +1008,144 @@\n %5B%5D%5B%5D\n-byte%7B%0A%09%09%7B'A', 'B', 'C'%7D,%0A%09%09%7B'D', 'E', 'F'%7D,%0A%09%09%7B'G', 'H', 'I'%7D,%0A%09%7D%0A%0A%09word := %22E%22%0A%0A%09fmt.Println(exist(grid, word)\n+int%7B%0A        %7B1, 1, 0%7D,%0A        %7B0, 1, 0%7D,%0A        %7B0, 0, 1%7D,%0A    %7D%0A%0A    visited := make(map%5BPos%5Dbool)%0A%0A    dfs(grid, Pos%7B0, 0%7D, visited\n )%0A%7D%0A\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-06-03_08-04-12",
+            "content": "@@ -6,16 +6,253 @@\n ge main%0A\n+%0Aimport (%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A)%0A%0Afunc backtrack()%0Afunc exist(grid %5B%5D%5B%5Dbyte, word string) bool %7B%0A%09for l := 0; l %3C len(grid); i++ %7B%0A%09%09for c := 0; c %3C len(grid%5B0%5D; c++) %7B%0A%09%09%09if grid%5Bl%5D%5Bc%5D == word%5B0%5D%0A%09%09%09return true%0A%09%09%7D%0A%09%7D%0A%7D%0A%0Apackage main%0A%0A\n import %22\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-06-03_08-04-41",
+            "content": "@@ -220,419 +220,8 @@\n %0A%7D%0A%0A\n-func dfs(grid %5B%5D%5B%5Dbyte, p Pos, word string, idx int) bool %7B%0A%0A    if idx == len(word) %7B%0A        return true%0A    %7D%0A%0A    if p.l %3C 0 %7C%7C p.c %3E= len(grid) %7C%7C p.c %3C 0 %7C%7C p.c %3E= len(grid%5B0%5D) %7B%0A        return false%0A    %7D%0A%0A    return dfs(grid, Pos%7Bp.l - 1, p.c%7D, word, idx+1) %7C%7C%0A%09%09dfs(grid, Pos%7Bp.l + 1, p.c%7D, word, idx+1) %7C%7C%0A%09%09dfs(grid, Pos%7Bp.l, p.c - 1%7D, word, idx+1) %7C%7C%0A%09%09dfs(grid, Pos%7Bp.l, p.c + 1%7D, word, idx+1)%0A%0A%7D%0A%0A\n func\n@@ -230,16 +230,16 @@\n ain() %7B%0A\n+\n %0A%09grid :\n@@ -325,10 +325,9 @@\n := %22\n-AB\n+E\n %22%0A%0A%09\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-06-03_08-09-39",
+            "content": "@@ -24,42 +24,8 @@\n t%22%0A%0A\n-type Pos struct %7B%0A    l, c int%0A%7D%0A%0A\n func\n@@ -762,17 +762,17 @@\n t(grid, \n-%22AB%22\n+word\n ))%0A%7D%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-06-03_08-10-59",
+            "content": "@@ -178,95 +178,57 @@\n  %7B%0A%0A\n-            if dfs(grid, Pos%7Bl, c%7D, word, 0) %7B%0A                return true%0A            \n+%09%09%09if grid%5Bl%5D%5Bc%5D == word%5B0%5D %7B%0A%09%09%09%09return true%0A%09%09%09\n %7D%0A%09%09\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-06-03_08-12-00",
+            "content": "@@ -422,17 +422,17 @@\n  0 %7C%7C p.\n-l\n+c\n  %3E= len(\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-06-03_08-12-43",
+            "content": "@@ -1,1081 +1,130 @@\n-package main%0Aimport %22fmt%22%0A%0Atype Pos struct %7B%0A    l, c int%0A%7D%0A%0Afunc exist(grid %5B%5D%5B%5Dbyte, word string) bool %7B%0A%0A%09for l := 0; l %3C len(grid); l++ %7B%0A%09%09for c := 0; c %3C len(grid%5B0%5D); c++ %7B%0A%0A            visited := male(map%5BPos%5Dbool)%0A%0A            if dfs(grid, Pos%7Bl, c%7D, word, 0) %7B%0A                return true%0A            %7D%0A%09%09%7D%0A%09%7D%0A%0A%09return false%0A%7D%0A%0Afunc dfs(grid %5B%5D%5B%5Dbyte, p Pos, word string, idx int, visited map%5BPos%5Dbool) bool %7B%0A%0A    if idx == len(word) %7B%0A        return true%0A    %7D%0A%0A    if p.l %3C 0 %7C%7C p.l %3E= len(grid) %7C%7C p.c %3C 0 %7C%7C p.c %3E= len(grid%5B0%5D) %7B%0A        return false%0A    %7D%0A%0A    if grid%5Bp.l%5D%5Bp.c%5D != word%5Bidx%5D %7B%0A        return false%0A    %7D%0A%0A    if visited%5Bp%5D %7B%0A        return false%0A    %7D%0A%0A    visited%5BPos%5D = true%0A%0A    found := dfs(grid, Pos%7Bp.l - 1, p.c%7D, word, idx+1) %7C%7C%0A%09%09dfs(grid, Pos%7Bp.l + 1, p.c%7D, word, idx+1) %7C%7C%0A%09%09dfs(grid, Pos%7Bp.l, p.c - 1%7D, word, idx+1) %7C%7C%0A%09%09dfs(grid, Pos%7Bp.l, p.c + 1%7D, word, idx+1)%0A%0A    visited%5BPos%5D = false%0A%0A%7D%0A%0Afunc main() %7B%0A%0A%09grid := %5B%5D%5B%5Dbyte%7B%0A%09%09%7B'A', 'B', 'C'%7D,%0A%09%09%7B'D', 'E', 'F'%7D,%0A%09%09%7B'G', 'H', 'I'%7D,%0A%09%7D%0A%0A%09word := %22AB%22%0A%0A%09fmt.Println(exist(grid, %22AB%22))%0A%7D\n+@@ -505,73 +505,8 @@%0A  %257D%250A%250A%0A-    if grid%255Bp.l%255D%255Bp.c%255D != word%255Bidx%255D %257B%250A        return false%250A    %257D%250A%250A%0A     \n %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-06-03_08-20-29",
+            "content": "@@ -199,17 +199,17 @@\n ed := ma\n-k\n+l\n e(map%5BPo\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-06-03_08-20-35",
+            "content": "@@ -260,25 +260,16 @@\n  word, 0\n-, visited\n ) %7B%0A    \n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-06-03_08-21-55",
+            "content": "@@ -1,402 +1,112 @@\n-package main%0Aimport %22fmt%22%0A%0Atype Pos struct %7B%0A    l, c int%0A%7D%0A%0Afunc exist(grid %5B%5D%5B%5Dbyte, word string) bool %7B%0A%0A%09for l := 0; l %3C len(grid); l++ %7B%0A%09%09for c := 0; c %3C len(grid%5B0%5D); c++ %7B%0A%0A            visited := make(map%5BPos%5Dbool)%0A%0A            if dfs(grid, Pos%7Bl, c%7D, word, 0, visited) %7B%0A                return true%0A            %7D%0A%09%09%7D%0A%09%7D%0A%0A%09return false%0A%7D%0A%0Afunc dfs(grid %5B%5D%5B%5Dbyte, p Pos, word string\n+@@ -762,33 +762,24 @@%0A  word, idx+1%0A-, visited%0A ) %257C%257C%250A%2509%2509dfs(g%0A@@ -809,33 +809,24 @@%0A  word\n , idx\n- int\n++1%0A-\n , vi\n@@ -114,430 +114,64 @@\n ited\n- map%5BPos%5Dbool) bool %7B%0A%0A    if idx == len(word) %7B%0A        return true%0A    %7D%0A%0A    if p.l %3C 0 %7C%7C p.l %3E= len(grid) %7C%7C p.c %3C 0 %7C%7C p.c %3E= len(grid%5B0%5D) %7B%0A        return false%0A    %7D%0A%0A    if grid%5Bp.l%5D%5Bp.c%5D != word%5Bidx%5D %7B%0A        return false%0A    %7D%0A%0A    if visited%5Bp%5D %7B%0A        return false%0A    %7D%0A%0A    visited%5BPos%5D = true%0A%0A    found := dfs(grid, Pos%7Bp.l - 1, p.c%7D, word, idx+1, visited) %7C%7C%0A%09%09dfs(grid, Pos%7Bp.l + 1, p.c%7D, wor\n+%0A ) %257C%257C%250A%2509%2509dfs(g%0A@@ -860,25 +860,16 @@%0A \n d, idx+1\n , vi\n@@ -158,32 +158,34 @@\n ,16 @@%0A d, idx+1\n+%0A-\n , visited) %7C%7C%0A%09%09\n@@ -181,111 +181,60 @@\n ited\n-) %7C%7C%0A%09%09dfs(grid, Pos%7Bp.l, p.c - 1%7D, word, idx+1, visited) %7C%7C%0A%09%09dfs(grid, Pos%7Bp.l, p.c + 1%7D, wor\n+%0A ) %257C%257C%250A%2509%2509d%0A@@ -907,25 +907,16 @@%0A \n d, idx+1\n , vi\n@@ -229,16 +229,18 @@\n d, idx+1\n+%0A-\n , visite\n@@ -244,197 +244,19 @@\n ited\n-)%0A%0A    visited%5BPos%5D = false%0A%0A    return found%0A%7D%0A%0Afunc main() %7B%0A%0A%09grid := %5B%5D%5B%5Dbyte%7B%0A%09%09%7B'A', 'B', 'C'%7D,%0A%09%09%7B'D', 'E', 'F'%7D,%0A%09%09%7B'G', 'H', 'I'%7D,%0A%09%7D%0A%0A%09word := %22AB%22%0A%0A%09fmt.Println(exist(grid, %22AB%22))%0A%7D\n+%0A )%250A%250A    v\n %0A\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-06-03_08-22-34",
+            "content": "@@ -1087,16 +1087,30 @@\n '%7D,%0A%09%7D%0A%0A\n+%09word := %22AB%22%0A\n %0A%09fmt.Pr\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-06-03_08-22-47",
+            "content": "@@ -696,25 +696,27 @@\n     visited%5B\n-p\n+Pos\n %5D = true%0A%0A  \n@@ -958,17 +958,19 @@\n visited%5B\n-p\n+Pos\n %5D = fals\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-06-03_08-23-43",
+            "content": "package main\nimport \"fmt\"\n\ntype Pos struct {\n    l, c int\n}\n\nfunc exist(grid [][]byte, word string) bool {\n\n\tfor l := 0; l < len(grid); l++ {\n\t\tfor c := 0; c < len(grid[0]); c++ {\n\n            visited := make(map[Pos]bool)\n\n            if dfs(grid, Pos{l, c}, word, 0, visited) {\n                return true\n            }\n\t\t}\n\t}\n\n\treturn false\n}\n\nfunc dfs(grid [][]byte, p Pos, word string, idx int, visited map[Pos]bool) bool {\n\n    if idx == len(word) {\n        return true\n    }\n\n    if p.l < 0 || p.l >= len(grid) || p.c < 0 || p.c >= len(grid[0]) {\n        return false\n    }\n\n    if grid[p.l][p.c] != word[idx] {\n        return false\n    }\n\n    if visited[p] {\n        return false\n    }\n\n    visited[p] = true\n\n    found := dfs(grid, Pos{p.l - 1, p.c}, word, idx+1, visited) ||\n\t\tdfs(grid, Pos{p.l + 1, p.c}, word, idx+1, visited) ||\n\t\tdfs(grid, Pos{p.l, p.c - 1}, word, idx+1, visited) ||\n\t\tdfs(grid, Pos{p.l, p.c + 1}, word, idx+1, visited)\n\n    visited[p] = false\n\n    return found\n}\n\nfunc main() {\n\n\tgrid := [][]byte{\n\t\t{'A', 'B', 'C'},\n\t\t{'D', 'E', 'F'},\n\t\t{'G', 'H', 'I'},\n\t}\n\n\n\tfmt.Println(exist(grid, \"AB\"))\n}\n",
+            "lines": "64"
+        }
+    ]
+}
