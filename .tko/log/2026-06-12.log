@@ -1,2 +1,16 @@
 2026-06-12 18:07:24, MOVE, v:1, k:ed@subset_sum, mode:PICK
 2026-06-12 18:07:47, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-12 18:22:55, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-06-12 18:49:40, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-06-12 18:51:37, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-06-12 18:51:42, MOVE, v:1, k:ed@ilhas, mode:PICK
+2026-06-12 18:52:23, MOVE, v:1, k:ed@ilhas, mode:BACK
+2026-06-12 18:55:21, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-06-12 18:56:14, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-06-12 18:56:41, MOVE, v:1, k:ed@quadrado, mode:DOWN
+2026-06-12 18:56:41, MOVE, v:1, k:ed@quadrado, mode:PICK
+2026-06-12 18:58:01, MOVE, v:1, k:ed@quadrado, mode:BACK
+2026-06-12 18:56:41, MOVE, v:1, k:ed@quadrado, mode:EDIT
+2026-06-12 18:56:41, MOVE, v:1, k:ed@quadrado, mode:EDIT
+2026-06-12 19:00:55, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-06-12 19:01:04, MOVE, v:1, k:ed@cercado, mode:BACK

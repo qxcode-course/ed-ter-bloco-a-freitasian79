@@ -6,29 +6,59 @@ import (
 	"os"
 )
 
-func inBorder(i, j, rows, cols int) bool {
-	return i == 0 || i == linhas - 1 || j == 0 || j == colunas - 1
+type Point struct {
+	l, c int
+}
+
+func inBorder(i, j, rows, cols int,) bool {
+	return i == 0 || i == rows - 1 || j == 0 || j == cols - 1
+}
+
+func dfs(matriz [][]byte, i, j int, visited map[Point]bool) {
+	rows := len(matriz)
+	cols := len(matriz[0])
+
+	p := Point{i, j}
+
+	if i < 0 || i >= rows || j < 0 || j >= cols || matriz[i][j] != 'O' || visited[p] {
+		return
+	}
+
+	visited[p] = true 
+
+	dfs(matriz, i+1, j, visited)
+	dfs(matriz, i-1, j, visited)
+	dfs(matriz, i, j+1, visited)
+	dfs(matriz, i, j-1, visited)
 }
 
 // NÃO ALTERE A ASSINATURA DA FUNÇÃO solve
 func solve(board [][]byte) {
-	visited := make(map[int]bool)
+	visited := make(map[Point]bool)
+
+	rows := len(board)
+	cols := len(board[0])
 
 	for i := 0 ; i < len(board); i++ {
 		for j := 0; j < len(board[0]); j++ {
-			if inBorder(i, j, len(board), len(board[0]) {
-				visited[board[i][j]] = true
+			if inBorder(i, j, rows, cols) && board[i][j] == 'O' {
+				dfs(board, i, j, visited)
 			}
 		}
 	}
 
-	for i := 0; i < len(board); i++ {
-		for j := 0; j < len(board[0]); j++ {
-			if !visited[board[i][j]] {
-				board[i][j] = 'X'
+	for i := 0; i < rows; i++ {
+		for j := 0; j < cols; j++ {
+			if board[i][j] == 'O'{
+				pos := Point{i, j}
+
+				if !visited[pos] {
+					board[i][j] = 'X'
+				}
 			}
 		}
 	}
+
 }
 
 // NÃO ALTERE A MAIN

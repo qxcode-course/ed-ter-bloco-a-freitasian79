@@ -1,0 +1,6 @@
+2026-06-28 12:45:56, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-06-28 12:46:53, MOVE, v:1, k:ed@pintura, mode:BACK
+2026-06-28 12:47:39, MOVE, v:1, k:ed@bufferring, mode:BACK
+2026-06-28 12:49:01, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-06-28 12:54:11, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-06-28 12:54:20, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:50

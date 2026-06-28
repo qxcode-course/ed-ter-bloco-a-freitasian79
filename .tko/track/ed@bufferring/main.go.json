@@ -1,0 +1,154 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-16_07-48-20",
+            "content": "@@ -154,20 +154,16 @@\n e) Len()\n- int\n  %7B%0A%09retu\n",
+            "lines": "118"
+        },
+        {
+            "label": "2026-06-16_07-48-33",
+            "content": "@@ -171,24 +171,20 @@\n eturn d.\n-capacity\n+size\n %0A%7D%0A%0Afunc\n",
+            "lines": "118"
+        },
+        {
+            "label": "2026-06-16_07-50-30",
+            "content": "@@ -166,72 +166,25 @@\n  %7B%0A%09\n-tam := 0%0A%0A%09for _, elem := range != nil %7B%0A%09%09tam++%0A%09%7D%0A%0A%09return tam\n+return d.capacity\n %0A%7D%0A%0A\n",
+            "lines": "118"
+        },
+        {
+            "label": "2026-06-16_07-52-05",
+            "content": "@@ -198,20 +198,8 @@\n nge \n-%7B%0A%09%09if elem \n != n\n@@ -207,17 +207,16 @@\n l %7B%0A\n-%09\n %09%09tam++%0A\n %09%09%7D%0A\n@@ -211,20 +211,16 @@\n %09%09tam++%0A\n-%09%09%7D%0A\n %09%7D%0A%0A%09ret\n",
+            "lines": "124"
+        },
+        {
+            "label": "2026-06-16_07-52-37",
+            "content": "@@ -198,15 +198,8 @@\n nge \n-d.data \n %7B%0A%09%09\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-16_07-53-05",
+            "content": "@@ -181,67 +181,39 @@\n for \n-i := d.front; i %3C len(d.capacity); i := d.front + 1\n+_, elem := range d.data\n  %7B%0A%09%09if \n i !=\n@@ -208,17 +208,20 @@\n  %7B%0A%09%09if \n-i\n+elem\n  != nil \n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-16_07-54-12",
+            "content": "@@ -166,21 +166,121 @@\n  %7B%0A%09\n-return d.size\n+tam := 0%0A%0A%09for i := d.front; i %3C len(d.capacity); i := d.front + 1 %7B%0A%09%09if i != nil %7B%0A%09%09%09tam++%0A%09%09%7D%0A%09%7D%0A%0A%09return tam\n %0A%7D%0A%0A\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-16_07-55-34",
+            "content": "@@ -137,207 +137,8 @@\n %0A%7D%0A%0A\n-func (d *Deque) PushBack(val int) error %7B%0A%09if d.capacity == d.size %7B%0A%09%09retur errors.New(%22deque cheio%22)%0A%09%7D%0A%0A%09targetIndex := d.getIndex(d.size)%0A%0A%09d.data%5BtargetIndex%5D = val %09%0A%0A%09d.size++%0A%0A%09returl nil%0A%7D%0A%0A\n func\n@@ -232,23 +232,21 @@\n rn (\n+log + \n d.front\n- + index\n ) %25 \n@@ -1334,16 +1334,19 @@\n ck%22:%0A%09%09%09\n+// \n for _, v\n@@ -1369,16 +1369,18 @@\n :%5D %7B%0A%09%09%09\n+//\n  %09num, _\n@@ -1402,16 +1402,18 @@\n i(v)%0A%09%09%09\n+//\n  %09buf.Pu\n@@ -1423,24 +1423,27 @@\n ack(num)%0A%09%09%09\n+// \n %7D%0A%09%09case %22pu\n@@ -1766,16 +1766,19 @@\n nt%22:%0A%09%09%09\n+// \n if val, \n@@ -1813,16 +1813,19 @@\n il %7B%0A%09%09%09\n+// \n %09fmt.Pri\n@@ -1837,16 +1837,19 @@\n err)%0A%09%09%09\n+// \n %7D else %7B\n@@ -1852,16 +1852,18 @@\n se %7B%0A%09%09%09\n+//\n  %09fmt.Pr\n@@ -1876,16 +1876,19 @@\n val)%0A%09%09%09\n+// \n %7D%0A%09%09case\n",
+            "lines": "118"
+        },
+        {
+            "label": "2026-06-16_08-18-45",
+            "content": "@@ -209,17 +209,16 @@\n %0A%09%09retur\n-n\n  errors.\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-06-16_08-18-57",
+            "content": "@@ -324,17 +324,17 @@\n %0A%0A%09retur\n-n\n+l\n  nil%0A%7D%0A%0A\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-06-16_08-19-07",
+            "content": "@@ -204,16 +204,48 @@\n ize %7B%0A%09%09\n+return errors.New(%22deque cheio%22)\n %0A%09%7D%0A%0A%09ta\n@@ -1958,18 +1958,16 @@\n nt%22:%0A%09%09%09\n-//\n if val, \n@@ -2002,18 +2002,16 @@\n il %7B%0A%09%09%09\n-//\n %09fmt.Pri\n@@ -2023,18 +2023,16 @@\n err)%0A%09%09%09\n-//\n %7D else %7B\n@@ -2027,34 +2027,32 @@\n %0A%09%09%09%7D else %7B%0A%09%09%09\n-//\n  %09fmt.Println(va\n@@ -2057,18 +2057,16 @@\n val)%0A%09%09%09\n-//\n %7D%0A%09%09case\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-06-16_08-21-33",
+            "content": "@@ -406,19 +406,21 @@\n front + \n-log\n+index\n ) %25 d.ca\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-06-16_08-21-49",
+            "content": "@@ -53,19 +53,8 @@\n gs%22%0A\n-%09%22strconv%22%0A\n )%0A%0At\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-06-16_08-22-08",
+            "content": "@@ -316,86 +316,8 @@\n %0A%7D%0A%0A\n-func (d *Deque) PopFront() %7B%0A%0A%09end := d.getIndex(d.size)%0A%09fmt.Println(end)%0A%7D%0A%0A\n func\n",
+            "lines": "133"
+        },
+        {
+            "label": "2026-06-16_08-23-58",
+            "content": "@@ -1699,24 +1699,27 @@\n _front%22:%0A%09%09%09\n+// \n for _, v := \n@@ -1730,32 +1730,34 @@\n e args%5B1:%5D %7B%0A%09%09%09\n+//\n  %09num, _ := strc\n@@ -1763,32 +1763,34 @@\n conv.Atoi(v)%0A%09%09%09\n+//\n  %09buf.PushFront(\n@@ -1789,32 +1789,35 @@\n shFront(num)%0A%09%09%09\n+// \n %7D%0A%09%09case %22pop_ba\n",
+            "lines": "139"
+        },
+        {
+            "label": "2026-06-16_08-24-37",
+            "content": "@@ -347,58 +347,51 @@\n %7B%0A%0A%09\n-d.front \n+end :\n = \n-(\n d.\n-front + 1) %25 d.capacity%0A%0A%09d.size--%09%0A%09\n+getIndex(d.size)%0A%09fmt.Println(end)\n %0A%7D%0A%0A\n",
+            "lines": "139"
+        },
+        {
+            "label": "2026-06-16_08-31-27",
+            "content": "@@ -1710,18 +1710,16 @@\n nt%22:%0A%09%09%09\n-//\n for _, v\n@@ -1742,18 +1742,16 @@\n :%5D %7B%0A%09%09%09\n-//\n  %09num, _\n@@ -1773,18 +1773,16 @@\n i(v)%0A%09%09%09\n-//\n  %09buf.Pu\n@@ -1793,26 +1793,24 @@\n ont(num)%0A%09%09%09\n-//\n %7D%0A%09%09case %22po\n@@ -1917,16 +1917,19 @@\n nt%22:%0A%09%09%09\n+// \n if err :\n@@ -1962,16 +1962,19 @@\n il %7B%0A%09%09%09\n+// \n %09fmt.Pri\n@@ -1982,24 +1982,27 @@\n tln(err)%0A%09%09%09\n+// \n %7D%0A%09%09case %22fr\n",
+            "lines": "141"
+        },
+        {
+            "label": "2026-06-16_08-32-22",
+            "content": "@@ -338,22 +338,16 @@\n pFront()\n- error\n  %7B%0A%0A%09d.f\n@@ -398,19 +398,8 @@\n %09%0A%09%0A\n-%09retur nil%0A\n %7D%0A%0Af\n",
+            "lines": "141"
+        },
+        {
+            "label": "2026-06-16_08-32-49",
+            "content": "@@ -402,25 +402,24 @@\n --%09%0A%09%0A%09retur\n-n\n  nil%0A%7D%0A%0Afunc\n",
+            "lines": "142"
+        },
+        {
+            "label": "2026-06-16_08-32-58",
+            "content": "@@ -1,9 +1,8 @@\n-%09\n package \n@@ -7,17 +7,16 @@\n e main%0A%0A\n-%09\n import (\n@@ -16,17 +16,16 @@\n mport (%0A\n-%09\n %09%22bufio%22\n@@ -29,24 +29,21 @@\n io%22%0A\n-%09\n %09%22fmt%22%0A\n-%09\n %09%22os%22%0A\n-%09\n %09%22st\n@@ -49,17 +49,16 @@\n trings%22%0A\n-%09\n %09%22strcon\n@@ -64,13 +64,11 @@\n nv%22%0A\n-%09\n )%0A%0A\n-%09\n type\n@@ -83,17 +83,16 @@\n truct %7B%0A\n-%09\n %09data   \n@@ -99,17 +99,16 @@\n   %5B%5Dint%0A\n-%09\n %09front  \n@@ -113,17 +113,16 @@\n     int%0A\n-%09\n %09size   \n@@ -127,17 +127,16 @@\n     int%0A\n-%09\n %09capacit\n@@ -145,328 +145,11 @@\n int%0A\n-%09\n %7D%0A%0A\n-%09func (d *Deque) getPos(index int) int %7B%0A%09%09return (d.front + index) %25 d.capacity%0A%09%7D%0A%09func (d *Deque) ExtendCapacity()  %7B%0A%09%09%0A%09%09new_vector := make(%5B%5Dint, d.capacity * 2)%0A%0A%09%09for i := 0; i %3C d.size; i++ %7B%0A%09%09%09new_vector%5Bi%5D = d.data%5Bd.getPos(i)%5D%0A%09%09%7D%0A%0A%09%09d.data = new_vector%0A%09%09d.capacity = d.capacity * 2%0A%09%09d.front = 0%0A%09%7D%0A%0A%09\n func\n@@ -186,17 +186,16 @@\n error %7B%0A\n-%09\n %09if d.ca\n@@ -219,34 +219,13 @@\n %7B%0A%09%09\n-%09d.ExtendCapacity()%0A%09\n+%0A\n %09%7D%0A%0A\n-%09\n %09tar\n@@ -256,17 +256,16 @@\n .size)%0A%0A\n-%09\n %09d.data%5B\n@@ -286,17 +286,16 @@\n  val %09%0A%0A\n-%09\n %09d.size+\n@@ -297,17 +297,16 @@\n size++%0A%0A\n-%09\n %09return \n@@ -301,37 +301,35 @@\n ++%0A%0A%09return nil%0A\n-%09\n %7D%0A%0A\n-%09\n func (d *Deque) \n@@ -352,62 +352,8 @@\n  %7B%0A%0A\n-%09%09if d.size == 0 %7B%0A%09%09%09return fmt.Errorf(%22fail%22)%0A%09%09%7D%0A%0A%09\n %09d.f\n@@ -387,17 +387,16 @@\n pacity%0A%0A\n-%09\n %09d.size-\n@@ -399,19 +399,17 @@\n ize--%09%0A%09\n-%09\n %0A\n-%09\n %09return \n@@ -412,21 +412,19 @@\n urn nil%0A\n-%09\n %7D%0A%0A\n-%09\n func (d \n@@ -435,33 +435,32 @@\n ue) Len() int %7B%0A\n-%09\n %09return d.size%0A%09\n@@ -458,21 +458,19 @@\n  d.size%0A\n-%09\n %7D%0A%0A\n-%09\n func (d \n@@ -501,17 +501,16 @@\n ) int %7B%0A\n-%09\n %09return \n@@ -538,21 +538,19 @@\n apacity%0A\n-%09\n %7D%0A%0A\n-%09\n func (b \n@@ -567,33 +567,32 @@\n ring() string %7B%0A\n-%09\n %09result := %5B%5Dstr\n@@ -597,17 +597,16 @@\n tring%7B%7D%0A\n-%09\n %09for i :\n@@ -622,17 +622,16 @@\n .size %7B%0A\n-%09\n %09%09val :=\n@@ -664,17 +664,16 @@\n city%5D%0A%09%09\n-%09\n result =\n@@ -705,21 +705,19 @@\n t(val))%0A\n-%09\n %09%7D%0A\n-%09\n %09return \n@@ -755,21 +755,19 @@\n ) + %22%5D%22%0A\n-%09\n %7D%0A%0A\n-%09\n func (b \n@@ -791,17 +791,16 @@\n tring %7B%0A\n-%09\n %09result \n@@ -829,17 +829,16 @@\n pacity)%0A\n-%09\n %09for i, \n@@ -857,17 +857,16 @@\n esult %7B%0A\n-%09\n %09%09result\n@@ -874,25 +874,24 @@\n i%5D = %22 _%22%0A%09%09\n-%09\n if i == b.fr\n@@ -896,17 +896,16 @@\n front %7B%0A\n-%09\n %09%09%09resul\n@@ -918,24 +918,21 @@\n  %22%3E_%22%0A%09%09\n-%09\n %7D%0A\n-%09\n %09%7D%0A\n-%09\n %09for i :\n@@ -948,17 +948,16 @@\n .size %7B%0A\n-%09\n %09%09index \n@@ -988,17 +988,16 @@\n acity%0A%09%09\n-%09\n val := b\n@@ -1009,17 +1009,16 @@\n %5Bindex%5D%0A\n-%09\n %09%09prefix\n@@ -1027,17 +1027,16 @@\n = %22 %22%0A%09%09\n-%09\n if i == \n@@ -1039,17 +1039,16 @@\n  == 0 %7B%0A\n-%09\n %09%09%09prefi\n@@ -1057,20 +1057,18 @@\n = %22%3E%22%0A%09%09\n-%09\n %7D%0A\n-%09\n %09%09result\n@@ -1110,21 +1110,19 @@\n x, val)%0A\n-%09\n %09%7D%0A\n-%09\n %09return \n@@ -1148,21 +1148,19 @@\n , %22 %7C%22)%0A\n-%09\n %7D%0A%0A\n-%09\n func mai\n@@ -1165,17 +1165,16 @@\n ain() %7B%0A\n-%09\n %09scanner\n@@ -1204,17 +1204,16 @@\n .Stdin)%0A\n-%09\n %09buf := \n@@ -1259,17 +1259,15 @@\n 4%7D%0A%0A\n-%09\n %09for %7B%0A\n-%09\n %09%09fm\n@@ -1281,17 +1281,16 @@\n (%22$%22)%0A%09%09\n-%09\n if !scan\n@@ -1309,17 +1309,16 @@\n %0A%09%09%09\n-%09\n break%0A%09%09\n %09%7D%0A%09\n@@ -1313,20 +1313,18 @@\n break%0A%09%09\n-%09\n %7D%0A\n-%09\n %09%09line :\n@@ -1342,17 +1342,16 @@\n ext()%0A%09%09\n-%09\n fmt.Prin\n@@ -1360,17 +1360,16 @@\n n(line)%0A\n-%09\n %09%09args :\n@@ -1394,17 +1394,16 @@\n ine)%0A%0A%09%09\n-%09\n if len(a\n@@ -1414,17 +1414,16 @@\n  == 0 %7B%0A\n-%09\n %09%09%09conti\n@@ -1428,21 +1428,19 @@\n tinue%0A%09%09\n-%09\n %7D%0A%0A\n-%09\n %09%09cmd :=\n@@ -1451,17 +1451,16 @@\n s%5B0%5D%0A%0A%09%09\n-%09\n switch c\n@@ -1464,17 +1464,16 @@\n h cmd %7B%0A\n-%09\n %09%09case %22\n@@ -1478,25 +1478,24 @@\n  %22show%22:%0A%09%09%09\n-%09\n fmt.Println(\n@@ -1504,25 +1504,24 @@\n f.String())%0A\n-%09\n %09%09case %22debu\n@@ -1523,25 +1523,24 @@\n %22debug%22:%0A%09%09%09\n-%09\n fmt.Println(\n@@ -1548,25 +1548,24 @@\n uf.Debug())%0A\n-%09\n %09%09case %22size\n@@ -1566,25 +1566,24 @@\n  %22size%22:%0A%09%09%09\n-%09\n fmt.Println(\n@@ -1593,17 +1593,16 @@\n .Len())%0A\n-%09\n %09%09case %22\n@@ -1616,17 +1616,16 @@\n ck%22:%0A%09%09%09\n-%09\n for _, v\n@@ -1648,17 +1648,17 @@\n :%5D %7B%0A%09%09%09\n-%09\n+ \n %09num, _ \n@@ -1679,17 +1679,17 @@\n i(v)%0A%09%09%09\n-%09\n+ \n %09buf.Pus\n@@ -1699,25 +1699,23 @@\n ck(num)%0A\n-%09\n %09%09%09%7D%0A%09%09\n-%09\n case %22pu\n@@ -1721,25 +1721,24 @@\n ush_front%22:%0A\n-%09\n %09%09%09//for _, \n@@ -1758,25 +1758,24 @@\n gs%5B1:%5D %7B%0A%09%09%09\n-%09\n // %09num, _ :\n@@ -1792,17 +1792,16 @@\n Atoi(v)%0A\n-%09\n %09%09%09// %09b\n@@ -1817,30 +1817,28 @@\n ont(num)%0A%09%09%09\n-%09\n //%7D%0A\n-%09\n %09%09case %22pop_\n@@ -1840,25 +1840,24 @@\n %22pop_back%22:%0A\n-%09\n %09%09%09// if err\n@@ -1880,33 +1880,32 @@\n ); err != nil %7B%0A\n-%09\n %09%09%09// %09fmt.Print\n@@ -1911,31 +1911,29 @@\n tln(err)%0A%09%09%09\n-%09\n // %7D%0A\n-%09\n %09%09case %22pop_\n@@ -1940,17 +1940,16 @@\n front%22:%0A\n-%09\n %09%09%09if er\n@@ -1982,17 +1982,16 @@\n = nil %7B%0A\n-%09\n %09%09%09%09fmt.\n@@ -2006,20 +2006,18 @@\n err)%0A%09%09%09\n-%09\n %7D%0A\n-%09\n %09%09case %22\n@@ -2024,17 +2024,16 @@\n front%22:%0A\n-%09\n %09%09%09//if \n@@ -2066,25 +2066,24 @@\n rr != nil %7B%0A\n-%09\n %09%09%09//%09fmt.Pr\n@@ -2096,17 +2096,16 @@\n err)%0A%09%09%09\n-%09\n //%7D else\n@@ -2099,33 +2099,32 @@\n )%0A%09%09%09//%7D else %7B%0A\n-%09\n %09%09%09// %09fmt.Print\n@@ -2134,22 +2134,20 @@\n val)%0A%09%09%09\n-%09\n //%7D%0A\n-%09\n %09%09case %22\n@@ -2156,17 +2156,16 @@\n ck%22:%0A%09%09%09\n-%09\n // if va\n@@ -2198,25 +2198,24 @@\n != nil %7B%0A%09%09%09\n-%09\n // %09fmt.Prin\n@@ -2222,25 +2222,24 @@\n tln(err)%0A%09%09%09\n-%09\n // %7D else %7B%0A\n@@ -2238,17 +2238,16 @@\n  else %7B%0A\n-%09\n %09%09%09// %09f\n@@ -2265,23 +2265,21 @@\n val)%0A%09%09%09\n-%09\n // %7D%0A\n-%09\n %09%09case %22\n@@ -2289,17 +2289,16 @@\n ar%22:%0A%09%09%09\n-%09\n // buf.C\n@@ -2304,17 +2304,16 @@\n Clear()%0A\n-%09\n %09%09case %22\n@@ -2325,17 +2325,15 @@\n %0A%09%09%09\n-%09\n return%0A\n-%09\n %09%09de\n@@ -2339,17 +2339,16 @@\n efault:%0A\n-%09\n %09%09%09fmt.P\n@@ -2384,16 +2384,13 @@\n o%22)%0A\n-%09%09%09%7D%0A\n %09%09%7D%0A%09%7D%0A\n+%7D%0A\n",
+            "lines": "142"
+        },
+        {
+            "label": "2026-06-16_08-42-27",
+            "content": "@@ -245,75 +245,8 @@\n y%0A%09%7D\n-%0A%0A%09func (d *Deque) PushFront(val int) %7B%0A%09%09d.data%5Bsize - 1%5D = val%0A%09%7D\n %0A%09fu\n",
+            "lines": "162"
+        },
+        {
+            "label": "2026-06-16_09-19-44",
+            "content": "@@ -290,18 +290,16 @@\n %09d.data%5B\n-d.\n size - 1\n",
+            "lines": "166"
+        },
+        {
+            "label": "2026-06-16_09-19-50",
+            "content": "@@ -285,31 +285,8 @@\n ) %7B%0A\n-%09%09d.front = d.size - 1%0A\n %09%09d.\n",
+            "lines": "166"
+        },
+        {
+            "label": "2026-06-16_09-20-26",
+            "content": "@@ -281,19 +281,16 @@\n  int) %7B%0A\n-%09%09%0A\n %09%09d.fron\n@@ -297,85 +297,45 @@\n t = \n-(\n d.\n-front - 1 + d.capacity) %25 d.capacity%0A%0A%09%09d.data%5Bd.front%5D = val%0A%0A%09%09d.size++%0A\n+size - 1%0A%09%09d.data%5Bd.size - 1%5D = val\n %0A%09%7D%0A\n",
+            "lines": "167"
+        },
+        {
+            "label": "2026-06-16_09-22-28",
+            "content": "@@ -2334,24 +2334,26 @@\n front%22:%0A%09%09%09%09\n+//\n for _, v := \n@@ -2373,16 +2373,18 @@\n %5D %7B%0A%09%09%09%09\n+//\n  %09num, _\n@@ -2407,16 +2407,18 @@\n (v)%0A%09%09%09%09\n+//\n  %09buf.Pu\n@@ -2426,32 +2426,34 @@\n hFront(num)%0A%09%09%09%09\n+//\n %7D%0A%09%09%09case %22pop_b\n",
+            "lines": "172"
+        },
+        {
+            "label": "2026-06-16_09-22-48",
+            "content": "@@ -245,53 +245,8 @@\n y%0A%09%7D\n-%0A%09%0A%09func (d *Deque) Clear() %7B%0A%09%09d.size = 0%0A%09%7D\n %0A%0A%09f\n@@ -2912,24 +2912,27 @@\n clear%22:%0A%09%09%09%09\n+// \n buf.Clear()%0A\n",
+            "lines": "172"
+        },
+        {
+            "label": "2026-06-16_09-24-19",
+            "content": "@@ -284,30 +284,16 @@\n ize = 0%0A\n-%09%09d.front = 0%0A\n %09%7D%0A%0A%09fun\n",
+            "lines": "176"
+        },
+        {
+            "label": "2026-06-16_09-24-36",
+            "content": "@@ -343,62 +343,8 @@\n t) %7B\n-%0A%0A%09%09if d.capacity = d.size %7B%0A%09%09%09d.ExtendCapacity()%0A%09%09%7D\n %0A%09%09%0A\n",
+            "lines": "177"
+        },
+        {
+            "label": "2026-06-16_09-25-05",
+            "content": "@@ -350,33 +350,32 @@\n %09if d.capacity =\n-=\n  d.size %7B%0A%09%09%09d.E\n",
+            "lines": "181"
+        },
+        {
+            "label": "2026-06-16_09-25-12",
+            "content": "\tpackage main\n\n\timport (\n\t\t\"bufio\"\n\t\t\"fmt\"\n\t\t\"os\"\n\t\t\"strings\"\n\t\t\"strconv\"\n\t)\n\n\ttype Deque struct {\n\t\tdata     []int\n\t\tfront    int\n\t\tsize     int\n\t\tcapacity int\n\t}\n\n\tfunc (d *Deque) getPos(index int) int {\n\t\treturn (d.front + index) % d.capacity\n\t}\n\t\n\tfunc (d *Deque) Clear() {\n\t\td.size = 0\n\t\td.front = 0\n\t}\n\n\tfunc (d *Deque) PushFront(val int) {\n\n\t\tif d.capacity == d.size {\n\t\t\td.ExtendCapacity()\n\t\t}\n\t\t\n\t\td.front = (d.front - 1 + d.capacity) % d.capacity\n\n\t\td.data[d.front] = val\n\n\t\td.size++\n\n\t}\n\tfunc (d *Deque) ExtendCapacity()  {\n\t\t\n\t\tnew_vector := make([]int, d.capacity * 2)\n\n\t\tfor i := 0; i < d.size; i++ {\n\t\t\tnew_vector[i] = d.data[d.getPos(i)]\n\t\t}\n\n\t\td.data = new_vector\n\t\td.capacity = d.capacity * 2\n\t\td.front = 0\n\t}\n\n\tfunc (d *Deque) PushBack(val int) error {\n\t\tif d.capacity == d.size {\n\t\t\td.ExtendCapacity()\n\t\t}\n\n\t\ttargetIndex := d.getIndex(d.size)\n\n\t\td.data[targetIndex] = val \t\n\n\t\td.size++\n\n\t\treturn nil\n\t}\n\n\tfunc (d *Deque) PopFront() error {\n\n\t\tif d.size == 0 {\n\t\t\treturn fmt.Errorf(\"fail\")\n\t\t}\n\n\t\td.front = (d.front + 1) % d.capacity\n\n\t\td.size--\t\n\t\t\n\t\treturn nil\n\t}\n\n\tfunc (d *Deque) Len() int {\n\t\treturn d.size\n\t}\n\n\tfunc (d *Deque) getIndex(log int) int {\n\t\treturn (d.front + log) % d.capacity\n\t}\n\n\tfunc (b *Deque) String() string {\n\t\tresult := []string{}\n\t\tfor i := range b.size {\n\t\t\tval := b.data[(b.front+i)%b.capacity]\n\t\t\tresult = append(result, fmt.Sprint(val))\n\t\t}\n\t\treturn \"[\" + strings.Join(result, \", \") + \"]\"\n\t}\n\n\tfunc (b *Deque) Debug() string {\n\t\tresult := make([]string, b.capacity)\n\t\tfor i, _ := range result {\n\t\t\tresult[i] = \" _\"\n\t\t\tif i == b.front {\n\t\t\t\tresult[i] = \">_\"\n\t\t\t}\n\t\t}\n\t\tfor i := range b.size {\n\t\t\tindex := (b.front + i) % b.capacity\n\t\t\tval := b.data[index]\n\t\t\tprefix := \" \"\n\t\t\tif i == 0 {\n\t\t\t\tprefix = \">\"\n\t\t\t}\n\t\t\tresult[index] = fmt.Sprintf(\"%s%d\", prefix, val)\n\t\t}\n\t\treturn strings.Join(result, \" |\")\n\t}\n\n\tfunc main() {\n\t\tscanner := bufio.NewScanner(os.Stdin)\n\t\tbuf := &Deque{data: make([]int, 4), capacity: 4}\n\n\t\tfor {\n\t\t\tfmt.Print(\"$\")\n\t\t\tif !scanner.Scan() {\n\t\t\t\tbreak\n\t\t\t}\n\t\t\tline := scanner.Text()\n\t\t\tfmt.Println(line)\n\t\t\targs := strings.Fields(line)\n\n\t\t\tif len(args) == 0 {\n\t\t\t\tcontinue\n\t\t\t}\n\n\t\t\tcmd := args[0]\n\n\t\t\tswitch cmd {\n\t\t\tcase \"show\":\n\t\t\t\tfmt.Println(buf.String())\n\t\t\tcase \"debug\":\n\t\t\t\tfmt.Println(buf.Debug())\n\t\t\tcase \"size\":\n\t\t\t\tfmt.Println(buf.Len())\n\t\t\tcase \"push_back\":\n\t\t\t\tfor _, v := range args[1:] {\n\t\t\t\t\tnum, _ := strconv.Atoi(v)\n\t\t\t\t\tbuf.PushBack(num)\n\t\t\t\t}\n\t\t\tcase \"push_front\":\n\t\t\t\tfor _, v := range args[1:] {\n\t\t\t\t \tnum, _ := strconv.Atoi(v)\n\t\t\t\t \tbuf.PushFront(num)\n\t\t\t\t}\n\t\t\tcase \"pop_back\":\n\t\t\t\t// if err := buf.PopBack(); err != nil {\n\t\t\t\t// \tfmt.Println(err)\n\t\t\t\t// }\n\t\t\tcase \"pop_front\":\n\t\t\t\tif err := buf.PopFront(); err != nil {\n\t\t\t\t\tfmt.Println(err)\n\t\t\t\t}\n\t\t\tcase \"front\":\n\t\t\t\t//if val, err := buf.Front(); err != nil {\n\t\t\t\t//\tfmt.Println(err)\n\t\t\t\t//} else {\n\t\t\t\t// \tfmt.Println(val)\n\t\t\t\t//}\n\t\t\tcase \"back\":\n\t\t\t\t// if val, err := buf.Back(); err != nil {\n\t\t\t\t// \tfmt.Println(err)\n\t\t\t\t// } else {\n\t\t\t\t// \tfmt.Println(val)\n\t\t\t\t// }\n\t\t\tcase \"clear\":\n\t\t\t\tbuf.Clear()\n\t\t\tcase \"end\":\n\t\t\t\treturn\n\t\t\tdefault:\n\t\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t\t}\n\t\t}\n\t}\n",
+            "lines": "181"
+        }
+    ]
+}
